@@ -35,35 +35,35 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="min-h-screen bg-[#000000] py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl text-[#CECECE] mb-16 text-center">
+    <section id="experience" className="min-h-screen bg-[#000000] py-12 sm:py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#CECECE] mb-8 sm:mb-12 md:mb-16 text-center">
           Experience
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-[#353535] p-8 border border-[#474747] 
+              className="bg-[#353535] p-4 sm:p-6 md:p-8 border border-[#474747] 
                        hover:border-[#919191] transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                <div className="flex items-start gap-4">
-                  <div className="bg-[#474747] p-3 border border-[#919191] flex-shrink-0">
-                    <Briefcase className="w-6 h-6 text-[#CECECE]" />
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="bg-[#474747] p-2 sm:p-3 border border-[#919191] flex-shrink-0">
+                    <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-[#CECECE]" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl text-white mb-2">{exp.title}</h3>
-                    <p className="text-[#919191]">{exp.company}</p>
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-1 sm:mb-2">{exp.title}</h3>
+                    <p className="text-sm sm:text-base text-[#919191] break-words">{exp.company}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-[#919191] flex-shrink-0 md:ml-4">
+                <div className="flex items-center gap-2 text-sm sm:text-base text-[#919191] flex-shrink-0 sm:ml-4">
                   <Calendar className="w-4 h-4" />
                   <span>{exp.period}</span>
                 </div>
               </div>
-              <p className="text-[#CECECE] leading-relaxed ml-0 md:ml-16">
+              <p className="text-sm sm:text-base text-[#CECECE] leading-relaxed ml-0 sm:ml-12 md:ml-16">
                 {exp.description}
               </p>
             </div>
