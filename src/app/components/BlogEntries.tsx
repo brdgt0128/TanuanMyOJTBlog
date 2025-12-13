@@ -1,7 +1,6 @@
 import { Calendar } from 'lucide-react';
 import img1 from '../../assets/d2c72bd2a0e9238bb5f678382138c66c9f1e18fe.png';
 import img2 from '../../assets/2cf62a57c1b8cbaf577cdfe9fae325a385401f90.png';
-import img3 from '../../assets/c2151fda3e2e133043a51014cfa73cd312e09752.png';
 import img4 from '../../assets/405bb002acee9f77041248e0a4fb6d418c7a9acd.png';
 
 export function BlogEntries() {
@@ -19,12 +18,6 @@ export function BlogEntries() {
       description: 'Recognized as top performing team for outstanding collaboration, innovation, and excellence in project delivery.',
     },
     {
-      image: img3,
-      date: 'Dec 02, 2025',
-      title: 'Deployment of the Vawc System',
-      description: 'Received certificates of recognition for exceptional performance and contribution to the development team.',
-    },
-    {
       image: img4,
       date: 'Dec 08, 2025',
       title: 'Beginning of OJT',
@@ -39,8 +32,8 @@ export function BlogEntries() {
           Blog Entries
         </h2>
 
-        {/* 4 columns only */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 3 columns only */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post, index) => (
             <div
               key={index}
