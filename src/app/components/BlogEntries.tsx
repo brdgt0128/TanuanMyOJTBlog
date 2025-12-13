@@ -15,7 +15,7 @@ export function BlogEntries() {
     {
       image: img2,
       date: 'Nov 07, 2025',
-      title: 'Research feast top performing team',
+      title: 'Research Feast Top Performing Team',
       description: 'Recognized as top performing team for outstanding collaboration, innovation, and excellence in project delivery.',
     },
     {
