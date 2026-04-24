@@ -131,7 +131,15 @@ export function BlogEntries() {
                   </div>
                 </div>
                 
-                <h3 className="text-lg sm:text-xl text-white group-hover:text-[#CECECE] transition-colors duration-300">
+                <h3
+                  className="text-lg sm:text-xl text-white group-hover:text-[#CECECE] transition-colors duration-300 min-h-[56px] sm:min-h-[64px]"
+                  style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                  }}
+                >
                   {post.title}
                 </h3>
                 
