@@ -22,7 +22,7 @@ export function PersonalProfile() {
   ];
 
   return (
-    <section id="about" className="min-h-screen bg-[#353535] py-12 sm:py-16 md:py-24">
+    <section id="about" className="bg-[#353535] py-12 sm:py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#CECECE] mb-8 sm:mb-12 md:mb-16 text-center">
           About Me
@@ -40,23 +40,23 @@ export function PersonalProfile() {
                 />
               </div>
               
-              <div className="text-center space-y-1">
-                <h3 className="text-xl sm:text-2xl text-white">Aldrin B. Tanuan</h3>
-                <p className="text-sm sm:text-base text-[#919191]">Frontend Developer</p>
-                <p className="text-[#CECECE] text-xs sm:text-sm">Bachelor of Science in Information Technology</p>
+              <div className="text-center space-y-2">
+                <h3 className="text-2xl sm:text-3xl text-white">Aldrin B. Tanuan</h3>
+                <p className="text-base sm:text-lg text-[#919191]">Frontend Developer</p>
+                <p className="text-[#CECECE] text-sm sm:text-base">Bachelor of Science in Information Technology</p>
               </div>
 
-              <div className="pt-4 border-t border-[#919191] space-y-2 text-center">
-                <p className="text-xs sm:text-sm text-[#CECECE]">
+              <div className="pt-5 border-t border-[#919191] space-y-3 text-center">
+                <p className="text-sm sm:text-base text-[#CECECE]">
                   <span className="text-white">Age:</span> 22
                 </p>
-                <p className="text-xs sm:text-sm text-[#CECECE]">
+                <p className="text-sm sm:text-base text-[#CECECE]">
                   <span className="text-white">Course:</span> Bachelor of Science Information Technology
                 </p>
-                <p className="text-xs sm:text-sm text-[#CECECE]">
+                <p className="text-sm sm:text-base text-[#CECECE]">
                   <span className="text-white">Address:</span> Buug Zamboanga Sibugay
                 </p>
-                <p className="text-xs sm:text-sm text-[#CECECE] break-all">
+                <p className="text-sm sm:text-base text-[#CECECE] break-all">
                   <span className="text-white">Email:</span> aldrin.tanuan@sccpag.edu.ph
                 </p>
               </div>
