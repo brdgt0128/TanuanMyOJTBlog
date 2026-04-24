@@ -135,7 +135,15 @@ export function BlogEntries() {
                   {post.title}
                 </h3>
                 
-                <p className="text-[#CECECE] text-xs sm:text-sm leading-relaxed">
+                <p
+                  className="text-[#CECECE] text-xs sm:text-sm leading-relaxed"
+                  style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 5,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                  }}
+                >
                   {post.description}
                 </p>
               </div>
