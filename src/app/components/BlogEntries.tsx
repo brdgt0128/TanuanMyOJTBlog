@@ -75,7 +75,7 @@ export function BlogEntries() {
           Blog Entries
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {posts.map((post, index) => (
             <div
               key={index}
