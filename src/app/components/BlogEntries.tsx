@@ -73,30 +73,30 @@ export function BlogEntries() {
     {
       image: februaryImg1,
       date: 'February 16, 2026',
-      title: 'Going to makati city',
+      title: 'Arrival in Manila',
       description:
-        'This day marked our trip to Makati City for the next phase of our OJT journey. It was an exciting start that gave us new energy and motivation for the experiences ahead.',
+        'This was the moment when we landed at Manila Airport to begin our On-the-Job Training (OJT) in Makati City. It was both fun and exciting because Makati is known as the business hub of the Philippines. Being there made us feel motivated and eager to experience what it is like to work in a professional environment.',
     },
     {
       image: februaryImg2,
       date: 'February 17, 2026',
-      title: 'First Day Makati OJT',
+      title: 'First Day of OJT in Makati',
       description:
-        'Our first day of OJT in Makati was both exciting and challenging. We started adjusting to a new work environment, learning the setup, and getting ready for the tasks assigned to our team.',
+        'This was our first day of OJT in Makati City. It was both exciting and a bit pressure-filled because we were about to learn many new things, especially real-world work experiences outside the classroom. Although we felt nervous at first, we were also excited to gain knowledge and develop new skills that will help us in our future careers.',
     },
     {
       image: februaryImg3,
       date: 'February 23, 2026',
-      title: 'Makati View',
+      title: 'View from Our Condominium',
       description:
-        'This moment captured one of the memorable views in Makati during my internship. It reminded me how meaningful this opportunity was for both personal growth and professional experience.',
+        'This was the beautiful view from our condominium in Makati City. The area was surrounded by modern and tall buildings, showing how advanced the city is. After a long day of OJT, it was refreshing to step outside, enjoy the view, and get some fresh air while appreciating the vibrant atmosphere of the city.',
     },
     {
       image: februaryImg4,
       date: 'February 27, 2026',
-      title: 'OJT Team',
+      title: 'Moments with My OJT Team',
       description:
-        'Spending time with the OJT team made the whole experience more enjoyable and inspiring. Our teamwork, support, and shared memories became an important part of my journey in Makati.',
+        'This is my fellow OJT team. At this time, we were having fun together and sharing stories about our college experiences. These moments helped us bond as a team, making our OJT journey more enjoyable and memorable while supporting each other throughout the training.',
     },
   ];
 
