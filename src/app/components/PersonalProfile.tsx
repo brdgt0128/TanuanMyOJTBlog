@@ -40,23 +40,23 @@ export function PersonalProfile() {
                 />
               </div>
               
-              <div className="text-center space-y-2">
-                <h3 className="text-2xl sm:text-3xl text-white">Aldrin B. Tanuan</h3>
-                <p className="text-base sm:text-lg text-[#919191]">Frontend Developer</p>
-                <p className="text-[#CECECE] text-sm sm:text-base">Bachelor of Science in Information Technology</p>
+              <div className="text-left space-y-2">
+                <h3 className="text-3xl sm:text-4xl text-white">Aldrin B. Tanuan</h3>
+                <p className="text-lg sm:text-xl text-[#919191]">Frontend Developer</p>
+                <p className="text-[#CECECE] text-base sm:text-lg">Bachelor of Science in Information Technology</p>
               </div>
 
-              <div className="pt-5 border-t border-[#919191] space-y-3 text-center">
-                <p className="text-sm sm:text-base text-[#CECECE]">
+              <div className="pt-5 border-t border-[#919191] space-y-4 text-left">
+                <p className="text-base sm:text-lg text-[#CECECE]">
                   <span className="text-white">Age:</span> 22
                 </p>
-                <p className="text-sm sm:text-base text-[#CECECE]">
+                <p className="text-base sm:text-lg text-[#CECECE]">
                   <span className="text-white">Course:</span> Bachelor of Science Information Technology
                 </p>
-                <p className="text-sm sm:text-base text-[#CECECE]">
+                <p className="text-base sm:text-lg text-[#CECECE]">
                   <span className="text-white">Address:</span> Buug Zamboanga Sibugay
                 </p>
-                <p className="text-sm sm:text-base text-[#CECECE] break-all">
+                <p className="text-base sm:text-lg text-[#CECECE] break-all">
                   <span className="text-white">Email:</span> aldrin.tanuan@sccpag.edu.ph
                 </p>
               </div>
