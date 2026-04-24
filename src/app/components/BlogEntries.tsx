@@ -47,56 +47,56 @@ export function BlogEntries() {
       date: 'January 5, 2026',
       title: 'Pagadian city demo onsite',
       description:
-        'January was an exciting and productive month during my OJT. We conducted an onsite system demo at a motorshop, which gave me valuable experience presenting the system in a real business setting.',
+        'We conducted an onsite system demo at a motorshop in Pagadian City and gained valuable experience presenting the system in a real business setting.',
     },
     {
       image: januaryImg2,
       date: 'January 12, 2026',
       title: 'Ozamis city demo onsite',
       description:
-        'We also trained the client at the autoshop and guided them on how to use the system effectively. This helped me improve my communication skills and learn how to explain technical workflows clearly to users.',
+        'We trained the client at the autoshop and guided them on how to use the system clearly and effectively during the onsite demo.',
     },
     {
       image: januaryImg3,
       date: 'January 21, 2026',
       title: 'Demo with the Artist',
       description:
-        'January included productive collaboration with our team as we coordinated updates, discussed client concerns, and supported one another during the training and demonstration process.',
+        'Our team collaborated well, discussed client concerns, and supported each other throughout the training and demonstration process.',
     },
     {
       image: januaryImg4,
       date: 'January 29, 2026',
       title: 'Onsite demo team',
       description:
-        'Seeing the system used in an actual workplace helped me understand its practical applications. It made me appreciate the importance of user training, teamwork, and building solutions that truly support daily operations.',
+        'Seeing the system used in an actual workplace helped me appreciate user training, teamwork, and solutions that support daily operations.',
     },
     {
       image: februaryImg1,
       date: 'February 16, 2026',
       title: 'Arrival in Manila',
       description:
-        'This was the moment when we landed at Manila Airport to begin our On-the-Job Training (OJT) in Makati City. It was both fun and exciting because Makati is known as the business hub of the Philippines. Being there made us feel motivated and eager to experience what it is like to work in a professional environment.',
+        'We arrived at Manila Airport to begin our OJT in Makati City, feeling excited and motivated to experience a real professional environment.',
     },
     {
       image: februaryImg2,
       date: 'February 17, 2026',
       title: 'First Day of OJT in Makati',
       description:
-        'This was our first day of OJT in Makati City. It was both exciting and a bit pressure-filled because we were about to learn many new things, especially real-world work experiences outside the classroom. Although we felt nervous at first, we were also excited to gain knowledge and develop new skills that will help us in our future careers.',
+        'Our first day of OJT in Makati was exciting and a little pressure-filled as we began learning real-world work experiences outside the classroom.',
     },
     {
       image: februaryImg3,
       date: 'February 23, 2026',
       title: 'View from Our Condominium',
       description:
-        'This was the beautiful view from our condominium in Makati City. The area was surrounded by modern and tall buildings, showing how advanced the city is. After a long day of OJT, it was refreshing to step outside, enjoy the view, and get some fresh air while appreciating the vibrant atmosphere of the city.',
+        'The view from our condominium in Makati was refreshing after OJT and showed the modern skyline and vibrant atmosphere of the city.',
     },
     {
       image: februaryImg4,
       date: 'February 27, 2026',
       title: 'Moments with My OJT Team',
       description:
-        'This is my fellow OJT team. At this time, we were having fun together and sharing stories about our college experiences. These moments helped us bond as a team, making our OJT journey more enjoyable and memorable while supporting each other throughout the training.',
+        'Spending time with my fellow OJT team helped us bond, share stories, and make our training journey more enjoyable and memorable.',
     },
   ];
 
