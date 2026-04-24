@@ -45,6 +45,21 @@ export function PersonalProfile() {
                 <p className="text-sm sm:text-base text-[#919191]">Frontend Developer</p>
                 <p className="text-[#CECECE] text-xs sm:text-sm">Bachelor of Science in Information Technology</p>
               </div>
+
+              <div className="pt-4 border-t border-[#919191] space-y-2 text-center">
+                <p className="text-xs sm:text-sm text-[#CECECE]">
+                  <span className="text-white">Age:</span> 22
+                </p>
+                <p className="text-xs sm:text-sm text-[#CECECE]">
+                  <span className="text-white">Course:</span> Bachelor of Science Information Technology
+                </p>
+                <p className="text-xs sm:text-sm text-[#CECECE]">
+                  <span className="text-white">Address:</span> Buug Zamboanga Sibugay
+                </p>
+                <p className="text-xs sm:text-sm text-[#CECECE] break-all">
+                  <span className="text-white">Email:</span> aldrin.tanuan@sccpag.edu.ph
+                </p>
+              </div>
             </div>
           </div>
 
