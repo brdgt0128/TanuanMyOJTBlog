@@ -1,34 +1,66 @@
 import { Calendar } from 'lucide-react';
-import img1 from '../../assets/january-onsite-demo.jpg';
-import img2 from '../../assets/january-client-training.jpg';
-import img3 from '../../assets/january-online-meeting.jpg';
-import img4 from '../../assets/january-team-visit.jpg';
+import oldImg1 from '../../assets/d2c72bd2a0e9238bb5f678382138c66c9f1e18fe.png';
+import oldImg2 from '../../assets/2cf62a57c1b8cbaf577cdfe9fae325a385401f90.png';
+import oldImg3 from '../../assets/c2151fda3e2e133043a51014cfa73cd312e09752.png';
+import oldImg4 from '../../assets/405bb002acee9f77041248e0a4fb6d418c7a9acd.png';
+import januaryImg1 from '../../assets/january-onsite-demo.jpg';
+import januaryImg2 from '../../assets/january-client-training.jpg';
+import januaryImg3 from '../../assets/january-online-meeting.jpg';
+import januaryImg4 from '../../assets/january-team-visit.jpg';
 
 export function BlogEntries() {
   const posts = [
     {
-      image: img1,
+      image: oldImg1,
+      date: 'Nov 04, 2025',
+      title: 'Capstone Project Final Defense',
+      description:
+        'Deployed an Online Case Filing System for VAWC, ensuring reliability, scalability, and usability for community stakeholders.',
+    },
+    {
+      image: oldImg2,
+      date: 'Nov 07, 2025',
+      title: 'Research Feast Top Performing Team',
+      description:
+        'Recognized as top performing team for outstanding collaboration, innovation, and excellence in project delivery.',
+    },
+    {
+      image: oldImg3,
+      date: 'Dec 02, 2025',
+      title: 'Deployment of the Vawc System',
+      description:
+        'Received certificates of recognition for exceptional performance and contribution to the development team.',
+    },
+    {
+      image: oldImg4,
+      date: 'Dec 08, 2025',
+      title: 'Beginning of OJT',
+      description:
+        'The first week of my practicum has been an incredible learning experience. Setting up my development environment and meeting my team.',
+    },
+    {
+      image: januaryImg1,
       date: 'January 5 - January 30, 2026',
       title: 'JANUARY OJT',
       description:
         'January was an exciting and productive month during my OJT. We conducted an onsite system demo at a motorshop, which gave me valuable experience presenting the system in a real business setting.',
     },
     {
-      image: img2,
+      image: januaryImg2,
       date: 'January 5 - January 30, 2026',
       title: 'JANUARY OJT',
       description:
         'We also trained the client at the autoshop and guided them on how to use the system effectively. This helped me improve my communication skills and learn how to explain technical workflows clearly to users.',
     },
     {
-      image: img3,
+      image: januaryImg3,
       date: 'January 5 - January 30, 2026',
       title: 'JANUARY OJT',
       description:
         'January included productive collaboration with our team as we coordinated updates, discussed client concerns, and supported one another during the training and demonstration process.',
     },
     {
-      image: img4,
+      image: januaryImg4,
       date: 'January 5 - January 30, 2026',
       title: 'JANUARY OJT',
       description:
@@ -43,7 +75,6 @@ export function BlogEntries() {
           Blog Entries
         </h2>
 
-        {/* 4 columns only */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {posts.map((post, index) => (
             <div
