@@ -7,6 +7,10 @@ import januaryImg1 from '../../assets/january-onsite-demo.jpg';
 import januaryImg2 from '../../assets/january-client-training.jpg';
 import januaryImg3 from '../../assets/january-online-meeting.jpg';
 import januaryImg4 from '../../assets/january-team-visit.jpg';
+import februaryImg1 from '../../assets/february-going-to-makati.jpg';
+import februaryImg2 from '../../assets/february-first-day-makati-ojt.jpg';
+import februaryImg3 from '../../assets/february-makati-view.jpg';
+import februaryImg4 from '../../assets/february-ojt-team.jpg';
 
 export function BlogEntries() {
   const posts = [
@@ -65,6 +69,34 @@ export function BlogEntries() {
       title: 'Onsite demo team',
       description:
         'Seeing the system used in an actual workplace helped me understand its practical applications. It made me appreciate the importance of user training, teamwork, and building solutions that truly support daily operations.',
+    },
+    {
+      image: februaryImg1,
+      date: 'February 16, 2026',
+      title: 'Going to makati city',
+      description:
+        'This day marked our trip to Makati City for the next phase of our OJT journey. It was an exciting start that gave us new energy and motivation for the experiences ahead.',
+    },
+    {
+      image: februaryImg2,
+      date: 'February 17, 2026',
+      title: 'First Day Makati OJT',
+      description:
+        'Our first day of OJT in Makati was both exciting and challenging. We started adjusting to a new work environment, learning the setup, and getting ready for the tasks assigned to our team.',
+    },
+    {
+      image: februaryImg3,
+      date: 'February 23, 2026',
+      title: 'Makati View',
+      description:
+        'This moment captured one of the memorable views in Makati during my internship. It reminded me how meaningful this opportunity was for both personal growth and professional experience.',
+    },
+    {
+      image: februaryImg4,
+      date: 'February 27, 2026',
+      title: 'OJT Team',
+      description:
+        'Spending time with the OJT team made the whole experience more enjoyable and inspiring. Our teamwork, support, and shared memories became an important part of my journey in Makati.',
     },
   ];
 
