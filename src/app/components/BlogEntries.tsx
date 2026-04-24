@@ -41,28 +41,28 @@ export function BlogEntries() {
     {
       image: januaryImg1,
       date: 'January 5 - January 30, 2026',
-      title: 'JANUARY OJT',
+      title: 'Pagadian city demo onsite',
       description:
         'January was an exciting and productive month during my OJT. We conducted an onsite system demo at a motorshop, which gave me valuable experience presenting the system in a real business setting.',
     },
     {
       image: januaryImg2,
       date: 'January 5 - January 30, 2026',
-      title: 'JANUARY OJT',
+      title: 'Ozamis city demo onsite',
       description:
         'We also trained the client at the autoshop and guided them on how to use the system effectively. This helped me improve my communication skills and learn how to explain technical workflows clearly to users.',
     },
     {
       image: januaryImg3,
       date: 'January 5 - January 30, 2026',
-      title: 'JANUARY OJT',
+      title: 'Demo with the Artist',
       description:
         'January included productive collaboration with our team as we coordinated updates, discussed client concerns, and supported one another during the training and demonstration process.',
     },
     {
       image: januaryImg4,
       date: 'January 5 - January 30, 2026',
-      title: 'JANUARY OJT',
+      title: 'Onsite demo team',
       description:
         'Seeing the system used in an actual workplace helped me understand its practical applications. It made me appreciate the importance of user training, teamwork, and building solutions that truly support daily operations.',
     },
