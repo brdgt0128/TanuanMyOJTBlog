@@ -1,4 +1,4 @@
-import { Github, Facebook, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Facebook, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
@@ -86,9 +86,6 @@ export function Footer() {
         <div className="pt-6 sm:pt-8 border-t border-[#474747] flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-xs sm:text-sm text-[#919191] text-center md:text-left">
             © 2025 DevPortfolio. All rights reserved.
-          </p>
-          <p className="text-xs sm:text-sm text-[#919191] flex items-center gap-2">
-            Built with <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500" /> using React & Tailwind CSS
           </p>
         </div>
       </div>
