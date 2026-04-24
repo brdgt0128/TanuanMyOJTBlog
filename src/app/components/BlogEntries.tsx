@@ -79,7 +79,7 @@ export function BlogEntries() {
           {posts.map((post, index) => (
             <div
               key={index}
-              className="bg-[#474747] border border-[#919191] overflow-hidden 
+              className="flex h-full flex-col bg-[#474747] border border-[#919191] overflow-hidden 
                        hover:border-[#CECECE] hover:scale-105 
                        transition-all duration-300 cursor-pointer group"
             >
@@ -91,7 +91,7 @@ export function BlogEntries() {
                 />
               </div>
               
-              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4 bg-[#353535]">
+              <div className="flex-1 p-4 sm:p-6 space-y-3 sm:space-y-4 bg-[#353535]">
                 <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-[#919191]">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
