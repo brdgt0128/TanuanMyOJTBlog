@@ -23,6 +23,13 @@ export function Achievements() {
       title: 'Saint Columban College Representative of Zam-Basulta Pitching Presentation',
       description: 'Represented Saint Columban College in the Zam-Basulta Pitching Presentation, showcasing innovative project ideas and solutions.',
     },
+    {
+      icon: Award,
+      category: 'Frontend Developer',
+      year: '2024',
+      title: 'Tuluyan App',
+      description: 'Tuluyan App is a mobile application designed to help students easily find a place to stay by renting or inquiring about boarding houses, apartments, and condominiums that fit their needs and budget.',
+    },
   ];
 
   return (
