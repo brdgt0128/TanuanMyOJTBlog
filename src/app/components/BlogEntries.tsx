@@ -11,6 +11,10 @@ import februaryImg1 from '../../assets/february-going-to-makati.jpg';
 import februaryImg2 from '../../assets/february-first-day-makati-ojt.jpg';
 import februaryImg3 from '../../assets/february-makati-view.jpg';
 import februaryImg4 from '../../assets/february-ojt-team.jpg';
+import marchImg1 from '../../assets/march-office-aia-tower.jpg';
+import marchImg2 from '../../assets/march-meeting-future-plans.jpg';
+import marchImg3 from '../../assets/march-lunch-ramen.jpg';
+import marchImg4 from '../../assets/march-after-ojt-tired.jpg';
 
 export function BlogEntries() {
   const posts = [
@@ -97,6 +101,34 @@ export function BlogEntries() {
       title: 'Moments with My OJT Team',
       description:
         'Spending time with my fellow OJT team helped us bond, share stories, and make our training journey more enjoyable and memorable.',
+    },
+    {
+      image: marchImg1,
+      date: 'March 2, 2026',
+      title: 'In the Office at AIA Tower',
+      description:
+        'My OJT classmates and I were in the office at AIA Tower in Makati City, where we experienced a real professional environment that motivated us to learn and improve.',
+    },
+    {
+      image: marchImg2,
+      date: 'March 6, 2026',
+      title: 'Meeting for Future Plans',
+      description:
+        'We had a meeting to discuss future plans, goals, project ideas, and upcoming tasks, while learning how professional teamwork and planning help achieve success.',
+    },
+    {
+      image: marchImg3,
+      date: 'March 12, 2026',
+      title: 'Lunch at a Ramen Restaurant',
+      description:
+        'We had lunch at a ramen restaurant, and the founder shared valuable advice about career growth, hard work, and continuous learning after graduation.',
+    },
+    {
+      image: marchImg4,
+      date: 'March 18, 2026',
+      title: 'After OJT - Feeling Tired',
+      description:
+        'After a long day at the office, I felt tired but also happy and proud because each day of OJT helps me gain real-world experience and prepare for my future career.',
     },
   ];
 
