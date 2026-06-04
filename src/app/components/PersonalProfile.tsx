@@ -1,5 +1,4 @@
 import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
-import profileImg from '../../assets/34f594899b925642a0558dcc467c890c89fdbc95.png';
 
 export function PersonalProfile() {
   const skills = [
@@ -28,47 +27,9 @@ export function PersonalProfile() {
           About Me
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-          {/* Profile Card */}
-          <div
-            className="lg:col-span-1 p-6 sm:p-8 transition-all duration-300"
-            style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
-          >
-            <div className="space-y-4">
-              <div
-                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden"
-                style={{ border: '3px solid rgba(201,168,76,0.4)' }}
-              >
-                <img
-                  src={profileImg}
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="text-left space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-semibold text-white">Aldrin B. Tanuan</h3>
-                <p className="text-sm sm:text-base font-medium" style={{ color: '#c9a84c' }}>Frontend Developer · SaaS Sales Executive</p>
-                <p className="text-sm sm:text-base" style={{ color: '#888888' }}>BS Information Technology</p>
-              </div>
-
-              <div className="pt-4 space-y-3 text-left" style={{ borderTop: '1px solid #1e1e1e' }}>
-                {[
-                  { label: 'Age', value: '22' },
-                  { label: 'Address', value: 'Buug Zamboanga Sibugay' },
-                  { label: 'Email', value: 'aldrin.tanuan@sccpag.edu.ph' },
-                ].map(({ label, value }) => (
-                  <div key={label}>
-                    <span className="text-xs uppercase tracking-wider" style={{ color: '#555555' }}>{label}</span>
-                    <p className="text-sm sm:text-base break-all mt-0.5" style={{ color: '#cccccc' }}>{value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
+        <div className="grid grid-cols-1 gap-6 sm:gap-8">
           {/* Skills & Tools */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6">
             {/* Professional Summary */}
             <div
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
