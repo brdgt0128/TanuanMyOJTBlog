@@ -75,59 +75,52 @@ export function Experience() {
           Experience
         </h2>
 
-        <div className="space-y-0">
-          {experiences.map((exp, index) => {
-            const Icon = exp.icon;
-            return (
-              <div key={index} className="relative flex gap-6 pb-10 sm:pb-12">
-                {/* Timeline dot */}
-                <div className="flex-shrink-0 flex flex-col items-center pt-1">
-                  <div
-                    className="w-3 h-3 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: '#c9a84c', boxShadow: '0 0 8px rgba(201,168,76,0.4)' }}
-                  />
-                  {index < experiences.length - 1 && (
-                    <div className="w-px flex-1 mt-2" style={{ backgroundColor: '#1e1e1e' }} />
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 pb-2">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                    <h3 className="text-xl sm:text-2xl font-semibold" style={{ color: '#ffffff' }}>
-                      {exp.title}
-                    </h3>
-                    <span
-                      className="text-xs px-3 py-1.5 rounded-full flex-shrink-0 self-start"
-                      style={{ backgroundColor: '#111111', border: '1px solid #2a2a2a', color: '#888888' }}
-                    >
-                      {exp.period}
-                    </span>
-                  </div>
-
-                  <p className="text-sm font-semibold mb-3" style={{ color: '#c9a84c' }}>
-                    {exp.company}
-                  </p>
-
-                  <p className="text-sm sm:text-base leading-relaxed mb-4" style={{ color: '#888888' }}>
-                    {exp.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-3 py-1 rounded-full"
-                        style={{ backgroundColor: '#111111', border: '1px solid #2a2a2a', color: '#cccccc' }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="p-5 sm:p-6 transition-all duration-300"
+              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
+              }}
+            >
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <h3 className="text-base sm:text-lg font-semibold leading-snug" style={{ color: '#ffffff' }}>
+                  {exp.title}
+                </h3>
+                <span
+                  className="text-xs px-2.5 py-1 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', color: '#888888' }}
+                >
+                  {exp.period}
+                </span>
               </div>
-            );
-          })}
+
+              <p className="text-sm font-semibold mb-3" style={{ color: '#c9a84c' }}>
+                {exp.company}
+              </p>
+
+              <p className="text-sm leading-relaxed mb-4" style={{ color: '#888888' }}>
+                {exp.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {exp.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="text-xs px-2.5 py-1 rounded-full"
+                    style={{ backgroundColor: '#0a0a0a', border: '1px solid #2a2a2a', color: '#cccccc' }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

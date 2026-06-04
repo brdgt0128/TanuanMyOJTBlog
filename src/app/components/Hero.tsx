@@ -88,7 +88,7 @@ export function Hero() {
               />
               {/* Photo circle */}
               <div
-                className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden"
+                className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[480px] md:h-[480px] rounded-full overflow-hidden"
                 style={{ border: '2px solid rgba(201,168,76,0.4)' }}
               >
                 <img
