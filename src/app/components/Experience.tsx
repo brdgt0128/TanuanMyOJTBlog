@@ -5,22 +5,25 @@ export function Experience() {
     {
       title: 'SaaS Sales Executive',
       company: 'Activerse Incorporation',
-      period: '2026',
+      period: '2024 – Present',
       description: 'Drove SaaS product sales by identifying and engaging potential clients, delivering compelling product demos, and closing deals. Built strong client relationships, managed the sales pipeline, and collaborated with the team to exceed revenue targets and expand the customer base.',
+      tags: ['B2B Sales', 'CRM', 'Lead Generation', 'Product Demos', 'Client Relations'],
       icon: TrendingUp,
     },
     {
       title: 'Tech Support Specialist',
       company: 'Activerse Incorporation',
-      period: '2026',
-      description: 'Provided technical support to clients, resolving software and system issues promptly and effectively. Assisted users with onboarding, troubleshooting, and navigating the platform, ensuring a smooth and satisfactory experience while maintaining high customer satisfaction rates.',
+      period: '2023 – 2024',
+      description: 'Provided first and second-line technical support to end users, troubleshooting software issues, account configurations, and system integrations. Documented bug reports and escalated complex tickets to the engineering team. Maintained a high customer satisfaction score by resolving issues promptly and clearly communicating solutions.',
+      tags: ['Troubleshooting', 'Ticketing Systems', 'Software Support', 'Customer Success'],
       icon: Headphones,
     },
     {
       title: 'Product Listing Specialist',
       company: 'Shopify / Activerse Incorporation',
-      period: '2026',
+      period: '2022 – 2023',
       description: 'Managed and optimized product listings on Shopify, ensuring accurate descriptions, high-quality images, and SEO-friendly content. Maintained organized product catalogs, monitored inventory updates, and worked to enhance product visibility and drive conversions through compelling listing strategies.',
+      tags: ['Shopify', 'SEO', 'Product Management', 'E-commerce'],
       icon: ShoppingBag,
     },
     {
@@ -28,127 +31,103 @@ export function Experience() {
       company: 'AI Company',
       period: '2025',
       description: 'Worked as a Game Tester in an AI-driven company, responsible for identifying bugs, evaluating gameplay mechanics, and ensuring overall quality and performance. Collaborated with development teams by providing detailed test reports and feedback to improve user experience and system reliability.',
+      tags: ['QA Testing', 'Bug Reporting', 'Game Mechanics'],
       icon: Briefcase,
     },
     {
       title: 'Frontend Developer',
-      company: 'Online Case Filing Management System for Violence Against Women and Their Children',
+      company: 'Online Case Filing Management System for VAWC',
       period: '2024',
-      description: 'Developed and implemented user-friendly interfaces for the Online Case Filing Management System. Focused on creating responsive layouts, improving usability, and ensuring accessibility for barangay personnel and end-users, contributing to a more efficient and secure case management process.',
+      description: 'Developed and implemented user-friendly interfaces for the Online Case Filing Management System. Focused on creating responsive layouts, improving usability, and ensuring accessibility for barangay personnel and end-users.',
+      tags: ['React', 'TypeScript', 'UI/UX', 'Responsive Design'],
       icon: Briefcase,
     },
     {
       title: 'System Quality Assurance / Tester',
-      company: 'Online Case Filing Management System for Violence Against Women and Their Children',
+      company: 'Online Case Filing Management System for VAWC',
       period: '2024',
-      description: "Performed system testing and quality assurance tasks to ensure the platform's stability, accuracy, and reliability. Conducted functional testing, identified system issues, and verified fixes to maintain high-quality standards throughout the development lifecycle.",
+      description: "Performed system testing and quality assurance tasks to ensure the platform's stability, accuracy, and reliability. Conducted functional testing, identified system issues, and verified fixes to maintain high-quality standards.",
+      tags: ['Testing', 'QA', 'Documentation'],
       icon: Briefcase,
     },
     {
       title: 'System Developer',
       company: 'Boarding House Management System',
       period: '2023',
-      description: 'Participated in the development of a Boarding House Management System by assisting in system design, feature implementation, and database integration. Helped streamline tenant records, payment tracking, and administrative processes through a structured and efficient system.',
+      description: 'Participated in the development of a Boarding House Management System by assisting in system design, feature implementation, and database integration. Helped streamline tenant records, payment tracking, and administrative processes.',
+      tags: ['System Design', 'Database', 'Development'],
       icon: Briefcase,
     },
     {
       title: 'Streamer & Discord Coordinator',
       company: 'Axie Infinity Community',
       period: '2021',
-      description: 'Worked as a content streamer and Discord coordinator for an Axie Infinity community. Managed online interactions, organized community events, moderated discussions, and supported players, strengthening engagement and maintaining an active and organized online community.',
+      description: 'Worked as a content streamer and Discord coordinator for an Axie Infinity community. Managed online interactions, organized community events, moderated discussions, and supported players.',
+      tags: ['Community Management', 'Streaming', 'Discord'],
       icon: Briefcase,
     },
   ];
 
   return (
-    <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#161925', borderTop: '1px solid #1B3145' }}>
+    <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 md:mb-16 text-center" style={{ color: '#c8dae8' }}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
           Experience
         </h2>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div
-            className="absolute left-6 sm:left-8 top-0 bottom-0 w-px hidden sm:block"
-            style={{ background: 'linear-gradient(to bottom, #1F4964, #1B3145, transparent)' }}
-          />
+        <div className="space-y-0">
+          {experiences.map((exp, index) => {
+            const Icon = exp.icon;
+            return (
+              <div key={index} className="relative flex gap-6 pb-10 sm:pb-12">
+                {/* Timeline dot */}
+                <div className="flex-shrink-0 flex flex-col items-center pt-1">
+                  <div
+                    className="w-3 h-3 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: '#c9a84c', boxShadow: '0 0 8px rgba(201,168,76,0.4)' }}
+                  />
+                  {index < experiences.length - 1 && (
+                    <div className="w-px flex-1 mt-2" style={{ backgroundColor: '#1e1e1e' }} />
+                  )}
+                </div>
 
-          <div className="space-y-6 sm:space-y-8">
-            {experiences.map((exp, index) => {
-              const Icon = exp.icon;
-              return (
-                <div key={index} className="relative flex gap-4 sm:gap-6 group">
-                  {/* Timeline dot + icon */}
-                  <div className="flex-shrink-0 hidden sm:flex flex-col items-center z-10">
-                    <div
-                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-300"
-                      style={{ border: '2px solid #2B334C', backgroundColor: '#1B3145' }}
-                      onMouseEnter={e => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
-                        (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(31,73,100,0.3)';
-                      }}
-                      onMouseLeave={e => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
-                        (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1B3145';
-                      }}
+                {/* Content */}
+                <div className="flex-1 pb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-semibold" style={{ color: '#ffffff' }}>
+                      {exp.title}
+                    </h3>
+                    <span
+                      className="text-xs px-3 py-1.5 rounded-full flex-shrink-0 self-start"
+                      style={{ backgroundColor: '#111111', border: '1px solid #2a2a2a', color: '#888888' }}
                     >
-                      <Icon className="w-6 h-6 transition-colors duration-300" style={{ color: '#3a6a88' }} />
-                    </div>
+                      {exp.period}
+                    </span>
                   </div>
 
-                  {/* Card */}
-                  <div
-                    className="flex-1 p-4 sm:p-6 md:p-8 transition-all duration-300 rounded-sm"
-                    style={{
-                      backgroundColor: '#1B3145',
-                      border: '1px solid #2B334C',
-                      borderLeft: '3px solid #1F4964',
-                    }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
-                      (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1d3a55';
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
-                      (e.currentTarget as HTMLDivElement).style.borderLeftColor = '#1F4964';
-                      (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1B3145';
-                    }}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-3 sm:mb-4">
-                      <div>
-                        {/* Mobile icon */}
-                        <div className="flex items-center gap-3 mb-2 sm:hidden">
-                          <div
-                            className="w-8 h-8 rounded-full flex items-center justify-center"
-                            style={{ border: '1px solid #1F4964', backgroundColor: '#161925' }}
-                          >
-                            <Icon className="w-4 h-4" style={{ color: '#1F4964' }} />
-                          </div>
-                        </div>
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-white leading-tight">
-                          {exp.title}
-                        </h3>
-                        <p className="text-sm sm:text-base mt-1 break-words" style={{ color: '#7ec8de' }}>
-                          {exp.company}
-                        </p>
-                      </div>
-                      <div
-                        className="flex items-center gap-2 text-xs sm:text-sm px-3 py-1.5 flex-shrink-0 self-start rounded-sm"
-                        style={{ backgroundColor: '#312840', border: '1px solid #2B334C', color: '#7a9ab5' }}
+                  <p className="text-sm font-semibold mb-3" style={{ color: '#c9a84c' }}>
+                    {exp.company}
+                  </p>
+
+                  <p className="text-sm sm:text-base leading-relaxed mb-4" style={{ color: '#888888' }}>
+                    {exp.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1 rounded-full"
+                        style={{ backgroundColor: '#111111', border: '1px solid #2a2a2a', color: '#cccccc' }}
                       >
-                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <span>{exp.period}</span>
-                      </div>
-                    </div>
-                    <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#5a7d96' }}>
-                      {exp.description}
-                    </p>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

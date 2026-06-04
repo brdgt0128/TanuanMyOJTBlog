@@ -133,9 +133,9 @@ export function BlogEntries() {
   ];
 
   return (
-    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0e1420', borderTop: '1px solid #1B3145' }}>
+    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0d0d0d', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 md:mb-16 text-center" style={{ color: '#c8dae8' }}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
           Blog Entries
         </h2>
 
@@ -143,14 +143,14 @@ export function BlogEntries() {
           {posts.map((post, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-sm transition-all duration-300 cursor-pointer group hover:-translate-y-1"
-              style={{ backgroundColor: '#1B3145', border: '1px solid #2B334C' }}
+              className="overflow-hidden transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(31,73,100,0.2)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(201,168,76,0.08)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
             >
@@ -163,7 +163,7 @@ export function BlogEntries() {
               </div>
 
               <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
-                <div className="flex items-center gap-2 text-xs" style={{ color: '#3a6a88' }}>
+                <div className="flex items-center gap-2 text-xs" style={{ color: '#555555' }}>
                   <Calendar className="w-3 h-3" />
                   <span>{post.date}</span>
                 </div>
@@ -171,7 +171,7 @@ export function BlogEntries() {
                 <h3
                   className="text-sm sm:text-base font-medium leading-snug transition-colors duration-300 min-h-[40px] sm:min-h-[44px]"
                   style={{
-                    color: '#c8dae8',
+                    color: '#ffffff',
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: 'vertical',
@@ -184,7 +184,7 @@ export function BlogEntries() {
                 <p
                   className="text-xs leading-relaxed"
                   style={{
-                    color: '#4a6a80',
+                    color: '#888888',
                     display: '-webkit-box',
                     WebkitLineClamp: 4,
                     WebkitBoxOrient: 'vertical',

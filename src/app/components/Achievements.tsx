@@ -33,9 +33,9 @@ export function Achievements() {
   ];
 
   return (
-    <section className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#161925', borderTop: '1px solid #1B3145' }}>
+    <section className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 md:mb-16 text-center" style={{ color: '#c8dae8' }}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
           Achievements & Recognition
         </h2>
 
@@ -45,41 +45,41 @@ export function Achievements() {
             return (
               <div
                 key={index}
-                className="p-5 sm:p-6 md:p-8 transition-all duration-300 rounded-sm group"
-                style={{ backgroundColor: '#1B3145', border: '1px solid #2B334C' }}
+                className="p-5 sm:p-6 md:p-8 transition-all duration-300 group"
+                style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1d3a55';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#161616';
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1B3145';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#111111';
                 }}
               >
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start justify-between">
                     <div
-                      className="p-2.5 sm:p-3 rounded-sm transition-colors duration-300"
-                      style={{ backgroundColor: 'rgba(31,73,100,0.25)', border: '1px solid rgba(31,73,100,0.4)' }}
+                      className="p-2.5 sm:p-3 transition-colors duration-300"
+                      style={{ backgroundColor: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)' }}
                     >
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#1F4964' }} />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#c9a84c' }} />
                     </div>
                     <span
                       className="text-xs sm:text-sm px-3 py-1 rounded-full"
-                      style={{ color: '#4a6a80', backgroundColor: '#312840', border: '1px solid #2B334C' }}
+                      style={{ color: '#888888', backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a' }}
                     >
                       {achievement.year}
                     </span>
                   </div>
 
                   <div className="space-y-2 sm:space-y-3">
-                    <p className="text-xs sm:text-sm uppercase tracking-wider font-medium" style={{ color: '#7ec8de' }}>
+                    <p className="text-xs sm:text-sm uppercase tracking-wider font-medium" style={{ color: '#c9a84c' }}>
                       {achievement.category}
                     </p>
-                    <h3 className="text-base sm:text-lg md:text-xl font-medium leading-tight" style={{ color: '#c8dae8' }}>
+                    <h3 className="text-base sm:text-lg md:text-xl font-medium leading-tight" style={{ color: '#ffffff' }}>
                       {achievement.title}
                     </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#4a6a80' }}>
+                    <p className="text-sm leading-relaxed" style={{ color: '#888888' }}>
                       {achievement.description}
                     </p>
                   </div>

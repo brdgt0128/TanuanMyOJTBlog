@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Code2, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,10 +22,10 @@ export function Navigation() {
   };
 
   const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'About Me', id: 'about' },
+    { name: 'About', id: 'about' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Blog Entries', id: 'blog' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Blog', id: 'blog' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -33,10 +33,9 @@ export function Navigation() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: isScrolled || isMobileMenuOpen ? 'rgba(22,25,37,0.97)' : 'transparent',
+        backgroundColor: isScrolled || isMobileMenuOpen ? 'rgba(10,10,10,0.97)' : 'transparent',
         backdropFilter: isScrolled || isMobileMenuOpen ? 'blur(12px)' : 'none',
-        borderBottom: isScrolled || isMobileMenuOpen ? '1px solid #1B3145' : 'none',
-        boxShadow: isScrolled || isMobileMenuOpen ? '0 4px 24px rgba(0,0,0,0.4)' : 'none',
+        borderBottom: isScrolled || isMobileMenuOpen ? '1px solid #1e1e1e' : 'none',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
@@ -45,10 +44,7 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-2 transition-colors duration-300"
           >
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#1F4964' }}>
-              <Code2 className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-base sm:text-lg font-semibold text-white">DevPortfolio</span>
+            <span className="text-lg sm:text-xl font-bold tracking-wider" style={{ color: '#c9a84c' }}>BT</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -57,15 +53,13 @@ export function Navigation() {
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm xl:text-base transition-all duration-300 px-4 py-2 rounded-md whitespace-nowrap"
-                  style={{ color: '#7a9ab5' }}
+                  className="text-xs sm:text-sm font-medium tracking-widest uppercase transition-all duration-300 px-4 py-2"
+                  style={{ color: '#ffffff' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1B3145';
+                    (e.currentTarget as HTMLButtonElement).style.color = '#c9a84c';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLButtonElement).style.color = '#7a9ab5';
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
+                    (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
                   }}
                 >
                   {item.name}
@@ -78,7 +72,7 @@ export function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden transition-colors duration-300 p-2 -mr-2"
-            style={{ color: '#7a9ab5' }}
+            style={{ color: '#ffffff' }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -91,21 +85,19 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-2 pb-4 animate-in slide-in-from-top-2" style={{ borderTop: '1px solid #1B3145' }}>
+          <div className="lg:hidden mt-2 pb-4" style={{ borderTop: '1px solid #1e1e1e' }}>
             <ul className="flex flex-col gap-1 pt-4">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="w-full text-left text-base transition-all duration-300 py-3 px-3 rounded-md"
-                    style={{ color: '#7a9ab5' }}
+                    className="w-full text-left text-sm font-medium tracking-widest uppercase transition-all duration-300 py-3 px-3"
+                    style={{ color: '#ffffff' }}
                     onMouseEnter={e => {
-                      (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
-                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1B3145';
+                      (e.currentTarget as HTMLButtonElement).style.color = '#c9a84c';
                     }}
                     onMouseLeave={e => {
-                      (e.currentTarget as HTMLButtonElement).style.color = '#7a9ab5';
-                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
+                      (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
                     }}
                   >
                     {item.name}
