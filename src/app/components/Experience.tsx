@@ -5,7 +5,7 @@ export function Experience() {
     {
       title: 'SaaS Sales Executive',
       company: 'Activerse Incorporation',
-      period: '2024 – Present',
+      period: '2025',
       description: 'Drove SaaS product sales by identifying and engaging potential clients, delivering compelling product demos, and closing deals. Built strong client relationships, managed the sales pipeline, and collaborated with the team to exceed revenue targets and expand the customer base.',
       tags: ['B2B Sales', 'CRM', 'Lead Generation', 'Product Demos', 'Client Relations'],
       icon: TrendingUp,
