@@ -7,7 +7,7 @@ export function Achievements() {
       category: 'Research Festival 2025',
       year: '2025',
       title: '2nd Best in Capstone Research',
-      description: 'Developed an Online Case Filing System for Violence Against Women and Children (VAWC), recognized for innovation and practical application. Also received Best in Booth Setup and People\'s Choice Award for presentation and engagement.',
+      description: "Developed an Online Case Filing System for Violence Against Women and Children (VAWC), recognized for innovation and practical application. Also received Best in Booth Setup and People's Choice Award for presentation and engagement.",
     },
     {
       icon: Award,
@@ -33,9 +33,9 @@ export function Achievements() {
   ];
 
   return (
-    <section className="min-h-screen bg-[#0a0a0a] py-12 sm:py-16 md:py-24 border-t border-[#1a1a1a]">
+    <section className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#161925', borderTop: '1px solid #1B3145' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#CECECE] mb-8 sm:mb-12 md:mb-16 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 md:mb-16 text-center" style={{ color: '#c8dae8' }}>
           Achievements & Recognition
         </h2>
 
@@ -45,29 +45,41 @@ export function Achievements() {
             return (
               <div
                 key={index}
-                className="bg-[#111111] p-5 sm:p-6 md:p-8 border border-[#222]
-                         hover:border-[#6366F1]/50 hover:bg-[#111622]
-                         transition-all duration-300 rounded-sm group"
+                className="p-5 sm:p-6 md:p-8 transition-all duration-300 rounded-sm group"
+                style={{ backgroundColor: '#1B3145', border: '1px solid #2B334C' }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1d3a55';
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1B3145';
+                }}
               >
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start justify-between">
-                    <div className="bg-[#6366F1]/10 p-2.5 sm:p-3 border border-[#6366F1]/20 rounded-sm
-                                  group-hover:bg-[#6366F1]/20 transition-colors duration-300">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#6366F1]" />
+                    <div
+                      className="p-2.5 sm:p-3 rounded-sm transition-colors duration-300"
+                      style={{ backgroundColor: 'rgba(31,73,100,0.25)', border: '1px solid rgba(31,73,100,0.4)' }}
+                    >
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#1F4964' }} />
                     </div>
-                    <span className="text-xs sm:text-sm text-[#555] bg-[#1a1a1a] border border-[#222] px-3 py-1 rounded-full">
+                    <span
+                      className="text-xs sm:text-sm px-3 py-1 rounded-full"
+                      style={{ color: '#4a6a80', backgroundColor: '#312840', border: '1px solid #2B334C' }}
+                    >
                       {achievement.year}
                     </span>
                   </div>
 
                   <div className="space-y-2 sm:space-y-3">
-                    <p className="text-xs sm:text-sm text-[#6366F1] uppercase tracking-wider font-medium">
+                    <p className="text-xs sm:text-sm uppercase tracking-wider font-medium" style={{ color: '#7ec8de' }}>
                       {achievement.category}
                     </p>
-                    <h3 className="text-base sm:text-lg md:text-xl text-white leading-tight font-medium">
+                    <h3 className="text-base sm:text-lg md:text-xl font-medium leading-tight" style={{ color: '#c8dae8' }}>
                       {achievement.title}
                     </h3>
-                    <p className="text-sm text-[#777] leading-relaxed">
+                    <p className="text-sm leading-relaxed" style={{ color: '#4a6a80' }}>
                       {achievement.description}
                     </p>
                   </div>

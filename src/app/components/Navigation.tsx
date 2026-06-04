@@ -17,7 +17,7 @@ export function Navigation() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // Close mobile menu after clicking
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -31,19 +31,21 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen
-          ? 'bg-[#000000]/95 backdrop-blur-sm border-b border-[#1a1a1a] shadow-lg shadow-black/50'
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: isScrolled || isMobileMenuOpen ? 'rgba(22,25,37,0.97)' : 'transparent',
+        backdropFilter: isScrolled || isMobileMenuOpen ? 'blur(12px)' : 'none',
+        borderBottom: isScrolled || isMobileMenuOpen ? '1px solid #1B3145' : 'none',
+        boxShadow: isScrolled || isMobileMenuOpen ? '0 4px 24px rgba(0,0,0,0.4)' : 'none',
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-2 transition-colors duration-300 group"
+            className="flex items-center gap-2 transition-colors duration-300"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#6366F1] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#1F4964' }}>
               <Code2 className="w-4 h-4 text-white" />
             </div>
             <span className="text-base sm:text-lg font-semibold text-white">DevPortfolio</span>
@@ -55,8 +57,16 @@ export function Navigation() {
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm xl:text-base text-[#919191] hover:text-white hover:bg-[#1a1a1a]
-                           transition-all duration-300 px-4 py-2 rounded-md whitespace-nowrap"
+                  className="text-sm xl:text-base transition-all duration-300 px-4 py-2 rounded-md whitespace-nowrap"
+                  style={{ color: '#7a9ab5' }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
+                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1B3145';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLButtonElement).style.color = '#7a9ab5';
+                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
+                  }}
                 >
                   {item.name}
                 </button>
@@ -67,7 +77,8 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-[#CECECE] hover:text-white transition-colors duration-300 p-2 -mr-2"
+            className="lg:hidden transition-colors duration-300 p-2 -mr-2"
+            style={{ color: '#7a9ab5' }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -80,13 +91,22 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-2 pb-4 border-t border-[#1e1e1e] animate-in slide-in-from-top-2">
+          <div className="lg:hidden mt-2 pb-4 animate-in slide-in-from-top-2" style={{ borderTop: '1px solid #1B3145' }}>
             <ul className="flex flex-col gap-1 pt-4">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="w-full text-left text-base text-[#CECECE] hover:text-white hover:bg-[#1a1a1a] transition-all duration-300 py-3 px-3 rounded-md"
+                    className="w-full text-left text-base transition-all duration-300 py-3 px-3 rounded-md"
+                    style={{ color: '#7a9ab5' }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#1B3145';
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLButtonElement).style.color = '#7a9ab5';
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent';
+                    }}
                   >
                     {item.name}
                   </button>

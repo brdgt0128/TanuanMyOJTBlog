@@ -133,9 +133,9 @@ export function BlogEntries() {
   ];
 
   return (
-    <section id="blog" className="min-h-screen bg-[#000000] py-12 sm:py-16 md:py-24 border-t border-[#1a1a1a]">
+    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0e1420', borderTop: '1px solid #1B3145' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#CECECE] mb-8 sm:mb-12 md:mb-16 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 md:mb-16 text-center" style={{ color: '#c8dae8' }}>
           Blog Entries
         </h2>
 
@@ -143,9 +143,16 @@ export function BlogEntries() {
           {posts.map((post, index) => (
             <div
               key={index}
-              className="bg-[#111111] border border-[#1e1e1e] overflow-hidden rounded-sm
-                       hover:border-[#6366F1]/50 hover:shadow-lg hover:shadow-[#6366F1]/5 hover:-translate-y-1
-                       transition-all duration-300 cursor-pointer group"
+              className="overflow-hidden rounded-sm transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+              style={{ backgroundColor: '#1B3145', border: '1px solid #2B334C' }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#1F4964';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(31,73,100,0.2)';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#2B334C';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+              }}
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -156,14 +163,15 @@ export function BlogEntries() {
               </div>
 
               <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
-                <div className="flex items-center gap-2 text-xs text-[#555]">
+                <div className="flex items-center gap-2 text-xs" style={{ color: '#3a6a88' }}>
                   <Calendar className="w-3 h-3" />
                   <span>{post.date}</span>
                 </div>
 
                 <h3
-                  className="text-sm sm:text-base text-white group-hover:text-[#a5b4fc] transition-colors duration-300 min-h-[40px] sm:min-h-[44px] font-medium leading-snug"
+                  className="text-sm sm:text-base font-medium leading-snug transition-colors duration-300 min-h-[40px] sm:min-h-[44px]"
                   style={{
+                    color: '#c8dae8',
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: 'vertical',
@@ -174,8 +182,9 @@ export function BlogEntries() {
                 </h3>
 
                 <p
-                  className="text-[#666] text-xs leading-relaxed"
+                  className="text-xs leading-relaxed"
                   style={{
+                    color: '#4a6a80',
                     display: '-webkit-box',
                     WebkitLineClamp: 4,
                     WebkitBoxOrient: 'vertical',
