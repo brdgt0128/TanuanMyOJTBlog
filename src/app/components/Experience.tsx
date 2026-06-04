@@ -1,7 +1,15 @@
-import { Briefcase, Calendar, ShoppingBag, Headphones, TrendingUp } from 'lucide-react';
+import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-react';
 
 export function Experience() {
   const experiences = [
+    {
+      title: 'Web Developer',
+      company: 'Activerse Incorporation',
+      period: '2026',
+      description: 'Developed and maintained web applications and landing pages for clients. Built responsive interfaces using modern frontend technologies, collaborated with the design team to implement UI/UX improvements, and ensured cross-browser compatibility and performance optimization.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive Design'],
+      icon: Globe,
+    },
     {
       title: 'SaaS Sales Executive',
       company: 'Activerse Incorporation',
@@ -75,7 +83,7 @@ export function Experience() {
           Experience
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {experiences.map((exp, index) => (
             <div
               key={index}
