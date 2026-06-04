@@ -80,18 +80,11 @@ export function Hero() {
 
           {/* Right: Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative w-80 sm:w-96 md:w-[480px]">
+            <div className="w-80 sm:w-96 md:w-[480px]">
               <img
                 src={profileImg}
                 alt="Aldrin B. Tanuan"
                 className="w-full h-auto object-contain"
-                style={{
-                  maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)',
-                  maskComposite: 'intersect',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)',
-                  WebkitMaskComposite: 'source-in',
-                  filter: 'drop-shadow(0 0 40px rgba(201,168,76,0.08))',
-                }}
               />
             </div>
           </div>
