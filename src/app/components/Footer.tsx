@@ -20,27 +20,32 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" className="bg-[#000000] border-t border-[#474747] py-8 sm:py-12 md:py-16">
+    <footer id="contact" className="bg-[#000000] border-t border-[#1a1a1a] py-10 sm:py-14 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-10 md:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-xl sm:text-2xl text-white">DevPortfolio</h3>
-            <p className="text-sm sm:text-base text-[#919191] leading-relaxed">
-              A personal blog documenting my journey as a software developer, 
-              sharing insights, projects, and experiences along the way.
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-lg bg-[#6366F1] flex items-center justify-center">
+                <span className="text-white text-xs font-bold">AT</span>
+              </div>
+              <h3 className="text-lg sm:text-xl text-white font-semibold">DevPortfolio</h3>
+            </div>
+            <p className="text-sm text-[#555] leading-relaxed">
+              A personal portfolio documenting my journey as a frontend developer and
+              SaaS professional, sharing projects and real-world experiences.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-lg sm:text-xl text-white">Quick Links</h3>
+            <h3 className="text-sm text-[#777] uppercase tracking-wider font-medium">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About Me', 'Blog', 'Contact'].map((link) => (
+              {['Home', 'About Me', 'Experience', 'Blog', 'Contact'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(' ', '-')}`}
-                    className="text-sm sm:text-base text-[#919191] hover:text-white transition-colors duration-300"
+                    className="text-sm text-[#555] hover:text-[#a5b4fc] transition-colors duration-300"
                   >
                     {link}
                   </a>
@@ -51,16 +56,16 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-lg sm:text-xl text-white">Get in Touch</h3>
-            <a 
+            <h3 className="text-sm text-[#777] uppercase tracking-wider font-medium">Get in Touch</h3>
+            <a
               href="mailto:aldrin.tanuan@sccpag.edu.ph"
-              className="flex items-center gap-2 text-sm sm:text-base text-[#919191] hover:text-white transition-colors duration-300 cursor-pointer break-all"
+              className="flex items-center gap-2 text-sm text-[#555] hover:text-[#a5b4fc] transition-colors duration-300 break-all"
             >
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+              <Mail className="w-4 h-4 flex-shrink-0 text-[#6366F1]" />
               <span>aldrin.tanuan@sccpag.edu.ph</span>
             </a>
 
-            <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
+            <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -69,12 +74,12 @@ export function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#353535] p-2.5 sm:p-3 border border-[#474747] 
-                             hover:border-[#919191] hover:bg-[#474747] hover:scale-110 
-                             transition-all duration-300"
+                    className="bg-[#111] p-2.5 border border-[#222]
+                             hover:border-[#6366F1]/50 hover:bg-[#6366F1]/10 hover:scale-110
+                             transition-all duration-300 rounded-sm"
                     aria-label={social.name}
                   >
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#CECECE]" />
+                    <Icon className="w-4 h-4 text-[#777] hover:text-[#a5b4fc]" />
                   </a>
                 );
               })}
@@ -83,10 +88,11 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 sm:pt-8 border-t border-[#474747] flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
-          <p className="text-xs sm:text-sm text-[#919191] text-center md:text-left">
-            © 2025 DevPortfolio. All rights reserved.
+        <div className="pt-6 border-t border-[#111] flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-[#444] text-center md:text-left">
+            © 2026 Aldrin B. Tanuan · All rights reserved.
           </p>
+          <p className="text-xs text-[#333]">Built with React & Tailwind CSS</p>
         </div>
       </div>
     </footer>

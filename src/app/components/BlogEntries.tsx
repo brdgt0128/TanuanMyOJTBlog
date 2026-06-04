@@ -133,38 +133,36 @@ export function BlogEntries() {
   ];
 
   return (
-    <section id="blog" className="min-h-screen bg-[#353535] py-12 sm:py-16 md:py-24">
+    <section id="blog" className="min-h-screen bg-[#000000] py-12 sm:py-16 md:py-24 border-t border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#CECECE] mb-8 sm:mb-12 md:mb-16 text-center">
           Blog Entries
         </h2>
 
-        <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {posts.map((post, index) => (
             <div
               key={index}
-              className="bg-[#474747] border border-[#919191] overflow-hidden 
-                       hover:border-[#CECECE] hover:scale-105 
+              className="bg-[#111111] border border-[#1e1e1e] overflow-hidden rounded-sm
+                       hover:border-[#6366F1]/50 hover:shadow-lg hover:shadow-[#6366F1]/5 hover:-translate-y-1
                        transition-all duration-300 cursor-pointer group"
             >
               <div className="aspect-video overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              
-              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4 bg-[#353535]">
-                <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-[#919191]">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>{post.date}</span>
-                  </div>
+
+              <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
+                <div className="flex items-center gap-2 text-xs text-[#555]">
+                  <Calendar className="w-3 h-3" />
+                  <span>{post.date}</span>
                 </div>
-                
+
                 <h3
-                  className="text-lg sm:text-xl text-white group-hover:text-[#CECECE] transition-colors duration-300 min-h-[56px] sm:min-h-[64px]"
+                  className="text-sm sm:text-base text-white group-hover:text-[#a5b4fc] transition-colors duration-300 min-h-[40px] sm:min-h-[44px] font-medium leading-snug"
                   style={{
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
@@ -174,12 +172,12 @@ export function BlogEntries() {
                 >
                   {post.title}
                 </h3>
-                
+
                 <p
-                  className="text-[#CECECE] text-xs sm:text-sm leading-relaxed"
+                  className="text-[#666] text-xs leading-relaxed"
                   style={{
                     display: '-webkit-box',
-                    WebkitLineClamp: 5,
+                    WebkitLineClamp: 4,
                     WebkitBoxOrient: 'vertical',
                     overflow: 'hidden',
                   }}

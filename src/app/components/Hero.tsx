@@ -1,38 +1,63 @@
-import { Download, ArrowDown } from 'lucide-react';
+import { ArrowDown, ChevronRight } from 'lucide-react';
 
 export function Hero() {
-  const scrollToBlog = () => {
-    const element = document.getElementById('blog');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-[#000000] pt-20 sm:pt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-        <div className="space-y-4 sm:space-y-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#CECECE] leading-tight">
-            Hi, I'm <span className="text-white">Aldrin B. Tanuan</span>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-[#000000] pt-20 sm:pt-24 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#6366F1] opacity-[0.04] rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="space-y-5 sm:space-y-7">
+          {/* Eyebrow tag */}
+          <div className="inline-flex items-center gap-2 border border-[#6366F1]/40 bg-[#6366F1]/10 text-[#a5b4fc] text-xs sm:text-sm px-4 py-1.5 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1] animate-pulse" />
+            Available for opportunities
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+            <span className="text-[#CECECE]">Hi, I'm </span>
+            <span
+              className="text-transparent bg-clip-text"
+              style={{ backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366F1 100%)' }}
+            >
+              Aldrin B. Tanuan
+            </span>
           </h1>
-          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#919191]">
-            A Frontend Developer
+
+          <p className="text-xl sm:text-2xl md:text-3xl text-[#919191] font-light">
+            Frontend Developer <span className="text-[#6366F1]">&</span> SaaS Sales Executive
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#919191] max-w-3xl mx-auto leading-relaxed px-4">
-            Passionate about building clean and functional digital experiences. 
-            This blog documents my journey through my practicum and the continuous 
+
+          <p className="text-base sm:text-lg text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed px-4">
+            Passionate about building clean and functional digital experiences.
+            This portfolio documents my journey through my practicum and the continuous
             learning that comes with being a developer.
           </p>
 
-          <div className="flex items-center justify-center gap-4 sm:gap-6 pt-6 sm:pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 sm:pt-8">
             <button
-              onClick={scrollToBlog}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-[#353535] text-sm sm:text-base text-[#CECECE] border border-[#474747] 
-                       hover:bg-[#474747] hover:border-[#919191] hover:scale-105 
+              onClick={() => scrollTo('experience')}
+              className="px-7 py-3.5 text-sm sm:text-base text-white font-medium flex items-center gap-2
+                       transition-all duration-300 hover:gap-3 hover:opacity-90"
+              style={{ background: 'linear-gradient(135deg, #6366F1, #4f46e5)' }}
+            >
+              View Experience
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => scrollTo('blog')}
+              className="px-7 py-3.5 bg-transparent text-sm sm:text-base text-[#CECECE] border border-[#333]
+                       hover:border-[#6366F1] hover:text-white
                        transition-all duration-300 flex items-center gap-2"
             >
               View My Blog
-              <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ArrowDown className="w-4 h-4" />
             </button>
           </div>
         </div>
