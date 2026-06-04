@@ -1,5 +1,5 @@
 import { ChevronRight, Download } from 'lucide-react';
-import profileImg from '../../assets/34f594899b925642a0558dcc467c890c89fdbc95.png';
+import profileImg from '../../assets/graduation-photo.jpg';
 
 export function Hero() {
   const scrollTo = (id: string) => {
