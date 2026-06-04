@@ -1,5 +1,5 @@
 import { ChevronRight, Download } from 'lucide-react';
-import profileImg from '../../assets/graduation-photo.jpg';
+import profileImg from '../../assets/nobg.png';
 
 export function Hero() {
   const scrollTo = (id: string) => {
@@ -80,27 +80,18 @@ export function Hero() {
 
           {/* Right: Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative">
-              {/* Glow ring */}
-              <div
-                className="absolute inset-0 rounded-full blur-xl"
-                style={{ backgroundColor: 'rgba(201,168,76,0.15)', transform: 'scale(1.1)' }}
-              />
-              {/* Photo circle */}
-              <div
-                className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[480px] md:h-[480px] rounded-full overflow-hidden"
-                style={{ border: '2px solid rgba(201,168,76,0.4)' }}
-              >
-                <img
-                  src={profileImg}
-                  alt="Aldrin B. Tanuan"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              {/* Subtle outer ring */}
-              <div
-                className="absolute inset-0 rounded-full pointer-events-none"
-                style={{ border: '1px solid rgba(201,168,76,0.15)', transform: 'scale(1.06)' }}
+            <div className="relative w-80 sm:w-96 md:w-[480px]">
+              <img
+                src={profileImg}
+                alt="Aldrin B. Tanuan"
+                className="w-full h-auto object-contain"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)',
+                  WebkitMaskComposite: 'source-in',
+                  filter: 'drop-shadow(0 0 40px rgba(201,168,76,0.08))',
+                }}
               />
             </div>
           </div>
