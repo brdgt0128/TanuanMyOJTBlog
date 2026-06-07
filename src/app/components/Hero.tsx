@@ -1,5 +1,6 @@
 import { ChevronRight, Download } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import idPhoto from '../../assets/newbg.png';
 
 const ROLES = [
   'Web Developer',
@@ -50,10 +51,10 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
-        <div className="flex items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[85vh]">
 
-          {/* Text Content */}
-          <div className="space-y-5 sm:space-y-6 max-w-2xl">
+          {/* Left: Text Content */}
+          <div className="space-y-5 sm:space-y-6 order-2 lg:order-1">
             <div
               className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border"
               style={{ borderColor: '#2a2a2a', backgroundColor: '#111111', color: '#888888' }}
@@ -66,16 +67,11 @@ export function Hero() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Hi, I'm <span style={{ color: '#c9a84c' }}>Aldrin!</span>
               </h1>
-
-              {/* Typewriter line */}
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug flex items-center gap-1" style={{ color: '#ffffff', minHeight: '2.5rem' }}>
                 <span style={{ color: '#c9a84c' }}>{typedRole}</span>
                 <span
                   className="inline-block w-0.5 h-7 sm:h-8 md:h-9 ml-0.5"
-                  style={{
-                    backgroundColor: '#c9a84c',
-                    animation: 'blink 1s step-end infinite',
-                  }}
+                  style={{ backgroundColor: '#c9a84c', animation: 'blink 1s step-end infinite' }}
                 />
               </h2>
             </div>
@@ -139,6 +135,89 @@ export function Hero() {
             </div>
           </div>
 
+          {/* Right: Swinging ID Card */}
+          <div className="flex justify-center lg:justify-end items-start order-1 lg:order-2 pt-10 lg:pt-16">
+            <div style={{ animation: 'idSwing 4s ease-in-out infinite', transformOrigin: 'top center' }}>
+
+              {/* Lanyard string + clip */}
+              <div className="flex flex-col items-center">
+                {/* String */}
+                <div className="w-px h-16" style={{ background: 'linear-gradient(to bottom, transparent, #c9a84c 30%, #a07830)' }} />
+
+                {/* Clip */}
+                <div
+                  className="w-6 h-5 flex items-center justify-center"
+                  style={{
+                    background: 'linear-gradient(180deg, #d4b060 0%, #a07830 100%)',
+                    clipPath: 'polygon(20% 0%, 80% 0%, 100% 30%, 100% 70%, 80% 100%, 20% 100%, 0% 70%, 0% 30%)',
+                    boxShadow: '0 2px 6px rgba(0,0,0,0.5)',
+                  }}
+                />
+
+                {/* ID Card */}
+                <div
+                  className="w-52 sm:w-60 overflow-hidden"
+                  style={{
+                    backgroundColor: '#f5f5f0',
+                    border: '2px solid #d4b060',
+                    borderRadius: '8px',
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.6), 0 4px 20px rgba(201,168,76,0.2)',
+                  }}
+                >
+                  {/* Card header */}
+                  <div
+                    className="px-3 py-2 flex items-center gap-2"
+                    style={{ background: 'linear-gradient(135deg, #1a0a00 0%, #3d1f00 100%)' }}
+                  >
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#c9a84c' }}>
+                      <span className="text-xs font-black text-black">SCC</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-bold leading-tight" style={{ fontSize: '8px', letterSpacing: '0.5px' }}>SAINT COLUMBAN COLLEGE</p>
+                      <p style={{ fontSize: '7px', color: '#c9a84c', letterSpacing: '0.3px' }}>Pagadian City, Philippines</p>
+                    </div>
+                  </div>
+
+                  {/* ID label */}
+                  <div className="text-center py-1" style={{ backgroundColor: '#c9a84c' }}>
+                    <span className="font-black tracking-widest text-black" style={{ fontSize: '8px' }}>STUDENT ID</span>
+                  </div>
+
+                  {/* Photo */}
+                  <div className="flex justify-center pt-3 pb-2 px-3" style={{ backgroundColor: '#f5f5f0' }}>
+                    <div
+                      className="overflow-hidden"
+                      style={{
+                        width: '120px',
+                        height: '145px',
+                        border: '2px solid #c9a84c',
+                      }}
+                    >
+                      <img
+                        src={idPhoto}
+                        alt="Aldrin B. Tanuan"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Info */}
+                  <div className="px-3 pb-3 text-center" style={{ backgroundColor: '#f5f5f0' }}>
+                    <p className="font-black tracking-wide text-black" style={{ fontSize: '11px' }}>TANUAN, ALDRIN B.</p>
+                    <p className="font-medium mt-0.5" style={{ fontSize: '8px', color: '#555555' }}>Bachelor of Science in</p>
+                    <p className="font-bold" style={{ fontSize: '8px', color: '#333333' }}>Information Technology</p>
+                    <div className="mt-2 pt-2" style={{ borderTop: '1px solid #ddd' }}>
+                      <p className="font-medium" style={{ fontSize: '7px', color: '#888888' }}>S.Y. 2025 – 2026</p>
+                    </div>
+                  </div>
+
+                  {/* Card footer bar */}
+                  <div className="h-2" style={{ background: 'linear-gradient(90deg, #1a0a00, #c9a84c, #1a0a00)' }} />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -146,6 +225,11 @@ export function Hero() {
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
+        }
+        @keyframes idSwing {
+          0%   { transform: rotate(-8deg); }
+          50%  { transform: rotate(8deg); }
+          100% { transform: rotate(-8deg); }
         }
       `}</style>
     </section>
