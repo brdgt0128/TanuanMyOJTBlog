@@ -3,6 +3,14 @@ import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-re
 export function Experience() {
   const experiences = [
     {
+      title: 'Claude Developer',
+      company: 'Activerse Incorporation',
+      period: '2026',
+      description: 'Leveraged Anthropic\'s Claude AI to build and integrate intelligent features into business workflows. Developed AI-assisted tools, automated content generation pipelines, and implemented Claude-powered support and sales assistants to enhance team productivity and client experience.',
+      tags: ['Claude AI', 'Anthropic', 'AI Integration', 'Prompt Engineering', 'Automation'],
+      icon: Globe,
+    },
+    {
       title: 'Web Developer',
       company: 'Activerse Incorporation',
       period: '2026',

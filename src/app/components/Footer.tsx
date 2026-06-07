@@ -47,14 +47,14 @@ export function Footer() {
           <div className="space-y-3 sm:space-y-4">
             <h3 className="text-xs uppercase tracking-widest font-medium" style={{ color: '#555555' }}>Get in Touch</h3>
             <a
-              href="mailto:aldrin.tanuan@sccpag.edu.ph"
+              href="mailto:tanuanaldrin28@gmail.com"
               className="flex items-center gap-2 text-sm transition-colors duration-300 break-all"
               style={{ color: '#888888' }}
               onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#c9a84c'}
               onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#888888'}
             >
               <Mail className="w-4 h-4 flex-shrink-0" style={{ color: '#c9a84c' }} />
-              <span>aldrin.tanuan@sccpag.edu.ph</span>
+              <span>tanuanaldrin28@gmail.com</span>
             </a>
 
             <div className="flex items-center gap-3 pt-2">
