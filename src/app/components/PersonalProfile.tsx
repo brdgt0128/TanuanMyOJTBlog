@@ -18,6 +18,9 @@ export function PersonalProfile() {
     { name: 'Canva', icon: Palette },
     { name: 'Draw.io', icon: Palette },
     { name: 'Postman', icon: Terminal },
+    { name: 'Claude AI', icon: Code },
+    { name: 'ChatGPT', icon: Code },
+    { name: 'Resend', icon: Terminal },
   ];
 
   return (
