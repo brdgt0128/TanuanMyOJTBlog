@@ -133,7 +133,14 @@ function SwingingID() {
       >
         {/* Lanyard cord */}
         <div className="flex flex-col items-center">
-          <div className="w-0.5 h-14" style={{ background: 'linear-gradient(to bottom, #c9a84c88, #a07830)' }} />
+          {/* Neck loop anchor bar */}
+          <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, #a07830 20%, #c9a84c 50%, #a07830 80%, transparent)' }} />
+
+          {/* Double-cord lanyard (two parallel strings) */}
+          <div className="relative flex items-start justify-center" style={{ height: '220px', width: '16px' }}>
+            <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, #a07830, #c9a84c88 60%, #a07830)' }} />
+            <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, #a07830, #c9a84c88 60%, #a07830)' }} />
+          </div>
 
           {/* Metal clip */}
           <div className="relative flex flex-col items-center -mb-0.5">
@@ -292,8 +299,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: Swinging ID */}
-          <div className="flex justify-center lg:justify-end items-start order-1 lg:order-2 pt-12 lg:pt-20">
+          {/* Right: Swinging ID — anchored to top so lanyard reaches header */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 self-start lg:-mt-20">
             <SwingingID />
           </div>
 
