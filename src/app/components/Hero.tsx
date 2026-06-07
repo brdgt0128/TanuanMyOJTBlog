@@ -42,6 +42,7 @@ function SwingingID() {
   const rafRef = useRef(0);
   const lastAngleRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
+  const dragOffsetRef = useRef(0);
 
   const getPivotCenter = () => {
     if (!pivotRef.current) return { x: 0, y: 0 };
@@ -88,22 +89,25 @@ function SwingingID() {
   const startDrag = (mx: number, my: number) => {
     isDraggingRef.current = true;
     angularVelRef.current = 0;
-    lastAngleRef.current = angleFromPivot(mx, my);
+    const mouseAngle = angleFromPivot(mx, my);
+    // preserve where on the card the user grabbed — no snap
+    dragOffsetRef.current = angleRef.current - mouseAngle;
+    lastAngleRef.current = angleRef.current;
     lastTimeRef.current = performance.now();
-    angleRef.current = lastAngleRef.current;
   };
 
   const moveDrag = (mx: number, my: number) => {
     if (!isDraggingRef.current) return;
     const now = performance.now();
     const dt = (now - lastTimeRef.current) / 1000 || 0.016;
-    const newAngle = angleFromPivot(mx, my);
-    angularVelRef.current = (newAngle - lastAngleRef.current) / dt;
-    angleRef.current = newAngle;
-    lastAngleRef.current = newAngle;
+    const newCardAngle = angleFromPivot(mx, my) + dragOffsetRef.current;
+    angularVelRef.current = (newCardAngle - angleRef.current) / dt;
+    angleRef.current = newCardAngle;
+    lastAngleRef.current = newCardAngle;
     lastTimeRef.current = now;
   };
 
+  // release — physics takes over with whatever velocity the drag had
   const endDrag = () => { isDraggingRef.current = false; };
 
   useEffect(() => {
@@ -122,7 +126,7 @@ function SwingingID() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center select-none" style={{ cursor: 'grab' }}>
+    <div className="flex flex-col items-center select-none" style={{ cursor: isDraggingRef.current ? 'grabbing' : 'grab' }}>
       {/* Pivot anchor */}
       <div ref={pivotRef} className="w-1 h-1" />
 
@@ -167,11 +171,11 @@ function SwingingID() {
                 className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 text-xs font-black"
                 style={{ background: 'linear-gradient(135deg, #c9a84c, #a07830)', color: '#0a0a0a' }}
               >
-                AV
+                AT
               </div>
               <div>
-                <p className="font-bold text-white leading-none" style={{ fontSize: '8px', letterSpacing: '0.8px' }}>ACTIVERSE</p>
-                <p style={{ fontSize: '7px', color: '#c9a84c', letterSpacing: '0.5px', marginTop: '2px' }}>INCORPORATION</p>
+                <p className="font-bold text-white leading-none" style={{ fontSize: '9px', letterSpacing: '1.5px' }}>PORTFOLIO</p>
+                <p style={{ fontSize: '7px', color: '#c9a84c', letterSpacing: '0.5px', marginTop: '2px' }}>aldrin b. tanuan</p>
               </div>
               <div className="ml-auto">
                 <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e', boxShadow: '0 0 6px #22c55e' }} />
