@@ -1,6 +1,42 @@
 import { ChevronRight, Download } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+const ROLES = [
+  'Web Developer',
+  'Frontend Developer',
+  'Claude Developer',
+  'SaaS Sales Executive',
+];
+
+function useTypewriter(words: string[], typingSpeed = 80, deletingSpeed = 40, pauseMs = 1800) {
+  const [displayed, setDisplayed] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = words[wordIndex % words.length];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && displayed.length < current.length) {
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), typingSpeed);
+    } else if (!isDeleting && displayed.length === current.length) {
+      timeout = setTimeout(() => setIsDeleting(true), pauseMs);
+    } else if (isDeleting && displayed.length > 0) {
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), deletingSpeed);
+    } else if (isDeleting && displayed.length === 0) {
+      setIsDeleting(false);
+      setWordIndex((i) => i + 1);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseMs]);
+
+  return displayed;
+}
 
 export function Hero() {
+  const typedRole = useTypewriter(ROLES);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -26,19 +62,27 @@ export function Hero() {
               Open to Opportunities
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Hi, I'm <span style={{ color: '#c9a84c' }}>Aldrin!</span>
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug" style={{ color: '#ffffff' }}>
-                Frontend Developer with skills in<br className="hidden sm:block" />
-                <span style={{ color: '#c9a84c' }}> SaaS Sales</span> &amp; Tech Support
+
+              {/* Typewriter line */}
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug flex items-center gap-1" style={{ color: '#ffffff', minHeight: '2.5rem' }}>
+                <span style={{ color: '#c9a84c' }}>{typedRole}</span>
+                <span
+                  className="inline-block w-0.5 h-7 sm:h-8 md:h-9 ml-0.5"
+                  style={{
+                    backgroundColor: '#c9a84c',
+                    animation: 'blink 1s step-end infinite',
+                  }}
+                />
               </h2>
             </div>
 
             <p className="text-sm sm:text-base leading-relaxed max-w-lg" style={{ color: '#888888' }}>
               I build responsive web applications and drive business growth through technology.
-              Experienced in e-commerce product listing, client support, and SaaS sales at Activerse Incorporation.
+              Experienced in web development, AI integration, and SaaS sales at Activerse Incorporation.
             </p>
 
             {/* Stats */}
@@ -97,6 +141,13 @@ export function Hero() {
 
         </div>
       </div>
+
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 }
