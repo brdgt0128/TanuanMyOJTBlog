@@ -18,8 +18,9 @@ export function Footer() {
               <h3 className="text-lg sm:text-xl text-white font-semibold">· DevPortfolio</h3>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#555555' }}>
-              A personal portfolio documenting my journey as a frontend developer and
-              SaaS professional, sharing projects and real-world experiences.
+              Web Developer specializing in responsive web apps, AI integration with Claude,
+              and SaaS sales. Built client websites for UK-based businesses and experienced
+              in full-stack tools, DNS, and API development.
             </p>
           </div>
 
