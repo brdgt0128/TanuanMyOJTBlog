@@ -304,7 +304,7 @@ export function Hero() {
           </div>
 
           {/* Right: Swinging ID — anchored to top so lanyard reaches header */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2 self-start lg:-mt-20">
+          <div className="flex justify-center order-1 lg:order-2 self-start lg:-mt-20">
             <SwingingID />
           </div>
 
