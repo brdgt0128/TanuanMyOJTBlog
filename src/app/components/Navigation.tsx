@@ -24,7 +24,7 @@ export function Navigation() {
   const navItems = [
     { name: 'About', id: 'about' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Skills', id: 'skills' },
+    { name: 'Projects', id: 'projects' },
     { name: 'Blog', id: 'blog' },
     { name: 'Contact', id: 'contact' },
   ];

@@ -79,9 +79,13 @@ export function Experience() {
   return (
     <section id="experience" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
-          Experience
-        </h2>
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Career</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {experiences.map((exp, index) => (

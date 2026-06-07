@@ -23,9 +23,13 @@ export function PersonalProfile() {
   return (
     <section id="about" className="py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
-          About Me
-        </h2>
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Background</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">About Me</h2>
+        </div>
 
         <div className="grid grid-cols-1 gap-6 sm:gap-8">
           {/* Skills & Tools */}

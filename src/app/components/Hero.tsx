@@ -42,6 +42,24 @@ export function Hero() {
               Experienced in e-commerce product listing, client support, and SaaS sales at Activerse Incorporation.
             </p>
 
+            {/* Stats */}
+            <div className="flex flex-wrap gap-3 pt-1">
+              {[
+                { value: '3', label: 'UK Projects' },
+                { value: '9+', label: 'Experiences' },
+                { value: '2026', label: 'BSIT Graduate' },
+              ].map(({ value, label }) => (
+                <div
+                  key={label}
+                  className="px-4 py-2.5 flex flex-col"
+                  style={{ border: '1px solid #1e1e1e', backgroundColor: '#111111' }}
+                >
+                  <span className="text-lg font-bold" style={{ color: '#c9a84c' }}>{value}</span>
+                  <span className="text-xs" style={{ color: '#555555' }}>{label}</span>
+                </div>
+              ))}
+            </div>
+
             <div className="flex flex-wrap gap-3 pt-2">
               <button
                 onClick={() => scrollTo('experience')}

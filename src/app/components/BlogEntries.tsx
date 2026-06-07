@@ -135,9 +135,13 @@ export function BlogEntries() {
   return (
     <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0d0d0d', borderTop: '1px solid #1e1e1e' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16" style={{ color: '#ffffff' }}>
-          Blog Entries
-        </h2>
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Journal</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Blog Entries</h2>
+        </div>
 
         <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {posts.map((post, index) => (
