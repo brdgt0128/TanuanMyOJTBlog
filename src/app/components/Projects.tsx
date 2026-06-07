@@ -5,38 +5,47 @@ export function Projects() {
     {
       id: 'ijones',
       icon: GraduationCap,
+      initials: 'IJ',
       label: 'Training Platform',
       title: 'iJones Training',
       url: 'https://ijones-training.co.uk/',
       displayUrl: 'ijones-training.co.uk',
-      preview: 'https://image.thum.io/get/width/600/crop/400/https://ijones-training.co.uk/',
       description:
-        'A professional logistics and transport training website for a family-run provider based in Telford. Offers ADR, Driver CPC, Forklift, and Transport Manager CPC courses backed by over 30 years of industry experience.',
+        'Logistics and transport training provider in Telford — ADR, Driver CPC, Forklift, and Transport Manager CPC courses backed by 30+ years of experience.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
+      gradient: 'linear-gradient(135deg, #0d1b2e 0%, #1a3550 50%, #0f2640 100%)',
+      accentColor: '#3b82f6',
+      glowColor: 'rgba(59,130,246,0.15)',
     },
     {
       id: 'shine',
       icon: Sparkles,
+      initials: 'LS',
       label: 'Service Website',
       title: 'Look at Them Shine',
       url: 'https://lookatthemshine.co.uk',
       displayUrl: 'lookatthemshine.co.uk',
-      preview: 'https://image.thum.io/get/width/600/crop/400/https://lookatthemshine.co.uk/',
       description:
-        'A clean and modern website for a family-run exterior cleaning business serving homes and businesses across Norwich and Norfolk — covering window cleaning, gutter cleaning, and fascia & soffit cleaning.',
+        'Exterior cleaning services across Norwich & Norfolk — window cleaning, gutter cleaning, and fascia & soffit cleaning for homes and businesses.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
+      gradient: 'linear-gradient(135deg, #071a1a 0%, #0d3030 50%, #0a2525 100%)',
+      accentColor: '#06b6d4',
+      glowColor: 'rgba(6,182,212,0.15)',
     },
     {
       id: 'vanhelps',
       icon: Truck,
+      initials: 'MV',
       label: 'Removals & Clearance',
       title: 'Man and Van Helps',
       url: 'https://manandvanhelps.co.uk/',
       displayUrl: 'manandvanhelps.co.uk',
-      preview: 'https://image.thum.io/get/width/600/crop/400/https://manandvanhelps.co.uk/',
       description:
-        'A 24/7 removals and clearance company website based in Cambridgeshire, covering house removals, waste removal, end of tenancy cleaning, and garden clearance across 30+ towns in East England.',
+        '24/7 removal and clearance company in Cambridgeshire — house removals, waste removal, end of tenancy cleaning across 30+ towns in East England.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
+      gradient: 'linear-gradient(135deg, #0d1a05 0%, #1a3010 50%, #122008 100%)',
+      accentColor: '#22c55e',
+      glowColor: 'rgba(34,197,94,0.15)',
     },
   ];
 
@@ -60,9 +69,7 @@ export function Projects() {
               Client Work · United Kingdom
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Projects
-          </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Projects</h2>
           <p className="mt-3 text-sm sm:text-base max-w-xl" style={{ color: '#888888' }}>
             Websites built for UK-based businesses — designed, developed, and delivered remotely.
           </p>
@@ -78,9 +85,9 @@ export function Projects() {
                 className="group flex flex-col transition-all duration-300 overflow-hidden"
                 style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.5)';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
                   (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.1)';
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
@@ -88,65 +95,98 @@ export function Projects() {
                   (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
                 }}
               >
-                {/* Screenshot Preview */}
-                <div className="relative overflow-hidden" style={{ aspectRatio: '16/9', borderBottom: '1px solid #1e1e1e' }}>
-                  <img
-                    src={project.preview}
-                    alt={`${project.title} preview`}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(17,17,17,0.6) 100%)' }} />
-                </div>
+                {/* Browser Window Mockup */}
+                <div className="relative overflow-hidden" style={{ height: '200px', background: project.gradient }}>
 
-                {/* Card Header */}
-                <div className="relative px-6 pt-5 pb-4" style={{ borderBottom: '1px solid #1e1e1e' }}>
-                  <div className="flex items-start justify-between mb-4">
-                    {/* Icon */}
+                  {/* Ambient glow */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: `radial-gradient(ellipse at 50% 60%, ${project.glowColor} 0%, transparent 70%)` }}
+                  />
+
+                  {/* Browser chrome */}
+                  <div
+                    className="relative z-10 flex items-center gap-2 px-3 py-2"
+                    style={{ backgroundColor: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+                  >
+                    {/* Traffic lights */}
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#ff5f57' }} />
+                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#febc2e' }} />
+                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#28c840' }} />
+                    </div>
+                    {/* Address bar */}
                     <div
-                      className="w-12 h-12 flex items-center justify-center text-lg font-bold"
+                      className="flex-1 flex items-center gap-1.5 px-2.5 py-1 text-xs"
+                      style={{ backgroundColor: 'rgba(0,0,0,0.35)', borderRadius: '3px', color: 'rgba(255,255,255,0.5)' }}
+                    >
+                      <svg className="w-3 h-3 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                      <span className="truncate">{project.displayUrl}</span>
+                    </div>
+                  </div>
+
+                  {/* Preview content */}
+                  <div className="relative z-10 flex flex-col items-center justify-center h-[calc(200px-37px)]">
+                    {/* Large initials watermark */}
+                    <span
+                      className="select-none font-black leading-none"
+                      style={{ fontSize: '80px', color: 'rgba(255,255,255,0.04)', letterSpacing: '-4px' }}
+                    >
+                      {project.initials}
+                    </span>
+                    {/* Centered icon */}
+                    <div
+                      className="absolute flex items-center justify-center w-14 h-14"
                       style={{
-                        backgroundColor: 'rgba(201,168,76,0.1)',
-                        border: '1px solid rgba(201,168,76,0.25)',
-                        color: '#c9a84c',
+                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        border: `1px solid ${project.accentColor}40`,
+                        backdropFilter: 'blur(4px)',
                       }}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-6 h-6" style={{ color: project.accentColor }} />
                     </div>
-                    {/* UK badge */}
+                  </div>
+
+                  {/* Bottom fade into card */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, transparent, #111111)' }}
+                  />
+                </div>
+
+                {/* Card Info */}
+                <div className="px-5 pt-4 pb-3" style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-xs uppercase tracking-widest" style={{ color: '#555555' }}>{project.label}</p>
                     <span
-                      className="text-xs px-2.5 py-1 font-medium tracking-wide"
+                      className="text-xs px-2 py-0.5 font-medium"
                       style={{ backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', color: '#888888' }}
                     >
                       🇬🇧 UK
                     </span>
                   </div>
-
-                  <p className="text-xs uppercase tracking-widest mb-1" style={{ color: '#555555' }}>
-                    {project.label}
-                  </p>
-                  <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>
-                  <p className="text-xs" style={{ color: '#555555' }}>
-                    <Globe className="w-3 h-3 inline mr-1" />
-                    {project.displayUrl}
+                  <h3 className="text-base font-bold text-white mb-1">{project.title}</h3>
+                  <p className="text-xs flex items-center gap-1" style={{ color: '#444444' }}>
+                    <Globe className="w-3 h-3" />{project.displayUrl}
                   </p>
                 </div>
 
-                {/* Card Body */}
-                <div className="flex-1 px-6 py-5 space-y-4">
-                  <p className="text-sm leading-relaxed" style={{ color: '#888888' }}>
+                {/* Description + Tags */}
+                <div className="flex-1 px-5 py-4 space-y-3">
+                  <p className="text-xs leading-relaxed" style={{ color: '#777777' }}>
                     {project.description}
                   </p>
-
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-2.5 py-1"
+                        className="text-xs px-2 py-0.5"
                         style={{
                           backgroundColor: tag === 'UK Client' ? 'rgba(201,168,76,0.08)' : '#0a0a0a',
-                          border: tag === 'UK Client' ? '1px solid rgba(201,168,76,0.25)' : '1px solid #2a2a2a',
-                          color: tag === 'UK Client' ? '#c9a84c' : '#777777',
+                          border: tag === 'UK Client' ? '1px solid rgba(201,168,76,0.25)' : '1px solid #222222',
+                          color: tag === 'UK Client' ? '#c9a84c' : '#666666',
                         }}
                       >
                         {tag}
@@ -155,8 +195,8 @@ export function Projects() {
                   </div>
                 </div>
 
-                {/* Card Footer */}
-                <div className="px-6 pb-6">
+                {/* Visit Button */}
+                <div className="px-5 pb-5">
                   <a
                     href={project.url}
                     target="_blank"
