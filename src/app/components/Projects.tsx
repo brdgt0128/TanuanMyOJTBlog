@@ -4,42 +4,39 @@ export function Projects() {
   const projects = [
     {
       id: 'ijones',
-      initials: 'IJ',
       icon: GraduationCap,
       label: 'Training Platform',
       title: 'iJones Training',
       url: 'https://ijones-training.co.uk/',
       displayUrl: 'ijones-training.co.uk',
+      preview: 'https://image.thum.io/get/width/600/crop/400/https://ijones-training.co.uk/',
       description:
         'A professional logistics and transport training website for a family-run provider based in Telford. Offers ADR, Driver CPC, Forklift, and Transport Manager CPC courses backed by over 30 years of industry experience.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
-      accent: '#c9a84c',
     },
     {
       id: 'shine',
-      initials: 'LS',
       icon: Sparkles,
       label: 'Service Website',
       title: 'Look at Them Shine',
       url: 'https://lookatthemshine.co.uk',
       displayUrl: 'lookatthemshine.co.uk',
+      preview: 'https://image.thum.io/get/width/600/crop/400/https://lookatthemshine.co.uk/',
       description:
         'A clean and modern website for a family-run exterior cleaning business serving homes and businesses across Norwich and Norfolk — covering window cleaning, gutter cleaning, and fascia & soffit cleaning.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
-      accent: '#c9a84c',
     },
     {
       id: 'vanhelps',
-      initials: 'MV',
       icon: Truck,
       label: 'Removals & Clearance',
       title: 'Man and Van Helps',
       url: 'https://manandvanhelps.co.uk/',
       displayUrl: 'manandvanhelps.co.uk',
+      preview: 'https://image.thum.io/get/width/600/crop/400/https://manandvanhelps.co.uk/',
       description:
         'A 24/7 removals and clearance company website based in Cambridgeshire, covering house removals, waste removal, end of tenancy cleaning, and garden clearance across 30+ towns in East England.',
       tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
-      accent: '#c9a84c',
     },
   ];
 
@@ -91,8 +88,19 @@ export function Projects() {
                   (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
                 }}
               >
+                {/* Screenshot Preview */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: '16/9', borderBottom: '1px solid #1e1e1e' }}>
+                  <img
+                    src={project.preview}
+                    alt={`${project.title} preview`}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 60%, rgba(17,17,17,0.6) 100%)' }} />
+                </div>
+
                 {/* Card Header */}
-                <div className="relative px-6 pt-6 pb-5" style={{ borderBottom: '1px solid #1e1e1e' }}>
+                <div className="relative px-6 pt-5 pb-4" style={{ borderBottom: '1px solid #1e1e1e' }}>
                   <div className="flex items-start justify-between mb-4">
                     {/* Icon */}
                     <div
