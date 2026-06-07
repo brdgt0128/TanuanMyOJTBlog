@@ -1,5 +1,4 @@
 import { ChevronRight, Download } from 'lucide-react';
-import profileImg from '../../assets/nobg.png';
 
 export function Hero() {
   const scrollTo = (id: string) => {
@@ -15,10 +14,10 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[80vh]">
+        <div className="flex items-center min-h-[80vh]">
 
-          {/* Left: Text Content */}
-          <div className="space-y-5 sm:space-y-6 order-2 lg:order-1">
+          {/* Text Content */}
+          <div className="space-y-5 sm:space-y-6 max-w-2xl">
             <div
               className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border"
               style={{ borderColor: '#2a2a2a', backgroundColor: '#111111', color: '#888888' }}
@@ -93,18 +92,6 @@ export function Hero() {
                 <Download className="w-4 h-4" />
                 Get in Touch
               </button>
-            </div>
-          </div>
-
-          {/* Right: Profile Photo */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="w-80 sm:w-96 md:w-[480px]">
-              <img
-                src={profileImg}
-                alt="Aldrin B. Tanuan"
-                className="w-full h-auto object-contain"
-                style={{ filter: 'brightness(0.6)' }}
-              />
             </div>
           </div>
 
