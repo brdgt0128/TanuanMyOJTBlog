@@ -98,11 +98,16 @@ export function Hero() {
 
           {/* Right: Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="w-80 sm:w-96 md:w-[480px]">
+            <div className="relative w-80 sm:w-96 md:w-[480px]">
               <img
                 src={profileImg}
                 alt="Aldrin B. Tanuan"
                 className="w-full h-auto object-contain"
+              />
+              {/* Dark overlay */}
+              <div
+                className="absolute inset-0"
+                style={{ background: 'rgba(0,0,0,0.35)', mixBlendMode: 'multiply' }}
               />
             </div>
           </div>
