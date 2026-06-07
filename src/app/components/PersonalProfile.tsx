@@ -1,12 +1,27 @@
 import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
 
 export function PersonalProfile() {
-  const skills = [
-    'HTML',
-    'CSS',
-    'C#',
-    'Java',
-    'JavaScript',
+  const skillGroups = [
+    {
+      label: 'Web Development',
+      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Node.js'],
+    },
+    {
+      label: 'Database',
+      skills: ['MySQL', 'Firebase', 'PostgreSQL', 'MongoDB'],
+    },
+    {
+      label: 'API Integration',
+      skills: ['REST API', 'Claude API', 'Resend API', 'Postman', 'Webhook'],
+    },
+    {
+      label: 'DNS & Hosting',
+      skills: ['DNS Configuration', 'Cloudflare', 'Domain Management', 'GitHub Pages', 'Vercel'],
+    },
+    {
+      label: 'Other',
+      skills: ['C#', 'Java', 'Git', 'Figma'],
+    },
   ];
 
   const tools = [
@@ -57,20 +72,29 @@ export function PersonalProfile() {
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
               style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Skills</h3>
-              <div className="flex flex-wrap gap-2 sm:gap-3">
-                {skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 text-sm transition-all duration-300 cursor-default"
-                    style={{
-                      color: '#c9a84c',
-                      backgroundColor: 'rgba(201,168,76,0.08)',
-                      border: '1px solid rgba(201,168,76,0.25)',
-                    }}
-                  >
-                    {skill}
-                  </span>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-5">Skills</h3>
+              <div className="space-y-5">
+                {skillGroups.map((group) => (
+                  <div key={group.label}>
+                    <p className="text-xs uppercase tracking-widest mb-2.5" style={{ color: '#555555' }}>
+                      {group.label}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {group.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 text-xs transition-all duration-300 cursor-default"
+                          style={{
+                            color: '#c9a84c',
+                            backgroundColor: 'rgba(201,168,76,0.08)',
+                            border: '1px solid rgba(201,168,76,0.2)',
+                          }}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
