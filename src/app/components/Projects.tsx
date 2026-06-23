@@ -160,7 +160,7 @@ export function Projects() {
       displayUrl: 'flatroofingguys.co.uk',
       description: 'Flat roofing specialists across the UK — GRP fibreglass, EPDM rubber, torch-on felt, and roof repairs with comprehensive guarantees for homes and commercial buildings.',
       logo: logoFlat,
-      logoBg: 'rgba(59,130,246,0.1)',
+      logoBg: 'rgba(255,255,255,0.95)',
       gradient: 'linear-gradient(135deg, #0a0a14 0%, #14142a 50%, #0d0d20 100%)',
       accentColor: '#a78bfa',
       glowColor: 'rgba(167,139,250,0.15)',

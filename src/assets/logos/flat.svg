@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="#3b82f6"/>
-  <path d="M15 45L50 20l35 25V82a4 4 0 01-4 4H19a4 4 0 01-4-4V45z" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56">
+  <!-- House icon badge -->
+  <rect x="0" y="2" width="52" height="52" rx="10" fill="#3b82f6"/>
+  <polygon points="26,12 46,28 42,28 42,46 10,46 10,28 6,28" fill="white" opacity="0.95"/>
+  <rect x="20" y="34" width="12" height="12" rx="1" fill="#3b82f6"/>
+  <!-- Wordmark -->
+  <text x="62" y="24" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="15" fill="#1e3a5f" letter-spacing="0.3">FLAT ROOFING</text>
+  <text x="62" y="43" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="16" fill="#3b82f6" letter-spacing="0.5">GUYS</text>
 </svg>
