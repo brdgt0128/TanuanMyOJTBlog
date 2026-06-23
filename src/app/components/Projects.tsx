@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, GraduationCap, Sparkles, Truck } from 'lucide-react';
+import { ExternalLink, Globe, GraduationCap, Sparkles } from 'lucide-react';
 
 export function Projects() {
   const projects = [
@@ -32,21 +32,6 @@ export function Projects() {
       accentColor: '#06b6d4',
       glowColor: 'rgba(6,182,212,0.15)',
     },
-    {
-      id: 'vanhelps',
-      icon: Truck,
-      initials: 'MV',
-      label: 'Removals & Clearance',
-      title: 'Man and Van Helps',
-      url: 'https://manandvanhelps.co.uk/',
-      displayUrl: 'manandvanhelps.co.uk',
-      description:
-        '24/7 removal and clearance company in Cambridgeshire — house removals, waste removal, end of tenancy cleaning across 30+ towns in East England.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UK Client'],
-      gradient: 'linear-gradient(135deg, #0d1a05 0%, #1a3010 50%, #122008 100%)',
-      accentColor: '#22c55e',
-      glowColor: 'rgba(34,197,94,0.15)',
-    },
   ];
 
   return (
@@ -76,7 +61,7 @@ export function Projects() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {projects.map((project) => {
             const Icon = project.icon;
             return (
