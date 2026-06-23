@@ -1,151 +1,162 @@
 import { ExternalLink, Globe, GraduationCap, Sparkles, Zap, Layers, Paintbrush, Droplets, Wrench, Hammer, Home, Building, Wind } from 'lucide-react';
 
-import imgIjones from '../../assets/screenshots/ijones-training.jpg';
-import imgShine from '../../assets/screenshots/lookatthemshine.jpg';
-import imgSparky from '../../assets/screenshots/westfifesparky.jpg';
-import imgHampshire from '../../assets/screenshots/hampshirewindows.jpg';
-import imgPhe from '../../assets/screenshots/phedecorating.jpg';
-import imgKwikrod from '../../assets/screenshots/kwikrod.jpg';
-import imgDd from '../../assets/screenshots/ddmaintenance.jpg';
-import imgSa from '../../assets/screenshots/sacontractors.jpg';
-import imgCcj from '../../assets/screenshots/ccjgroundworks.jpg';
-import imgFlat from '../../assets/screenshots/flatroofingguys.jpg';
-import imgWpe from '../../assets/screenshots/wpe.jpg';
-import imgLondon from '../../assets/screenshots/londonpressurewash.jpg';
-
 export function Projects() {
   const projects = [
     {
       id: 'ijones',
       icon: GraduationCap,
+      initials: 'IJ',
       label: 'Training Platform',
       title: 'iJones Training',
       url: 'https://ijonestraining.center/',
       displayUrl: 'ijonestraining.center',
       description: 'Logistics and transport training provider in Telford — ADR, Driver CPC, Forklift, and Transport Manager CPC courses backed by 30+ years of experience.',
-      screenshot: imgIjones,
+      gradient: 'linear-gradient(135deg, #0d1b2e 0%, #1a3550 50%, #0f2640 100%)',
       accentColor: '#3b82f6',
+      glowColor: 'rgba(59,130,246,0.15)',
     },
     {
       id: 'shine',
       icon: Sparkles,
+      initials: 'LS',
       label: 'Service Website',
       title: 'Look at Them Shine',
       url: 'https://lookatthemshine.co.uk',
       displayUrl: 'lookatthemshine.co.uk',
       description: 'Exterior cleaning services across Norwich & Norfolk — window cleaning, gutter cleaning, and fascia & soffit cleaning for homes and businesses.',
-      screenshot: imgShine,
+      gradient: 'linear-gradient(135deg, #071a1a 0%, #0d3030 50%, #0a2525 100%)',
       accentColor: '#06b6d4',
+      glowColor: 'rgba(6,182,212,0.15)',
     },
     {
       id: 'sparky',
       icon: Zap,
+      initials: 'WF',
       label: 'Electrical Services',
       title: 'West Fife Sparky',
       url: 'https://westfifesparky.com/',
       displayUrl: 'westfifesparky.com',
       description: 'Trusted electrician based in West Fife, Scotland — domestic and commercial electrical installations, rewiring, fault finding, and EV charger fitting.',
-      screenshot: imgSparky,
+      gradient: 'linear-gradient(135deg, #1a1400 0%, #2d2200 50%, #1f1800 100%)',
       accentColor: '#eab308',
+      glowColor: 'rgba(234,179,8,0.15)',
     },
     {
       id: 'hampshire',
       icon: Layers,
+      initials: 'HW',
       label: 'Windows & Glazing',
       title: 'Hampshire Windows',
       url: 'https://hampshirewindows.com/',
       displayUrl: 'hampshirewindows.com',
       description: 'Window and door specialists across Hampshire — uPVC, aluminium, and composite installations for residential properties with free quotes and supply.',
-      screenshot: imgHampshire,
+      gradient: 'linear-gradient(135deg, #0a1520 0%, #0f2535 50%, #0c1e30 100%)',
       accentColor: '#60a5fa',
+      glowColor: 'rgba(96,165,250,0.15)',
     },
     {
       id: 'phe',
       icon: Paintbrush,
+      initials: 'PH',
       label: 'Decorating Services',
       title: 'PHE Decorating',
       url: 'https://phedecorating.co.uk/',
       displayUrl: 'phedecorating.co.uk',
       description: 'Professional painting and decorating company in the UK — interior and exterior decoration, wallpapering, and colour consultancy for homes and commercial spaces.',
-      screenshot: imgPhe,
+      gradient: 'linear-gradient(135deg, #1a0d00 0%, #2d1a00 50%, #221000 100%)',
       accentColor: '#f97316',
+      glowColor: 'rgba(249,115,22,0.15)',
     },
     {
       id: 'kwikrod',
       icon: Droplets,
+      initials: 'KR',
       label: 'Drainage Solutions',
       title: 'Kwikrod',
       url: 'https://kwikrod.co.uk/',
       displayUrl: 'kwikrod.co.uk',
       description: 'Fast drainage and unblocking specialists in the UK — drain jetting, CCTV surveys, rod services, and emergency call-outs for residential and commercial clients.',
-      screenshot: imgKwikrod,
+      gradient: 'linear-gradient(135deg, #05101a 0%, #0a1e30 50%, #071525 100%)',
       accentColor: '#0ea5e9',
+      glowColor: 'rgba(14,165,233,0.15)',
     },
     {
       id: 'ddmaintenance',
       icon: Wrench,
+      initials: 'DD',
       label: 'Property Maintenance',
       title: 'DD Maintenance',
       url: 'https://ddmaintenance.co.uk/',
       displayUrl: 'ddmaintenance.co.uk',
       description: 'All-trades property maintenance company in the UK — plumbing, electrical, tiling, carpentry, and general repairs for landlords, letting agents, and homeowners.',
-      screenshot: imgDd,
+      gradient: 'linear-gradient(135deg, #0d0d14 0%, #14142a 50%, #0f0f1e 100%)',
       accentColor: '#8b5cf6',
+      glowColor: 'rgba(139,92,246,0.15)',
     },
     {
       id: 'sacontractors',
       icon: Hammer,
+      initials: 'SA',
       label: 'Building Contractors',
       title: 'SA Contractors',
       url: 'https://sacontractors.co.uk/',
       displayUrl: 'sacontractors.co.uk',
       description: 'Experienced building contractors in the UK — extensions, loft conversions, refurbishments, and new builds delivered to a high standard for residential clients.',
-      screenshot: imgSa,
+      gradient: 'linear-gradient(135deg, #1a0e00 0%, #2d1a00 50%, #231200 100%)',
       accentColor: '#f59e0b',
+      glowColor: 'rgba(245,158,11,0.15)',
     },
     {
       id: 'ccjgroundworks',
       icon: Building,
+      initials: 'CC',
       label: 'Groundworks',
       title: 'CCJ Groundworks',
       url: 'https://ccjgroundworks.co.uk/',
       displayUrl: 'ccjgroundworks.co.uk',
       description: 'Specialist groundworks contractor in the UK — foundations, drainage, concrete works, landscaping groundworks, and site preparation for construction projects.',
-      screenshot: imgCcj,
+      gradient: 'linear-gradient(135deg, #100e04 0%, #1e1a06 50%, #161202 100%)',
       accentColor: '#84cc16',
+      glowColor: 'rgba(132,204,22,0.15)',
     },
     {
       id: 'flatroofing',
       icon: Home,
+      initials: 'FR',
       label: 'Flat Roofing',
       title: 'Flat Roofing Guys',
       url: 'https://flatroofingguys.co.uk/',
       displayUrl: 'flatroofingguys.co.uk',
       description: 'Flat roofing specialists across the UK — GRP fibreglass, EPDM rubber, torch-on felt, and roof repairs with comprehensive guarantees for homes and commercial buildings.',
-      screenshot: imgFlat,
+      gradient: 'linear-gradient(135deg, #0a0a14 0%, #14142a 50%, #0d0d20 100%)',
       accentColor: '#a78bfa',
+      glowColor: 'rgba(167,139,250,0.15)',
     },
     {
       id: 'wpe',
       icon: Hammer,
+      initials: 'WP',
       label: 'Property Improvements',
       title: 'WPE Property Improvements',
       url: 'https://www.wpepropertyimprovementsltd.co.uk/',
       displayUrl: 'wpepropertyimprovementsltd.co.uk',
       description: 'Full-service property improvement company in the UK — kitchens, bathrooms, extensions, and renovation projects managed end-to-end for homeowners and landlords.',
-      screenshot: imgWpe,
+      gradient: 'linear-gradient(135deg, #140a0a 0%, #241212 50%, #1a0c0c 100%)',
       accentColor: '#f43f5e',
+      glowColor: 'rgba(244,63,94,0.15)',
     },
     {
       id: 'londonpressure',
       icon: Wind,
+      initials: 'LP',
       label: 'Pressure Washing',
       title: 'London Pressure Wash',
       url: 'https://londonpressurewash.co.uk/',
       displayUrl: 'londonpressurewash.co.uk',
       description: 'Professional pressure washing and exterior cleaning in London — driveways, patios, decking, render, and commercial facades restored to pristine condition.',
-      screenshot: imgLondon,
+      gradient: 'linear-gradient(135deg, #001a14 0%, #003025 50%, #00221a 100%)',
       accentColor: '#2dd4bf',
+      glowColor: 'rgba(45,212,191,0.15)',
     },
   ];
 
@@ -196,23 +207,26 @@ export function Projects() {
                 }}
               >
                 {/* Browser Window Mockup */}
-                <div className="relative overflow-hidden" style={{ height: '180px', backgroundColor: '#0a0a0a' }}>
+                <div className="relative overflow-hidden" style={{ height: '160px', background: project.gradient }}>
+                  {/* Ambient glow */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: `radial-gradient(ellipse at 50% 60%, ${project.glowColor} 0%, transparent 70%)` }}
+                  />
 
                   {/* Browser chrome */}
                   <div
-                    className="relative z-20 flex items-center gap-2 px-3 py-2"
-                    style={{ backgroundColor: 'rgba(15,15,15,0.95)', backdropFilter: 'blur(4px)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+                    className="relative z-10 flex items-center gap-2 px-3 py-2"
+                    style={{ backgroundColor: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}
                   >
-                    {/* Traffic lights */}
                     <div className="flex items-center gap-1.5">
                       <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#ff5f57' }} />
                       <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#febc2e' }} />
                       <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#28c840' }} />
                     </div>
-                    {/* Address bar */}
                     <div
                       className="flex-1 flex items-center gap-1.5 px-2 py-0.5"
-                      style={{ backgroundColor: 'rgba(0,0,0,0.4)', borderRadius: '3px' }}
+                      style={{ backgroundColor: 'rgba(0,0,0,0.35)', borderRadius: '3px' }}
                     >
                       <svg className="w-2.5 h-2.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -221,16 +235,31 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {/* Screenshot */}
-                  <div className="absolute inset-0 top-[33px] overflow-hidden">
-                    <img
-                      src={project.screenshot}
-                      alt={project.title}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {/* Subtle dark overlay so text below reads well */}
-                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 60%, rgba(17,17,17,0.9) 100%)' }} />
+                  {/* Preview content */}
+                  <div className="relative z-10 flex flex-col items-center justify-center h-[calc(160px-33px)]">
+                    <span
+                      className="select-none font-black leading-none"
+                      style={{ fontSize: '64px', color: 'rgba(255,255,255,0.04)', letterSpacing: '-4px' }}
+                    >
+                      {project.initials}
+                    </span>
+                    <div
+                      className="absolute flex items-center justify-center w-12 h-12"
+                      style={{
+                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        border: `1px solid ${project.accentColor}40`,
+                        backdropFilter: 'blur(4px)',
+                      }}
+                    >
+                      <Icon className="w-5 h-5" style={{ color: project.accentColor }} />
+                    </div>
                   </div>
+
+                  {/* Bottom fade */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, transparent, #111111)' }}
+                  />
                 </div>
 
                 {/* Card Info */}
