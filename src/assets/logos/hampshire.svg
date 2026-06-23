@@ -1,0 +1,17 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer frame -->
+  <rect x="1" y="1" width="40" height="40" rx="8" fill="#166534"/>
+  <!-- Window frame -->
+  <rect x="7" y="7" width="28" height="28" rx="2" fill="none" stroke="white" stroke-width="2.2"/>
+  <!-- Vertical mullion -->
+  <line x1="21" y1="7" x2="21" y2="35" stroke="white" stroke-width="2"/>
+  <!-- Horizontal transom -->
+  <line x1="7" y1="21" x2="35" y2="21" stroke="white" stroke-width="2"/>
+  <!-- Glass panes -->
+  <rect x="9" y="9" width="10" height="10" rx="1" fill="white" fill-opacity="0.12"/>
+  <rect x="23" y="9" width="10" height="10" rx="1" fill="white" fill-opacity="0.22"/>
+  <rect x="9" y="23" width="10" height="10" rx="1" fill="white" fill-opacity="0.08"/>
+  <rect x="23" y="23" width="10" height="10" rx="1" fill="white" fill-opacity="0.16"/>
+  <!-- Corner accent dot -->
+  <circle cx="38" cy="4" r="3" fill="#86efac"/>
+</svg>
