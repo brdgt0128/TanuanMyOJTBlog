@@ -137,8 +137,8 @@ export function BlogEntries() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Journal</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Journal</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Blog Entries</h2>
         </div>
@@ -150,8 +150,8 @@ export function BlogEntries() {
               className="overflow-hidden transition-all duration-300 cursor-pointer group hover:-translate-y-1"
               style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(201,168,76,0.08)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(220,38,38,0.08)';
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';

@@ -37,8 +37,8 @@ export function Achievements() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Awards</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Awards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Achievements & Recognition</h2>
         </div>
@@ -52,7 +52,7 @@ export function Achievements() {
                 className="p-5 sm:p-6 md:p-8 transition-all duration-300 group"
                 style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#161616';
                 }}
                 onMouseLeave={e => {
@@ -64,9 +64,9 @@ export function Achievements() {
                   <div className="flex items-start justify-between">
                     <div
                       className="p-2.5 sm:p-3 transition-colors duration-300"
-                      style={{ backgroundColor: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)' }}
+                      style={{ backgroundColor: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.2)' }}
                     >
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#c9a84c' }} />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#dc2626' }} />
                     </div>
                     <span
                       className="text-xs sm:text-sm px-3 py-1 rounded-full"
@@ -77,7 +77,7 @@ export function Achievements() {
                   </div>
 
                   <div className="space-y-2 sm:space-y-3">
-                    <p className="text-xs sm:text-sm uppercase tracking-wider font-medium" style={{ color: '#c9a84c' }}>
+                    <p className="text-xs sm:text-sm uppercase tracking-wider font-medium" style={{ color: '#dc2626' }}>
                       {achievement.category}
                     </p>
                     <h3 className="text-base sm:text-lg md:text-xl font-medium leading-tight" style={{ color: '#ffffff' }}>

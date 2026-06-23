@@ -43,8 +43,8 @@ export function PersonalProfile() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Background</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Background</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">About Me</h2>
         </div>
@@ -85,9 +85,9 @@ export function PersonalProfile() {
                           key={skill}
                           className="px-3 py-1 text-xs transition-all duration-300 cursor-default"
                           style={{
-                            color: '#c9a84c',
-                            backgroundColor: 'rgba(201,168,76,0.08)',
-                            border: '1px solid rgba(201,168,76,0.2)',
+                            color: '#dc2626',
+                            backgroundColor: 'rgba(220,38,38,0.08)',
+                            border: '1px solid rgba(220,38,38,0.2)',
                           }}
                         >
                           {skill}
@@ -114,15 +114,15 @@ export function PersonalProfile() {
                       className="p-3 sm:p-4 flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300 cursor-pointer"
                       style={{ backgroundColor: '#0a0a0a', border: '1px solid #1e1e1e' }}
                       onMouseEnter={e => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
-                        (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(201,168,76,0.05)';
+                        (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
+                        (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(220,38,38,0.05)';
                       }}
                       onMouseLeave={e => {
                         (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
                         (e.currentTarget as HTMLDivElement).style.backgroundColor = '#0a0a0a';
                       }}
                     >
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#c9a84c' }} />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#dc2626' }} />
                       <span className="text-xs sm:text-sm text-center" style={{ color: '#888888' }}>{tool.name}</span>
                     </div>
                   );

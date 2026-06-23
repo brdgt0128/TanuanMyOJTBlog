@@ -89,8 +89,8 @@ export function Experience() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-10 sm:mb-14">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>Career</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Career</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
         </div>
@@ -104,7 +104,7 @@ export function Experience() {
                 className="p-4 transition-all duration-300"
                 style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#161616';
                 }}
                 onMouseLeave={e => {
@@ -116,9 +116,9 @@ export function Experience() {
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className="w-8 h-8 flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)' }}
+                    style={{ backgroundColor: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.2)' }}
                   >
-                    <Icon className="w-4 h-4" style={{ color: '#c9a84c' }} />
+                    <Icon className="w-4 h-4" style={{ color: '#dc2626' }} />
                   </div>
                   <span
                     className="text-xs px-2 py-0.5"
@@ -134,7 +134,7 @@ export function Experience() {
                 </h3>
 
                 {/* Company */}
-                <p className="text-xs font-medium mb-2" style={{ color: '#c9a84c' }}>
+                <p className="text-xs font-medium mb-2" style={{ color: '#dc2626' }}>
                   {exp.company}
                 </p>
 

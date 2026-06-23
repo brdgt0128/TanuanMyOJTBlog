@@ -44,7 +44,7 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-2 transition-colors duration-300"
           >
-            <span className="text-lg sm:text-xl font-bold tracking-wider" style={{ color: '#c9a84c' }}>BT</span>
+            <span className="text-lg sm:text-xl font-bold tracking-wider" style={{ color: '#dc2626' }}>BT</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export function Navigation() {
                   className="text-xs sm:text-sm font-medium tracking-widest uppercase transition-all duration-300 px-4 py-2"
                   style={{ color: '#ffffff' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLButtonElement).style.color = '#c9a84c';
+                    (e.currentTarget as HTMLButtonElement).style.color = '#dc2626';
                   }}
                   onMouseLeave={e => {
                     (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';
@@ -94,7 +94,7 @@ export function Navigation() {
                     className="w-full text-left text-sm font-medium tracking-widest uppercase transition-all duration-300 py-3 px-3"
                     style={{ color: '#ffffff' }}
                     onMouseEnter={e => {
-                      (e.currentTarget as HTMLButtonElement).style.color = '#c9a84c';
+                      (e.currentTarget as HTMLButtonElement).style.color = '#dc2626';
                     }}
                     onMouseLeave={e => {
                       (e.currentTarget as HTMLButtonElement).style.color = '#ffffff';

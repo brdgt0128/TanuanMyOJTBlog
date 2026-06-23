@@ -203,7 +203,7 @@ export function Projects() {
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
-          backgroundImage: 'linear-gradient(#c9a84c 1px, transparent 1px), linear-gradient(90deg, #c9a84c 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(#dc2626 1px, transparent 1px), linear-gradient(90deg, #dc2626 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -212,8 +212,8 @@ export function Projects() {
         {/* Section Header */}
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#c9a84c' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#c9a84c' }}>
+            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>
               Client Work · United Kingdom
             </span>
           </div>
@@ -231,7 +231,7 @@ export function Projects() {
               className="group flex flex-col transition-all duration-300 overflow-hidden"
               style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(201,168,76,0.4)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
               }}
@@ -331,9 +331,9 @@ export function Projects() {
                       key={tag}
                       className="px-1.5 py-0.5"
                       style={{
-                        backgroundColor: tag === 'UK Client' ? 'rgba(201,168,76,0.08)' : '#0a0a0a',
-                        border: tag === 'UK Client' ? '1px solid rgba(201,168,76,0.25)' : '1px solid #222222',
-                        color: tag === 'UK Client' ? '#c9a84c' : '#666666',
+                        backgroundColor: tag === 'UK Client' ? 'rgba(220,38,38,0.08)' : '#0a0a0a',
+                        border: tag === 'UK Client' ? '1px solid rgba(220,38,38,0.25)' : '1px solid #222222',
+                        color: tag === 'UK Client' ? '#dc2626' : '#666666',
                         fontSize: '10px',
                       }}
                     >
@@ -352,9 +352,9 @@ export function Projects() {
                   className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-medium transition-all duration-300"
                   style={{ border: '1px solid #2a2a2a', color: '#888888', backgroundColor: 'transparent' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#c9a84c';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#c9a84c';
-                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(201,168,76,0.05)';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#dc2626';
+                    (e.currentTarget as HTMLAnchorElement).style.color = '#dc2626';
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(220,38,38,0.05)';
                   }}
                   onMouseLeave={e => {
                     (e.currentTarget as HTMLAnchorElement).style.borderColor = '#2a2a2a';
