@@ -6,7 +6,7 @@ import logoSparky       from '../../assets/logos/sparky.png';
 import logoHampshire    from '../../assets/logos/hampshire.svg';
 import logoPhe          from '../../assets/logos/phe.png';
 import logoKwikrod      from '../../assets/logos/kwikrod.png';
-import logoDd           from '../../assets/logos/ddmaintenance.svg';
+import logoDd           from '../../assets/logos/ddmaintenance.png';
 import logoSa           from '../../assets/logos/sacontractors-logo2.png';
 import logoCcj          from '../../assets/logos/ccj.png';
 import logoFlat         from '../../assets/logos/flat.svg';
@@ -111,11 +111,11 @@ export function Projects() {
       initials: 'DD',
       label: 'Property Maintenance',
       title: 'DD Maintenance',
-      url: 'https://ddmaintenance.co.uk/',
-      displayUrl: 'ddmaintenance.co.uk',
+      url: 'https://ddpropertymaintenace.co.uk/',
+      displayUrl: 'ddpropertymaintenace.co.uk',
       description: 'All-trades property maintenance company in the UK — plumbing, electrical, tiling, carpentry, and general repairs for landlords, letting agents, and homeowners.',
       logo: logoDd,
-      logoBg: 'rgba(0,0,0,0)',
+      logoBg: 'rgba(255,255,255,0.95)',
       gradient: 'linear-gradient(135deg, #0d0d14 0%, #14142a 50%, #0f0f1e 100%)',
       accentColor: '#8b5cf6',
       glowColor: 'rgba(139,92,246,0.15)',
