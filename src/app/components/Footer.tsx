@@ -1,6 +1,5 @@
 ﻿import { Github, Facebook, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
-import logoSvg from '../../assets/logo.svg';
 
 export function Footer() {
   const socialLinks = [
@@ -22,7 +21,7 @@ export function Footer() {
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center gap-2">
-              <img src={logoSvg} alt="AT Logo" className="w-9 h-9" />
+              <span className="text-xl font-bold tracking-wider" style={{ color: '#f5a623' }}>AT</span>
               <h3 className="text-lg sm:text-xl text-white font-semibold">· DevPortfolio</h3>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#555555' }}>
