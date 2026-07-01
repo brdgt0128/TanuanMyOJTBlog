@@ -1,5 +1,6 @@
 ﻿import { ChevronRight, Mail } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import idPhoto from '../../assets/newbg.png';
 
 const ROLES = [
@@ -258,7 +259,12 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[85vh]">
 
           {/* Left */}
-          <div className="space-y-5 sm:space-y-6 order-2 lg:order-1">
+          <motion.div
+            className="space-y-5 sm:space-y-6 order-2 lg:order-1"
+            initial={{ opacity: 0, x: -32 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
             <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border"
               style={{ borderColor: '#302e14', backgroundColor: '#1b1b0d', color: '#888888' }}>
               <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#f5a623' }} />
@@ -305,12 +311,17 @@ export function Hero() {
                 <Mail className="w-4 h-4" /> Get in Touch
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Swinging ID — anchored to top so lanyard reaches header */}
-          <div className="flex justify-center order-1 lg:order-2 self-start lg:-mt-20">
+          <motion.div
+            className="flex justify-center order-1 lg:order-2 self-start lg:-mt-20"
+            initial={{ opacity: 0, x: 32 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
             <SwingingID />
-          </div>
+          </motion.div>
 
         </div>
       </div>

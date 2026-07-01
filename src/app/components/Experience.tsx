@@ -1,4 +1,5 @@
-﻿import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-react';
+import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function Experience() {
   const experiences = [
@@ -87,19 +88,25 @@ export function Experience() {
   return (
     <section id="experience" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-10 sm:mb-14">
+        <motion.div
+          className="mb-10 sm:mb-14"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Career</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="p-4 transition-all duration-300"
                 style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
@@ -111,8 +118,11 @@ export function Experience() {
                   (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
                 }}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: Math.min(index * 0.07, 0.42), ease: [0.21, 0.47, 0.32, 0.98] }}
               >
-                {/* Icon + period row */}
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className="w-8 h-8 flex items-center justify-center"
@@ -128,22 +138,18 @@ export function Experience() {
                   </span>
                 </div>
 
-                {/* Title */}
                 <h3 className="text-sm font-bold mb-1 leading-snug" style={{ color: '#ffffff' }}>
                   {exp.title}
                 </h3>
 
-                {/* Company */}
                 <p className="text-xs font-medium mb-2" style={{ color: '#f5a623' }}>
                   {exp.company}
                 </p>
 
-                {/* Description */}
                 <p className="text-xs leading-relaxed mb-3" style={{ color: '#666666' }}>
                   {exp.description}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   {exp.tags.map((tag, i) => (
                     <span
@@ -155,7 +161,7 @@ export function Experience() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

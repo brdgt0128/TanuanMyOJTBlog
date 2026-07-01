@@ -1,4 +1,5 @@
 ﻿import { ExternalLink, Globe, GraduationCap, Sparkles, Zap, Layers, Paintbrush, Droplets, Wrench, Hammer, Home, Building, Wind } from 'lucide-react';
+import { motion } from 'motion/react';
 
 import logoIjones       from '../../assets/logos/ijones.svg';
 import logoShine        from '../../assets/logos/shine.png';
@@ -210,7 +211,13 @@ export function Projects() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="mb-12 sm:mb-16">
+        <motion.div
+          className="mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>
@@ -221,15 +228,19 @@ export function Projects() {
           <p className="mt-3 text-sm sm:text-base max-w-xl" style={{ color: '#888888' }}>
             Websites built for UK-based businesses — designed, developed, and delivered remotely.
           </p>
-        </div>
+        </motion.div>
 
         {/* Project Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
               className="group flex flex-col transition-all duration-300 overflow-hidden"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.36), ease: [0.21, 0.47, 0.32, 0.98] }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
@@ -366,7 +377,7 @@ export function Projects() {
                   Visit Live Site
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

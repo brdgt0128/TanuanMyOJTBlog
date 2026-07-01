@@ -1,4 +1,5 @@
 ﻿import { Github, Facebook, Linkedin, Mail } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function Footer() {
   const socialLinks = [
@@ -10,7 +11,13 @@ export function Footer() {
   return (
     <footer id="contact" className="py-10 sm:py-14 md:py-16 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center gap-2">
@@ -85,7 +92,7 @@ export function Footer() {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #282812' }}>

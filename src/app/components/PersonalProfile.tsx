@@ -1,4 +1,12 @@
-﻿import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
+import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
+import { motion } from 'motion/react';
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 } as const,
+  viewport: { once: true, margin: '-80px' } as const,
+  transition: { duration: 0.55, delay, ease: [0.21, 0.47, 0.32, 0.98] as const },
+});
 
 export function PersonalProfile() {
   const skillGroups = [
@@ -41,21 +49,20 @@ export function PersonalProfile() {
   return (
     <section id="about" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-12 sm:mb-16">
+        <motion.div className="mb-12 sm:mb-16" {...fadeUp()}>
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Background</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">About Me</h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 gap-6 sm:gap-8">
-          {/* Skills & Tools */}
           <div className="space-y-6">
-            {/* Professional Summary */}
-            <div
+            <motion.div
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              {...fadeUp(0.1)}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Professional Summary</h3>
               <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#888888' }}>
@@ -64,13 +71,13 @@ export function PersonalProfile() {
                 Currently expanding skills through practicum experience at Activerse Incorporation,
                 focusing on building modern web applications and driving business growth through technology.
               </p>
-            </div>
+            </motion.div>
 
-            {/* Skills */}
-            <div
+            <motion.div
               id="skills"
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              {...fadeUp(0.18)}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-5">Skills</h3>
               <div className="space-y-5">
@@ -97,19 +104,19 @@ export function PersonalProfile() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            {/* Tools & Technologies */}
-            <div
+            <motion.div
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              {...fadeUp(0.26)}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Tools & Technologies</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                 {tools.map((tool, index) => {
                   const Icon = tool.icon;
                   return (
-                    <div
+                    <motion.div
                       key={index}
                       className="p-3 sm:p-4 flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300 cursor-pointer"
                       style={{ backgroundColor: '#131309', border: '1px solid #282812' }}
@@ -121,14 +128,18 @@ export function PersonalProfile() {
                         (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                         (e.currentTarget as HTMLDivElement).style.backgroundColor = '#131309';
                       }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-60px' }}
+                      transition={{ duration: 0.4, delay: Math.min(index * 0.06, 0.4), ease: [0.21, 0.47, 0.32, 0.98] }}
                     >
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#f5a623' }} />
                       <span className="text-xs sm:text-sm text-center" style={{ color: '#888888' }}>{tool.name}</span>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-﻿import { Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { motion } from 'motion/react';
 import oldImg1 from '../../assets/d2c72bd2a0e9238bb5f678382138c66c9f1e18fe.png';
 import oldImg2 from '../../assets/2cf62a57c1b8cbaf577cdfe9fae325a385401f90.png';
 import oldImg3 from '../../assets/c2151fda3e2e133043a51014cfa73cd312e09752.png';
@@ -135,17 +136,23 @@ export function BlogEntries() {
   return (
     <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-12 sm:mb-16">
+        <motion.div
+          className="mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Journal</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Blog Entries</h2>
-        </div>
+        </motion.div>
 
         <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {posts.map((post, index) => (
-            <div
+            <motion.div
               key={index}
               className="overflow-hidden transition-all duration-300 cursor-pointer group hover:-translate-y-1"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
@@ -157,6 +164,10 @@ export function BlogEntries() {
                 (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.36), ease: [0.21, 0.47, 0.32, 0.98] }}
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -198,7 +209,7 @@ export function BlogEntries() {
                   {post.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

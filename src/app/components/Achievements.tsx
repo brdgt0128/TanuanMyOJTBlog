@@ -1,4 +1,5 @@
-﻿import { Trophy, Award } from 'lucide-react';
+import { Trophy, Award } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function Achievements() {
   const achievements = [
@@ -35,19 +36,25 @@ export function Achievements() {
   return (
     <section className="min-h-screen py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="mb-12 sm:mb-16">
+        <motion.div
+          className="mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Awards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Achievements & Recognition</h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
           {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="p-5 sm:p-6 md:p-8 transition-all duration-300 group"
                 style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
@@ -59,6 +66,10 @@ export function Achievements() {
                   (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
                 }}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.55, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
               >
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start justify-between">
@@ -88,7 +99,7 @@ export function Achievements() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
