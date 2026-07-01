@@ -242,7 +242,7 @@ export function Projects() {
               }}
             >
               {/* Browser Window Mockup */}
-              <div className="relative overflow-hidden" style={{ height: '160px', background: project.gradient }}>
+              <div className="relative overflow-hidden" style={{ height: '160px', backgroundColor: '#0d0d09' }}>
                 {/* Ambient glow */}
                 <div
                   className="absolute inset-0 pointer-events-none"
@@ -299,12 +299,12 @@ export function Projects() {
                 {/* Bottom fade */}
                 <div
                   className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none z-20"
-                  style={{ background: 'linear-gradient(to bottom, transparent, #111111)' }}
+                  style={{ background: 'linear-gradient(to bottom, transparent, #1b1b0d)' }}
                 />
               </div>
 
               {/* Card Info */}
-              <div className="px-4 pt-3 pb-2.5" style={{ borderBottom: '1px solid #1a1a1a' }}>
+              <div className="px-4 pt-3 pb-2.5" style={{ borderBottom: '1px solid #282812' }}>
                 <div className="flex items-center justify-between mb-1.5">
                   <p style={{ fontSize: '9px', color: '#555555', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{project.label}</p>
                   <span
