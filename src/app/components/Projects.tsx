@@ -306,7 +306,7 @@ export function Projects() {
               {/* Card Info */}
               <div className="px-4 pt-3 pb-2.5" style={{ borderBottom: '1px solid #282812' }}>
                 <div className="flex items-center justify-between mb-1.5">
-                  <p style={{ fontSize: '9px', color: '#555555', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{project.label}</p>
+                  <p style={{ fontSize: '9px', color: '#999999', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{project.label}</p>
                   <span
                     className="px-1.5 py-0.5 font-medium"
                     style={{ backgroundColor: '#1e1e0c', border: '1px solid #302e14', color: '#888888', fontSize: '10px' }}
@@ -315,14 +315,14 @@ export function Projects() {
                   </span>
                 </div>
                 <h3 className="text-sm font-bold text-white mb-1 leading-tight">{project.title}</h3>
-                <p className="flex items-center gap-1" style={{ color: '#444444', fontSize: '10px' }}>
+                <p className="flex items-center gap-1" style={{ color: '#777777', fontSize: '10px' }}>
                   <Globe className="w-2.5 h-2.5" />{project.displayUrl}
                 </p>
               </div>
 
               {/* Description + Tags */}
               <div className="flex-1 px-4 py-3 space-y-2.5">
-                <p className="leading-relaxed" style={{ color: '#777777', fontSize: '11px' }}>
+                <p className="leading-relaxed" style={{ color: '#aaaaaa', fontSize: '11px' }}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
