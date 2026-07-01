@@ -99,7 +99,7 @@ export function Footer() {
           <p className="text-xs text-center md:text-left" style={{ color: '#333333' }}>
             © 2026 Aldrin B. Tanuan · All rights reserved.
           </p>
-          <p className="text-xs" style={{ color: '#302e14' }}>Built with React & Tailwind CSS</p>
+          <p className="text-xs" style={{ color: '#302e14' }}>Built by Aldrin Tanuan</p>
         </div>
       </div>
     </footer>
