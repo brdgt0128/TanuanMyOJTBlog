@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoSvg from '../../assets/logo.svg';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +45,7 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-2 transition-colors duration-300"
           >
-            <span className="text-lg sm:text-xl font-bold tracking-wider" style={{ color: '#f5a623' }}>BT</span>
+            <img src={logoSvg} alt="AT Logo" className="w-9 h-9" />
           </button>
 
           {/* Desktop Navigation */}

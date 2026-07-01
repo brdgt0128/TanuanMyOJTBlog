@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Stroke gradient: bright gold → warm amber -->
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ffe080"/>
+      <stop offset="45%"  stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#c4820d"/>
+    </linearGradient>
+
+    <!-- Background radial gradient -->
+    <radialGradient id="bg" cx="42%" cy="36%" r="68%">
+      <stop offset="0%"   stop-color="#1e1c0a"/>
+      <stop offset="100%" stop-color="#080806"/>
+    </radialGradient>
+
+    <!-- Glow filter for strokes -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Softer glow for the accent dot -->
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Badge background -->
+  <rect width="120" height="120" rx="20" fill="url(#bg)"/>
+
+  <!-- Outer border (dim gold) -->
+  <rect width="120" height="120" rx="20" fill="none" stroke="#f5a623" stroke-width="1.5" opacity="0.22"/>
+
+  <!-- Inner border (fine highlight) -->
+  <rect x="3" y="3" width="114" height="114" rx="17.5" fill="none" stroke="#ffe080" stroke-width="0.6" opacity="0.12"/>
+
+  <!-- Corner accent marks -->
+  <line x1="12" y1="12" x2="22" y2="12" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="12" y1="12" x2="12" y2="22" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="108" y1="12" x2="98"  y2="12" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="108" y1="12" x2="108" y2="22" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="12"  y1="108" x2="22"  y2="108" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="12"  y1="108" x2="12"  y2="98"  stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="108" y1="108" x2="98"  y2="108" stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <line x1="108" y1="108" x2="108" y2="98"  stroke="#f5a623" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- ═══ AT MONOGRAM ═══
+       A: left diagonal full height + right diagonal stops at crossbar
+       Shared crossbar: A crossbar = T top bar
+       T: stem drops from center of its top bar
+  -->
+  <g filter="url(#glow)">
+    <!-- A — left leg (full height) -->
+    <line x1="18" y1="95" x2="48" y2="18"
+          stroke="url(#sg)" stroke-width="8.5" stroke-linecap="round"/>
+
+    <!-- A — right leg (stops at crossbar) -->
+    <line x1="48" y1="18" x2="63" y2="62"
+          stroke="url(#sg)" stroke-width="8.5" stroke-linecap="round"/>
+
+    <!-- Shared crossbar (A crossbar → T top bar) -->
+    <line x1="26" y1="62" x2="102" y2="62"
+          stroke="url(#sg)" stroke-width="8.5" stroke-linecap="round"/>
+
+    <!-- T — stem -->
+    <line x1="84" y1="62" x2="84" y2="95"
+          stroke="url(#sg)" stroke-width="8.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Apex accent dot (where A peaks) -->
+  <circle cx="48" cy="18" r="5" fill="#ffe080" filter="url(#dotGlow)" opacity="0.95"/>
+  <circle cx="48" cy="18" r="2.5" fill="#ffffff" opacity="0.85"/>
+</svg>
