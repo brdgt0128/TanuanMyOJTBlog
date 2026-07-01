@@ -138,13 +138,9 @@ export function Experience() {
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold mb-1 leading-snug" style={{ color: '#ffffff' }}>
+                <h3 className="text-sm font-bold mb-2 leading-snug" style={{ color: '#ffffff' }}>
                   {exp.title}
                 </h3>
-
-                <p className="text-xs font-medium mb-2" style={{ color: '#f5a623' }}>
-                  {exp.company}
-                </p>
 
                 <p className="text-xs leading-relaxed mb-3" style={{ color: '#666666' }}>
                   {exp.description}
