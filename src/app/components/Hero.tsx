@@ -112,7 +112,11 @@ function SwingingID() {
 
   useEffect(() => {
     const mm = (e: MouseEvent) => moveDrag(e.clientX, e.clientY);
-    const tm = (e: TouchEvent) => { e.preventDefault(); moveDrag(e.touches[0].clientX, e.touches[0].clientY); };
+    const tm = (e: TouchEvent) => {
+      if (!isDraggingRef.current) return;
+      e.preventDefault();
+      moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+    };
     window.addEventListener('mousemove', mm);
     window.addEventListener('mouseup', endDrag);
     window.addEventListener('touchmove', tm, { passive: false });
@@ -141,7 +145,7 @@ function SwingingID() {
           <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, #b91c1c 20%, #dc2626 50%, #b91c1c 80%, transparent)' }} />
 
           {/* Double-cord lanyard (two parallel strings) */}
-          <div className="relative flex items-start justify-center" style={{ height: '220px', width: '16px' }}>
+          <div className="relative flex items-start justify-center" style={{ height: 'clamp(80px, 14vw, 220px)', width: '16px' }}>
             <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, #b91c1c, #dc262688 60%, #b91c1c)' }} />
             <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, #b91c1c, #dc262688 60%, #b91c1c)' }} />
           </div>
@@ -277,7 +281,7 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3 pt-1">
-              {[{ value: '12', label: 'UK Projects' }, { value: '9+', label: 'Experiences' }, { value: '2026', label: 'BSIT Graduate' }].map(({ value, label }) => (
+              {[{ value: '12', label: 'UK Projects' }, { value: '3', label: 'Years Experience' }, { value: '2026', label: 'BSIT Graduate' }].map(({ value, label }) => (
                 <div key={label} className="px-4 py-2.5 flex flex-col" style={{ border: '1px solid #1e1e1e', backgroundColor: '#111111' }}>
                   <span className="text-lg font-bold" style={{ color: '#dc2626' }}>{value}</span>
                   <span className="text-xs" style={{ color: '#555555' }}>{label}</span>
