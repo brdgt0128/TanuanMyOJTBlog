@@ -68,10 +68,10 @@ export function PersonalProfile() {
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Professional Summary</h3>
               <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#888888' }}>
-                A passionate frontend developer and SaaS sales professional with hands-on experience
-                in web development, product listing, tech support, and enterprise software sales.
-                Currently expanding skills through practicum experience at Activerse Incorporation,
-                focusing on building modern web applications and driving business growth through technology.
+                A versatile professional with hands-on experience as a Web Developer, Tech Support Specialist,
+                and SaaS Sales Executive. Skilled in building responsive web applications, resolving technical
+                issues, and driving B2B sales growth. Passionate about leveraging modern tools and AI to deliver
+                impactful digital solutions and exceed client expectations.
               </p>
             </motion.div>
 
