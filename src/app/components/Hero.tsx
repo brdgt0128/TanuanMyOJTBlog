@@ -283,7 +283,7 @@ export function Hero() {
 
             <p className="text-sm sm:text-base leading-relaxed max-w-lg" style={{ color: '#888888' }}>
               I build responsive web applications and drive business growth through technology.
-              Experienced in web development, API integration, and SaaS sales at Activerse Incorporation.
+              Experienced in web development, API integration, tech support, and SaaS sales.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-1">
