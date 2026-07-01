@@ -44,6 +44,8 @@ export function PersonalProfile() {
     { name: 'Claude AI', icon: Code },
     { name: 'ChatGPT', icon: Code },
     { name: 'Resend', icon: Terminal },
+    { name: 'Vercel', icon: Terminal },
+    { name: 'n8n', icon: Code },
   ];
 
   return (
