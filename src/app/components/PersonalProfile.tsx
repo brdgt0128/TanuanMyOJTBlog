@@ -1,4 +1,4 @@
-import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
+﻿import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
 
 export function PersonalProfile() {
   const skillGroups = [
@@ -39,12 +39,12 @@ export function PersonalProfile() {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
+    <section id="about" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Background</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Background</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">About Me</h2>
         </div>
@@ -55,7 +55,7 @@ export function PersonalProfile() {
             {/* Professional Summary */}
             <div
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
-              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Professional Summary</h3>
               <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#888888' }}>
@@ -70,7 +70,7 @@ export function PersonalProfile() {
             <div
               id="skills"
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
-              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-5">Skills</h3>
               <div className="space-y-5">
@@ -85,9 +85,9 @@ export function PersonalProfile() {
                           key={skill}
                           className="px-3 py-1 text-xs transition-all duration-300 cursor-default"
                           style={{
-                            color: '#dc2626',
-                            backgroundColor: 'rgba(220,38,38,0.08)',
-                            border: '1px solid rgba(220,38,38,0.2)',
+                            color: '#f5a623',
+                            backgroundColor: 'rgba(245,166,35,0.08)',
+                            border: '1px solid rgba(245,166,35,0.2)',
                           }}
                         >
                           {skill}
@@ -102,7 +102,7 @@ export function PersonalProfile() {
             {/* Tools & Technologies */}
             <div
               className="p-4 sm:p-6 md:p-8 transition-all duration-300"
-              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
             >
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Tools & Technologies</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
@@ -112,17 +112,17 @@ export function PersonalProfile() {
                     <div
                       key={index}
                       className="p-3 sm:p-4 flex flex-col items-center gap-2 hover:scale-105 transition-all duration-300 cursor-pointer"
-                      style={{ backgroundColor: '#0a0a0a', border: '1px solid #1e1e1e' }}
+                      style={{ backgroundColor: '#131309', border: '1px solid #282812' }}
                       onMouseEnter={e => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
-                        (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(220,38,38,0.05)';
+                        (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                        (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(245,166,35,0.05)';
                       }}
                       onMouseLeave={e => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
-                        (e.currentTarget as HTMLDivElement).style.backgroundColor = '#0a0a0a';
+                        (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                        (e.currentTarget as HTMLDivElement).style.backgroundColor = '#131309';
                       }}
                     >
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#dc2626' }} />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#f5a623' }} />
                       <span className="text-xs sm:text-sm text-center" style={{ color: '#888888' }}>{tool.name}</span>
                     </div>
                   );

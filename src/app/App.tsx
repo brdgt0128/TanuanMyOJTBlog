@@ -1,4 +1,4 @@
-import { Navigation } from './components/Navigation';
+﻿import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { PersonalProfile } from './components/PersonalProfile';
 import { Experience } from './components/Experience';
@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 export default function App() {
 
   return (
-    <div className="min-h-screen bg-[#000000]">
+    <div className="min-h-screen grid-bg" style={{ backgroundColor: '#131309' }}>
       <Navigation />
       <Hero />
       <PersonalProfile />

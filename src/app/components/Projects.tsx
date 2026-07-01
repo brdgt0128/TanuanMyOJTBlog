@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, GraduationCap, Sparkles, Zap, Layers, Paintbrush, Droplets, Wrench, Hammer, Home, Building, Wind } from 'lucide-react';
+﻿import { ExternalLink, Globe, GraduationCap, Sparkles, Zap, Layers, Paintbrush, Droplets, Wrench, Hammer, Home, Building, Wind } from 'lucide-react';
 
 import logoIjones       from '../../assets/logos/ijones.svg';
 import logoShine        from '../../assets/logos/shine.png';
@@ -25,7 +25,7 @@ export function Projects() {
       displayUrl: 'ijonestraining.center',
       description: 'Logistics and transport training provider in Telford — ADR, Driver CPC, Forklift, and Transport Manager CPC courses backed by 30+ years of experience.',
       logo: logoIjones,
-      logoBg: 'rgba(153,27,27,0.12)',
+      logoBg: 'rgba(180,140,20,0.12)',
       gradient: 'linear-gradient(135deg, #0d1b2e 0%, #1a3550 50%, #0f2640 100%)',
       accentColor: '#3b82f6',
       glowColor: 'rgba(59,130,246,0.15)',
@@ -198,12 +198,12 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-16 sm:py-20 md:py-28 relative" style={{ backgroundColor: '#0d0d0d', borderTop: '1px solid #1e1e1e' }}>
+    <section id="projects" className="py-16 sm:py-20 md:py-28 relative grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
-          backgroundImage: 'linear-gradient(#dc2626 1px, transparent 1px), linear-gradient(90deg, #dc2626 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(#f5a623 1px, transparent 1px), linear-gradient(90deg, #f5a623 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -212,8 +212,8 @@ export function Projects() {
         {/* Section Header */}
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>
+            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>
               Client Work · United Kingdom
             </span>
           </div>
@@ -229,14 +229,14 @@ export function Projects() {
             <div
               key={project.id}
               className="group flex flex-col transition-all duration-300 overflow-hidden"
-              style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
@@ -309,7 +309,7 @@ export function Projects() {
                   <p style={{ fontSize: '9px', color: '#555555', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{project.label}</p>
                   <span
                     className="px-1.5 py-0.5 font-medium"
-                    style={{ backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', color: '#888888', fontSize: '10px' }}
+                    style={{ backgroundColor: '#1e1e0c', border: '1px solid #302e14', color: '#888888', fontSize: '10px' }}
                   >
                     🇬🇧 UK
                   </span>
@@ -331,9 +331,9 @@ export function Projects() {
                       key={tag}
                       className="px-1.5 py-0.5"
                       style={{
-                        backgroundColor: tag === 'UK Client' ? 'rgba(220,38,38,0.08)' : '#0a0a0a',
-                        border: tag === 'UK Client' ? '1px solid rgba(220,38,38,0.25)' : '1px solid #222222',
-                        color: tag === 'UK Client' ? '#dc2626' : '#666666',
+                        backgroundColor: tag === 'UK Client' ? 'rgba(245,166,35,0.08)' : '#131309',
+                        border: tag === 'UK Client' ? '1px solid rgba(245,166,35,0.25)' : '1px solid #222222',
+                        color: tag === 'UK Client' ? '#f5a623' : '#666666',
                         fontSize: '10px',
                       }}
                     >
@@ -350,14 +350,14 @@ export function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-medium transition-all duration-300"
-                  style={{ border: '1px solid #2a2a2a', color: '#888888', backgroundColor: 'transparent' }}
+                  style={{ border: '1px solid #302e14', color: '#888888', backgroundColor: 'transparent' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#dc2626';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#dc2626';
-                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(220,38,38,0.05)';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#f5a623';
+                    (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623';
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(245,166,35,0.05)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#2a2a2a';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#302e14';
                     (e.currentTarget as HTMLAnchorElement).style.color = '#888888';
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent';
                   }}

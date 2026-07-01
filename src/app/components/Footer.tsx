@@ -1,4 +1,4 @@
-import { Github, Facebook, Linkedin, Mail } from 'lucide-react';
+﻿import { Github, Facebook, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
@@ -8,13 +8,13 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" className="py-10 sm:py-14 md:py-16" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
+    <footer id="contact" className="py-10 sm:py-14 md:py-16 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-wider" style={{ color: '#dc2626' }}>BT</span>
+              <span className="text-xl font-bold tracking-wider" style={{ color: '#f5a623' }}>BT</span>
               <h3 className="text-lg sm:text-xl text-white font-semibold">· DevPortfolio</h3>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: '#555555' }}>
@@ -34,7 +34,7 @@ export function Footer() {
                     href={`#${link.toLowerCase().replace(' ', '-')}`}
                     className="text-sm transition-colors duration-300"
                     style={{ color: '#888888' }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#dc2626'}
+                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623'}
                     onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#888888'}
                   >
                     {link}
@@ -51,10 +51,10 @@ export function Footer() {
               href="mailto:tanuanaldrin28@gmail.com"
               className="flex items-center gap-2 text-sm transition-colors duration-300 break-all"
               style={{ color: '#888888' }}
-              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#dc2626'}
+              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623'}
               onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#888888'}
             >
-              <Mail className="w-4 h-4 flex-shrink-0" style={{ color: '#dc2626' }} />
+              <Mail className="w-4 h-4 flex-shrink-0" style={{ color: '#f5a623' }} />
               <span>tanuanaldrin28@gmail.com</span>
             </a>
 
@@ -68,15 +68,15 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 transition-all duration-300 hover:scale-110"
-                    style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+                    style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
                     aria-label={social.name}
                     onMouseEnter={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(220,38,38,0.5)';
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(220,38,38,0.08)';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,166,35,0.5)';
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(245,166,35,0.08)';
                     }}
                     onMouseLeave={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = '#1e1e1e';
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#111111';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = '#282812';
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#1b1b0d';
                     }}
                   >
                     <Icon className="w-4 h-4" style={{ color: '#888888' }} />
@@ -88,11 +88,11 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #1e1e1e' }}>
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #282812' }}>
           <p className="text-xs text-center md:text-left" style={{ color: '#333333' }}>
             © 2026 Aldrin B. Tanuan · All rights reserved.
           </p>
-          <p className="text-xs" style={{ color: '#2a2a2a' }}>Built with React & Tailwind CSS</p>
+          <p className="text-xs" style={{ color: '#302e14' }}>Built with React & Tailwind CSS</p>
         </div>
       </div>
     </footer>

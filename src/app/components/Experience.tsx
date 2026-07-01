@@ -1,4 +1,4 @@
-import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-react';
+﻿import { Briefcase, ShoppingBag, Headphones, TrendingUp, Globe } from 'lucide-react';
 
 export function Experience() {
   const experiences = [
@@ -85,12 +85,12 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#0a0a0a', borderTop: '1px solid #1e1e1e' }}>
+    <section id="experience" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-10 sm:mb-14">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#dc2626' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#dc2626' }}>Career</span>
+            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Career</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
         </div>
@@ -102,27 +102,27 @@ export function Experience() {
               <div
                 key={index}
                 className="p-4 transition-all duration-300"
-                style={{ backgroundColor: '#111111', border: '1px solid #1e1e1e' }}
+                style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(220,38,38,0.4)';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#161616';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0c';
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e1e';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#111111';
+                  (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
                 }}
               >
                 {/* Icon + period row */}
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className="w-8 h-8 flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.2)' }}
+                    style={{ backgroundColor: 'rgba(245,166,35,0.1)', border: '1px solid rgba(245,166,35,0.2)' }}
                   >
-                    <Icon className="w-4 h-4" style={{ color: '#dc2626' }} />
+                    <Icon className="w-4 h-4" style={{ color: '#f5a623' }} />
                   </div>
                   <span
                     className="text-xs px-2 py-0.5"
-                    style={{ backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', color: '#666666' }}
+                    style={{ backgroundColor: '#1e1e0c', border: '1px solid #302e14', color: '#666666' }}
                   >
                     {exp.period}
                   </span>
@@ -134,7 +134,7 @@ export function Experience() {
                 </h3>
 
                 {/* Company */}
-                <p className="text-xs font-medium mb-2" style={{ color: '#dc2626' }}>
+                <p className="text-xs font-medium mb-2" style={{ color: '#f5a623' }}>
                   {exp.company}
                 </p>
 
@@ -149,7 +149,7 @@ export function Experience() {
                     <span
                       key={i}
                       className="text-xs px-2 py-0.5"
-                      style={{ backgroundColor: '#0a0a0a', border: '1px solid #222222', color: '#777777' }}
+                      style={{ backgroundColor: '#131309', border: '1px solid #222222', color: '#777777' }}
                     >
                       {tag}
                     </span>
