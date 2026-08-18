@@ -56,7 +56,7 @@ export function Achievements() {
             return (
               <motion.div
                 key={index}
-                className="transition-all duration-300 group overflow-hidden"
+                className="overflow-hidden transition-all duration-300"
                 style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
@@ -75,6 +75,7 @@ export function Achievements() {
               >
                 {/* Gold gradient top accent */}
                 <div className="h-0.5 w-full" style={{ background: 'linear-gradient(90deg, #f5a623 0%, rgba(196,130,13,0.4) 60%, transparent 100%)' }} />
+
                 <div className="p-5 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
                   <div className="flex items-start justify-between">
                     <div
@@ -102,7 +103,6 @@ export function Achievements() {
                       {achievement.description}
                     </p>
                   </div>
-                </div>
                 </div>
               </motion.div>
             );
