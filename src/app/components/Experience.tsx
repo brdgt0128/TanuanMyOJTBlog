@@ -97,7 +97,7 @@ export function Experience() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Career</span>
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>02 — Career</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
         </motion.div>
@@ -109,14 +109,18 @@ export function Experience() {
               <motion.div
                 key={index}
                 className="p-4 transition-all duration-300"
-                style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+                style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812', borderLeft: '2px solid rgba(245,166,35,0.35)' }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = '#f5a623';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0c';
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = 'rgba(245,166,35,0.35)';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 }}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}

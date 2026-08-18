@@ -145,23 +145,72 @@ export function BlogEntries() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Journal</span>
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>04 — Journal</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Blog Entries</h2>
         </motion.div>
 
-        <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {posts.map((post, index) => (
+        {/* Featured posts (first 2) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5">
+          {posts.slice(0, 2).map((post, index) => (
             <motion.div
               key={index}
-              className="overflow-hidden transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+              className="overflow-hidden transition-all duration-300 cursor-pointer group"
               style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(245,166,35,0.08)';
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 12px 40px rgba(0,0,0,0.4)';
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+              }}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.55, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            >
+              <div className="overflow-hidden" style={{ height: '220px' }}>
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 sm:p-6 space-y-3">
+                <div className="flex items-center gap-2 text-xs" style={{ color: '#555555' }}>
+                  <Calendar className="w-3 h-3" style={{ color: '#f5a623' }} />
+                  <span>{post.date}</span>
+                  <span className="ml-auto px-2 py-0.5 text-xs" style={{ backgroundColor: 'rgba(245,166,35,0.08)', border: '1px solid rgba(245,166,35,0.18)', color: '#f5a623' }}>Featured</span>
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold leading-snug" style={{ color: '#ffffff' }}>
+                  {post.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#888888' }}>
+                  {post.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Regular grid (remaining posts) */}
+        <div className="grid items-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          {posts.slice(2).map((post, index) => (
+            <motion.div
+              key={index}
+              className="overflow-hidden transition-all duration-300 cursor-pointer group"
+              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(245,166,35,0.07)';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
               initial={{ opacity: 0, y: 28 }}

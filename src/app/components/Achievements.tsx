@@ -45,7 +45,7 @@ export function Achievements() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>Awards</span>
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>05 — Awards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Achievements & Recognition</h2>
         </motion.div>
@@ -56,22 +56,26 @@ export function Achievements() {
             return (
               <motion.div
                 key={index}
-                className="p-5 sm:p-6 md:p-8 transition-all duration-300 group"
+                className="transition-all duration-300 group overflow-hidden"
                 style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0c';
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)';
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
                   (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 }}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.55, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
               >
-                <div className="space-y-3 sm:space-y-4">
+                {/* Gold gradient top accent */}
+                <div className="h-0.5 w-full" style={{ background: 'linear-gradient(90deg, #f5a623 0%, rgba(196,130,13,0.4) 60%, transparent 100%)' }} />
+                <div className="p-5 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
                   <div className="flex items-start justify-between">
                     <div
                       className="p-2.5 sm:p-3 transition-colors duration-300"
@@ -98,6 +102,7 @@ export function Achievements() {
                       {achievement.description}
                     </p>
                   </div>
+                </div>
                 </div>
               </motion.div>
             );

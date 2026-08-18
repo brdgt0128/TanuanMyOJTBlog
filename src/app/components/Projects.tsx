@@ -221,7 +221,7 @@ export function Projects() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
             <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>
-              Client Work · United Kingdom
+              03 — Client Work · United Kingdom
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Projects</h2>

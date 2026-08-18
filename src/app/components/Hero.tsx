@@ -326,6 +326,24 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Scroll indicator */}
+      <motion.button
+        onClick={() => scrollTo('about')}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 cursor-pointer hidden sm:flex"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.7 }}
+        aria-label="Scroll to about"
+      >
+        <span className="text-xs tracking-[0.22em] uppercase" style={{ color: '#444444' }}>Scroll</span>
+        <motion.div
+          className="w-px h-10"
+          style={{ background: 'linear-gradient(to bottom, #f5a623, transparent)', transformOrigin: 'top' }}
+          animate={{ opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </motion.button>
+
       <style>{`
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
       `}</style>
