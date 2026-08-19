@@ -86,10 +86,10 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
+    <section id="experience" className="py-16 sm:py-20 md:py-28 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
-          className="mb-10 sm:mb-14"
+          className="mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}

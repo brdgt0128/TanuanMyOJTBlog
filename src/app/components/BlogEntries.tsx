@@ -134,7 +134,7 @@ export function BlogEntries() {
   ];
 
   return (
-    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
+    <section id="blog" className="py-16 sm:py-20 md:py-28 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="mb-12 sm:mb-16"

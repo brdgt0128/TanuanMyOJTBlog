@@ -57,7 +57,7 @@ export function PersonalProfile() {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
+    <section id="about" className="py-16 sm:py-20 md:py-28 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div className="mb-12 sm:mb-16" {...fadeUp()}>
