@@ -86,7 +86,7 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
+    <section id="experience" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="mb-10 sm:mb-14"
@@ -96,70 +96,114 @@ export function Experience() {
           transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>02 — Career</span>
+            <div className="h-px w-8" style={{ backgroundColor: 'var(--accent)' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>02 — Career</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Experience</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: 'var(--ink)' }}>Experience</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Manifest header row — desktop only */}
+        <div
+          className="hidden lg:grid gap-4 px-4 pb-3 text-xs uppercase tracking-widest"
+          style={{
+            gridTemplateColumns: '3.5rem 1fr 11rem 7rem',
+            color: 'var(--ink-faint)',
+            fontFamily: 'var(--font-mono)',
+            borderBottom: '1px solid var(--rule)',
+          }}
+        >
+          <span>Nº</span>
+          <span>Role · Company</span>
+          <span>Focus</span>
+          <span style={{ textAlign: 'right' }}>Period</span>
+        </div>
+
+        <div className="flex flex-col">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
+            const isOngoing = exp.period.includes('2026');
             return (
               <motion.div
                 key={index}
-                className="p-4 transition-all duration-300"
-                style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812', borderLeft: '2px solid rgba(245,166,35,0.35)' }}
+                className="group grid grid-cols-1 lg:items-center gap-3 lg:gap-4 px-4 py-5 transition-all duration-300"
+                style={{
+                  gridTemplateColumns: '3.5rem 1fr 11rem 7rem',
+                  borderBottom: '1px solid var(--hairline)',
+                  borderLeft: '2px solid transparent',
+                }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = '#f5a623';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0c';
-                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = 'var(--paper-2)';
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = 'var(--accent)';
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = 'rgba(245,166,35,0.35)';
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1b1b0d';
-                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = 'transparent';
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = 'transparent';
                 }}
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: Math.min(index * 0.07, 0.42), ease: [0.21, 0.47, 0.32, 0.98] }}
+                transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.4), ease: [0.21, 0.47, 0.32, 0.98] }}
               >
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3 lg:block">
+                  <span className="text-xs" style={{ color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                   <div
-                    className="w-8 h-8 flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(245,166,35,0.1)', border: '1px solid rgba(245,166,35,0.2)' }}
+                    className="w-8 h-8 flex items-center justify-center lg:hidden"
+                    style={{ backgroundColor: 'oklch(66% 0.235 25 / 0.1)', border: '1px solid oklch(66% 0.235 25 / 0.2)', borderRadius: 'var(--radius-sm)' }}
                   >
-                    <Icon className="w-4 h-4" style={{ color: '#f5a623' }} />
+                    <Icon className="w-4 h-4" style={{ color: 'var(--accent)' }} />
                   </div>
+                </div>
+
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div
+                      className="w-7 h-7 items-center justify-center hidden lg:flex flex-shrink-0"
+                      style={{ backgroundColor: 'oklch(66% 0.235 25 / 0.1)', border: '1px solid oklch(66% 0.235 25 / 0.2)', borderRadius: 'var(--radius-sm)' }}
+                    >
+                      <Icon className="w-3.5 h-3.5" style={{ color: 'var(--accent)' }} />
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold leading-snug" style={{ color: 'var(--ink)' }}>
+                      {exp.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs mb-2" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>{exp.company}</p>
+                  <p className="text-xs leading-relaxed mb-2.5 max-w-xl" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-body)' }}>
+                    {exp.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {exp.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-2 py-0.5"
+                        style={{ backgroundColor: 'var(--paper)', border: '1px solid var(--hairline)', color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)', borderRadius: 'var(--radius-xs)' }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="hidden lg:block">
                   <span
-                    className="text-xs px-2 py-0.5"
-                    style={{ backgroundColor: '#1e1e0c', border: '1px solid #302e14', color: '#666666' }}
+                    className="inline-flex items-center gap-1.5 text-xs px-2 py-0.5 uppercase tracking-wider"
+                    style={{
+                      color: isOngoing ? 'var(--status-go)' : 'var(--ink-faint)',
+                      border: `1px solid ${isOngoing ? 'oklch(72% 0.150 145 / 0.35)' : 'var(--hairline)'}`,
+                      fontFamily: 'var(--font-mono)',
+                      borderRadius: 'var(--radius-xs)',
+                    }}
                   >
-                    {exp.period}
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isOngoing ? 'var(--status-go)' : 'var(--ink-faint)' }} />
+                    {isOngoing ? 'Ongoing' : 'Logged'}
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold mb-2 leading-snug" style={{ color: '#ffffff' }}>
-                  {exp.title}
-                </h3>
-
-                <p className="text-xs leading-relaxed mb-3" style={{ color: '#666666' }}>
-                  {exp.description}
-                </p>
-
-                <div className="flex flex-wrap gap-1.5">
-                  {exp.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="text-xs px-2 py-0.5"
-                      style={{ backgroundColor: '#131309', border: '1px solid #222222', color: '#777777' }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="text-left lg:text-right">
+                  <span className="text-xs" style={{ color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}>
+                    {exp.period}
+                  </span>
                 </div>
               </motion.div>
             );

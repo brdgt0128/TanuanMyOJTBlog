@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 export default function App() {
 
   return (
-    <div className="min-h-screen grid-bg" style={{ backgroundColor: '#131309' }}>
+    <div className="min-h-screen grid-bg" style={{ backgroundColor: 'var(--paper)' }}>
       <Navigation />
       <Hero />
       <PersonalProfile />

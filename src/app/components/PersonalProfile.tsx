@@ -57,13 +57,13 @@ export function PersonalProfile() {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
+    <section id="about" className="py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div className="mb-12 sm:mb-16" {...fadeUp()}>
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>01 — Background</span>
+            <div className="h-px w-8" style={{ backgroundColor: 'var(--accent)' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>01 — Background</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">About Me</h2>
         </motion.div>
@@ -72,18 +72,18 @@ export function PersonalProfile() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 mb-5 sm:mb-6">
           <motion.div
             className="lg:col-span-2 p-6 md:p-8 transition-all duration-300"
-            style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+            style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
             {...fadeUp(0.1)}
           >
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-4">Professional Summary</h3>
-            <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: '#888888' }}>
+            <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: 'var(--ink-mute)' }}>
               A versatile professional with hands-on experience as a Web Developer, Tech Support Specialist,
               and SaaS Sales Executive. Skilled in building responsive web applications, resolving technical
               issues, and driving B2B sales growth. Passionate about leveraging modern tools and AI to deliver
               impactful digital solutions and exceed client expectations.
             </p>
-            <div className="pl-4 py-0.5" style={{ borderLeft: '2px solid #f5a623' }}>
-              <p className="text-sm sm:text-base italic leading-relaxed" style={{ color: '#bbbbbb' }}>
+            <div className="pl-4 py-0.5" style={{ borderLeft: '2px solid var(--accent)' }}>
+              <p className="text-sm sm:text-base italic leading-relaxed" style={{ color: 'var(--ink-2)' }}>
                 "Passionate about building digital products that are fast, beautiful, and genuinely useful."
               </p>
             </div>
@@ -91,7 +91,7 @@ export function PersonalProfile() {
 
           <motion.div
             className="p-6 md:p-8 transition-all duration-300"
-            style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+            style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
             {...fadeUp(0.15)}
           >
             <h3 className="text-lg sm:text-xl font-semibold text-white mb-5">Quick Facts</h3>
@@ -100,10 +100,10 @@ export function PersonalProfile() {
                 <div
                   key={label}
                   className="flex justify-between items-center py-3"
-                  style={{ borderBottom: '1px solid #1e1e0c' }}
+                  style={{ borderBottom: '1px solid var(--paper-3)' }}
                 >
-                  <span className="text-xs uppercase tracking-widest" style={{ color: '#555555' }}>{label}</span>
-                  <span className="text-sm font-medium" style={{ color: '#dddddd' }}>{value}</span>
+                  <span className="text-xs uppercase tracking-widest" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>{label}</span>
+                  <span className="text-sm font-medium" style={{ color: 'var(--ink-2)' }}>{value}</span>
                 </div>
               ))}
             </div>
@@ -114,14 +114,14 @@ export function PersonalProfile() {
         <motion.div
           id="skills"
           className="p-6 md:p-8 transition-all duration-300 mb-5 sm:mb-6"
-          style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+          style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
           {...fadeUp(0.18)}
         >
           <h3 className="text-lg sm:text-xl font-semibold text-white mb-6">Skills</h3>
           <div className="space-y-5">
             {skillGroups.map((group) => (
               <div key={group.label}>
-                <p className="text-xs uppercase tracking-widest mb-2.5" style={{ color: '#555555' }}>
+                <p className="text-xs uppercase tracking-widest mb-2.5" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>
                   {group.label}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -130,9 +130,11 @@ export function PersonalProfile() {
                       key={skill}
                       className="px-3 py-1 text-xs transition-all duration-300 cursor-default"
                       style={{
-                        color: '#f5a623',
-                        backgroundColor: 'rgba(245,166,35,0.07)',
-                        border: '1px solid rgba(245,166,35,0.18)',
+                        color: 'var(--accent)',
+                        backgroundColor: 'oklch(66% 0.235 25 /0.07)',
+                        border: '1px solid oklch(66% 0.235 25 /0.18)',
+                        borderRadius: 'var(--radius-sm)',
+                        fontFamily: 'var(--font-mono)',
                       }}
                     >
                       {skill}
@@ -147,7 +149,7 @@ export function PersonalProfile() {
         {/* Bento Row 3: Tools & Technologies */}
         <motion.div
           className="p-6 md:p-8 transition-all duration-300"
-          style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+          style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
           {...fadeUp(0.24)}
         >
           <h3 className="text-lg sm:text-xl font-semibold text-white mb-6">Tools & Technologies</h3>
@@ -158,15 +160,15 @@ export function PersonalProfile() {
                 <motion.div
                   key={index}
                   className="p-3 flex flex-col items-center gap-2 transition-all duration-300 cursor-pointer group"
-                  style={{ backgroundColor: '#131309', border: '1px solid #1e1e0c' }}
+                  style={{ backgroundColor: 'var(--paper)', border: '1px solid var(--paper-3)', borderRadius: 'var(--radius-sm)' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.35)';
-                    (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(245,166,35,0.04)';
+                    (e.currentTarget as HTMLDivElement).style.borderColor = 'oklch(66% 0.235 25 /0.35)';
+                    (e.currentTarget as HTMLDivElement).style.backgroundColor = 'oklch(66% 0.235 25 /0.04)';
                     (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLDivElement).style.borderColor = '#1e1e0c';
-                    (e.currentTarget as HTMLDivElement).style.backgroundColor = '#131309';
+                    (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--paper-3)';
+                    (e.currentTarget as HTMLDivElement).style.backgroundColor = 'var(--paper)';
                     (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                   }}
                   initial={{ opacity: 0, y: 16 }}
@@ -174,8 +176,8 @@ export function PersonalProfile() {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.35, delay: Math.min(index * 0.05, 0.4), ease: [0.21, 0.47, 0.32, 0.98] }}
                 >
-                  <Icon className="w-5 h-5" style={{ color: '#f5a623' }} />
-                  <span className="text-xs text-center leading-tight" style={{ color: '#777777' }}>{tool.name}</span>
+                  <Icon className="w-5 h-5" style={{ color: 'var(--accent)' }} />
+                  <span className="text-xs text-center leading-tight" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>{tool.name}</span>
                 </motion.div>
               );
             })}

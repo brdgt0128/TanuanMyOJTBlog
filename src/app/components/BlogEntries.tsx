@@ -134,7 +134,7 @@ export function BlogEntries() {
   ];
 
   return (
-    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
+    <section id="blog" className="min-h-screen py-12 sm:py-16 md:py-24 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="mb-12 sm:mb-16"
@@ -144,10 +144,10 @@ export function BlogEntries() {
           transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>04 — Journal</span>
+            <div className="h-px w-8" style={{ backgroundColor: 'var(--accent)' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>04 — Journal</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Blog Entries</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: 'var(--ink)' }}>Blog Entries</h2>
         </motion.div>
 
         {/* Featured posts (first 2) */}
@@ -156,14 +156,14 @@ export function BlogEntries() {
             <motion.div
               key={index}
               className="overflow-hidden transition-all duration-300 cursor-pointer group"
-              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'oklch(66% 0.235 25 /0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = '0 12px 40px rgba(0,0,0,0.4)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--hairline)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
@@ -180,15 +180,15 @@ export function BlogEntries() {
                 />
               </div>
               <div className="p-5 sm:p-6 space-y-3">
-                <div className="flex items-center gap-2 text-xs" style={{ color: '#555555' }}>
-                  <Calendar className="w-3 h-3" style={{ color: '#f5a623' }} />
+                <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>
+                  <Calendar className="w-3 h-3" style={{ color: 'var(--accent)' }} />
                   <span>{post.date}</span>
-                  <span className="ml-auto px-2 py-0.5 text-xs" style={{ backgroundColor: 'rgba(245,166,35,0.08)', border: '1px solid rgba(245,166,35,0.18)', color: '#f5a623' }}>Featured</span>
+                  <span className="ml-auto px-2 py-0.5 text-xs uppercase tracking-wider" style={{ backgroundColor: 'oklch(66% 0.235 25 /0.08)', border: '1px solid oklch(66% 0.235 25 /0.18)', color: 'var(--accent)', borderRadius: 'var(--radius-xs)' }}>Featured</span>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold leading-snug" style={{ color: '#ffffff' }}>
+                <h3 className="text-base sm:text-lg font-semibold leading-snug" style={{ color: 'var(--ink)' }}>
                   {post.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#888888' }}>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-body)' }}>
                   {post.description}
                 </p>
               </div>
@@ -202,14 +202,14 @@ export function BlogEntries() {
             <motion.div
               key={index}
               className="overflow-hidden transition-all duration-300 cursor-pointer group"
-              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'oklch(66% 0.235 25 /0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px rgba(245,166,35,0.07)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 32px oklch(66% 0.235 25 /0.07)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--hairline)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
@@ -227,7 +227,7 @@ export function BlogEntries() {
               </div>
 
               <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
-                <div className="flex items-center gap-2 text-xs" style={{ color: '#555555' }}>
+                <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>
                   <Calendar className="w-3 h-3" />
                   <span>{post.date}</span>
                 </div>
@@ -235,7 +235,7 @@ export function BlogEntries() {
                 <h3
                   className="text-sm sm:text-base font-medium leading-snug transition-colors duration-300 min-h-[40px] sm:min-h-[44px]"
                   style={{
-                    color: '#ffffff',
+                    color: 'var(--ink)',
                     display: '-webkit-box',
                     WebkitLineClamp: 2,
                     WebkitBoxOrient: 'vertical',
@@ -248,7 +248,8 @@ export function BlogEntries() {
                 <p
                   className="text-xs leading-relaxed"
                   style={{
-                    color: '#888888',
+                    color: 'var(--ink-mute)',
+                    fontFamily: 'var(--font-body)',
                     display: '-webkit-box',
                     WebkitLineClamp: 4,
                     WebkitBoxOrient: 'vertical',

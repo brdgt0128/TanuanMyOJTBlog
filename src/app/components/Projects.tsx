@@ -199,12 +199,12 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-16 sm:py-20 md:py-28 relative grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
+    <section id="projects" className="py-16 sm:py-20 md:py-28 relative grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
-          backgroundImage: 'linear-gradient(#f5a623 1px, transparent 1px), linear-gradient(90deg, #f5a623 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(var(--accent) 1px, transparent 1px), linear-gradient(90deg, var(--accent) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -219,13 +219,13 @@ export function Projects() {
           transition={{ duration: 0.55, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ backgroundColor: '#f5a623' }} />
-            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#f5a623' }}>
+            <div className="h-px w-8" style={{ backgroundColor: 'var(--accent)' }} />
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>
               03 — Client Work · United Kingdom
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Projects</h2>
-          <p className="mt-3 text-sm sm:text-base max-w-xl" style={{ color: '#888888' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: 'var(--ink)' }}>Projects</h2>
+          <p className="mt-3 text-sm sm:text-base max-w-xl" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-body)' }}>
             Websites built for UK-based businesses — designed, developed, and delivered remotely.
           </p>
         </motion.div>
@@ -236,24 +236,24 @@ export function Projects() {
             <motion.div
               key={project.id}
               className="group flex flex-col transition-all duration-300 overflow-hidden"
-              style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+              style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.36), ease: [0.21, 0.47, 0.32, 0.98] }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(245,166,35,0.4)';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'oklch(66% 0.235 25 /0.4)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = '#282812';
+                (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--hairline)';
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
             >
               {/* Browser Window Mockup */}
-              <div className="relative overflow-hidden" style={{ height: '160px', backgroundColor: '#0d0d09' }}>
+              <div className="relative overflow-hidden" style={{ height: '160px', backgroundColor: 'var(--paper)' }}>
                 {/* Ambient glow */}
                 <div
                   className="absolute inset-0 pointer-events-none"
@@ -310,30 +310,32 @@ export function Projects() {
                 {/* Bottom fade */}
                 <div
                   className="absolute bottom-0 left-0 right-0 h-8 pointer-events-none z-20"
-                  style={{ background: 'linear-gradient(to bottom, transparent, #1b1b0d)' }}
+                  style={{ background: 'linear-gradient(to bottom, transparent, var(--paper-2))' }}
                 />
               </div>
 
               {/* Card Info */}
-              <div className="px-4 pt-3 pb-2.5" style={{ borderBottom: '1px solid #282812' }}>
+              <div className="px-4 pt-3 pb-2.5" style={{ borderBottom: '1px solid var(--hairline)' }}>
                 <div className="flex items-center justify-between mb-1.5">
-                  <p style={{ fontSize: '9px', color: '#999999', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{project.label}</p>
+                  <p style={{ fontSize: '9px', color: 'var(--ink-faint)', textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: 'var(--font-mono)' }}>
+                    Nº {String(index + 1).padStart(2, '0')} · {project.label}
+                  </p>
                   <span
                     className="px-1.5 py-0.5 font-medium"
-                    style={{ backgroundColor: '#1e1e0c', border: '1px solid #302e14', color: '#888888', fontSize: '10px' }}
+                    style={{ backgroundColor: 'var(--paper-3)', border: '1px solid var(--rule)', color: 'var(--ink-mute)', fontSize: '10px', fontFamily: 'var(--font-mono)', borderRadius: 'var(--radius-xs)' }}
                   >
-                    🇬🇧 UK
+                    UK
                   </span>
                 </div>
-                <h3 className="text-sm font-bold text-white mb-1 leading-tight">{project.title}</h3>
-                <p className="flex items-center gap-1" style={{ color: '#777777', fontSize: '10px' }}>
+                <h3 className="text-sm font-bold mb-1 leading-tight" style={{ color: 'var(--ink)' }}>{project.title}</h3>
+                <p className="flex items-center gap-1" style={{ color: 'var(--ink-mute)', fontSize: '10px', fontFamily: 'var(--font-mono)' }}>
                   <Globe className="w-2.5 h-2.5" />{project.displayUrl}
                 </p>
               </div>
 
               {/* Description + Tags */}
               <div className="flex-1 px-4 py-3 space-y-2.5">
-                <p className="leading-relaxed" style={{ color: '#aaaaaa', fontSize: '11px' }}>
+                <p className="leading-relaxed" style={{ color: 'var(--ink-mute)', fontSize: '11px', fontFamily: 'var(--font-body)' }}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
@@ -342,10 +344,12 @@ export function Projects() {
                       key={tag}
                       className="px-1.5 py-0.5"
                       style={{
-                        backgroundColor: tag === 'UK Client' ? 'rgba(245,166,35,0.08)' : '#131309',
-                        border: tag === 'UK Client' ? '1px solid rgba(245,166,35,0.25)' : '1px solid #222222',
-                        color: tag === 'UK Client' ? '#f5a623' : '#666666',
+                        backgroundColor: tag === 'UK Client' ? 'oklch(66% 0.235 25 /0.08)' : 'var(--paper)',
+                        border: tag === 'UK Client' ? '1px solid oklch(66% 0.235 25 /0.25)' : '1px solid var(--hairline)',
+                        color: tag === 'UK Client' ? 'var(--accent)' : 'var(--ink-mute)',
                         fontSize: '10px',
+                        fontFamily: 'var(--font-mono)',
+                        borderRadius: 'var(--radius-xs)',
                       }}
                     >
                       {tag}
@@ -360,16 +364,16 @@ export function Projects() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-medium transition-all duration-300"
-                  style={{ border: '1px solid #302e14', color: '#888888', backgroundColor: 'transparent' }}
+                  className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-medium uppercase tracking-wider transition-all duration-300"
+                  style={{ border: '1px solid var(--rule)', color: 'var(--ink-mute)', backgroundColor: 'transparent', fontFamily: 'var(--font-mono)', borderRadius: 'var(--radius-sm)' }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#f5a623';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623';
-                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(245,166,35,0.05)';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)';
+                    (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)';
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'oklch(66% 0.235 25 /0.05)';
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor = '#302e14';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#888888';
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)';
+                    (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-mute)';
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent';
                   }}
                 >

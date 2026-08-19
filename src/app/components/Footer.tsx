@@ -9,7 +9,7 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" className="py-10 sm:py-14 md:py-16 grid-bg" style={{ backgroundColor: '#131309', borderTop: '1px solid #282812' }}>
+    <footer id="contact" className="py-10 sm:py-14 md:py-16 grid-bg" style={{ backgroundColor: 'var(--paper)', borderTop: '1px solid var(--hairline)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12"
@@ -21,10 +21,10 @@ export function Footer() {
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-wider" style={{ color: '#f5a623' }}>AT</span>
-              <h3 className="text-lg sm:text-xl text-white font-semibold">· DevPortfolio</h3>
+              <span className="text-xl font-bold tracking-wider" style={{ color: 'var(--accent)', fontFamily: 'var(--font-display)' }}>AT</span>
+              <h3 className="text-lg sm:text-xl font-semibold" style={{ color: 'var(--ink)' }}>· DevPortfolio</h3>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: '#555555' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-body)' }}>
               Web Developer specializing in responsive web apps, AI integration with Claude,
               and SaaS sales. Built client websites for UK-based businesses and experienced
               in full-stack tools, DNS, and API development.
@@ -33,16 +33,16 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-xs uppercase tracking-widest font-medium" style={{ color: '#555555' }}>Quick Links</h3>
+            <h3 className="text-xs uppercase tracking-widest font-medium" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'About Me', 'Experience', 'Blog', 'Contact'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(' ', '-')}`}
                     className="text-sm transition-colors duration-300"
-                    style={{ color: '#888888' }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623'}
-                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#888888'}
+                    style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}
+                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'}
+                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-mute)'}
                   >
                     {link}
                   </a>
@@ -53,15 +53,15 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-xs uppercase tracking-widest font-medium" style={{ color: '#555555' }}>Get in Touch</h3>
+            <h3 className="text-xs uppercase tracking-widest font-medium" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>Get in Touch</h3>
             <a
               href="mailto:tanuanaldrin28@gmail.com"
               className="flex items-center gap-2 text-sm transition-colors duration-300 break-all"
-              style={{ color: '#888888' }}
-              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = '#f5a623'}
-              onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = '#888888'}
+              style={{ color: 'var(--ink-mute)' }}
+              onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'}
+              onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-mute)'}
             >
-              <Mail className="w-4 h-4 flex-shrink-0" style={{ color: '#f5a623' }} />
+              <Mail className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--accent)' }} />
               <span>tanuanaldrin28@gmail.com</span>
             </a>
 
@@ -75,18 +75,18 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 transition-all duration-300 hover:scale-110"
-                    style={{ backgroundColor: '#1b1b0d', border: '1px solid #282812' }}
+                    style={{ backgroundColor: 'var(--paper-2)', border: '1px solid var(--hairline)', borderRadius: 'var(--radius-sm)' }}
                     aria-label={social.name}
                     onMouseEnter={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(245,166,35,0.5)';
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'rgba(245,166,35,0.08)';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'oklch(66% 0.235 25 / 0.5)';
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'oklch(66% 0.235 25 / 0.08)';
                     }}
                     onMouseLeave={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = '#282812';
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#1b1b0d';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--hairline)';
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--paper-2)';
                     }}
                   >
-                    <Icon className="w-4 h-4" style={{ color: '#888888' }} />
+                    <Icon className="w-4 h-4" style={{ color: 'var(--ink-mute)' }} />
                   </a>
                 );
               })}
@@ -95,11 +95,11 @@ export function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #282812' }}>
-          <p className="text-xs text-center md:text-left" style={{ color: '#333333' }}>
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid var(--hairline)' }}>
+          <p className="text-xs text-center md:text-left" style={{ color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}>
             © 2026 Aldrin B. Tanuan · All rights reserved.
           </p>
-          <p className="text-xs" style={{ color: '#302e14' }}>Built by Aldrin Tanuan</p>
+          <p className="text-xs" style={{ color: 'var(--rule)', fontFamily: 'var(--font-mono)' }}>Built by Aldrin Tanuan</p>
         </div>
       </div>
     </footer>

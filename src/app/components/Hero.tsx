@@ -143,61 +143,61 @@ function SwingingID() {
         {/* Lanyard cord */}
         <div className="flex flex-col items-center">
           {/* Neck loop anchor bar */}
-          <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, #c4820d 20%, #f5a623 50%, #c4820d 80%, transparent)' }} />
+          <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-dim) 20%, var(--accent) 50%, var(--accent-dim) 80%, transparent)' }} />
 
           {/* Double-cord lanyard (two parallel strings) */}
           <div className="relative flex items-start justify-center" style={{ height: 'clamp(80px, 14vw, 220px)', width: '16px' }}>
-            <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, #c4820d, #f5a62360 60%, #c4820d)' }} />
-            <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, #c4820d, #f5a62360 60%, #c4820d)' }} />
+            <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, var(--accent-dim), var(--accent)60 60%, var(--accent-dim))' }} />
+            <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, var(--accent-dim), var(--accent)60 60%, var(--accent-dim))' }} />
           </div>
 
           {/* Metal clip */}
           <div className="relative flex flex-col items-center -mb-0.5">
-            <div className="w-5 h-2 rounded-t-sm" style={{ background: 'linear-gradient(180deg,#f5bf23,#c4820d)', border: '1px solid #92600a' }} />
-            <div className="w-3 h-3 rounded-b-full" style={{ background: 'linear-gradient(180deg,#f5a623,#92600a)', border: '1px solid #5a3a10' }} />
+            <div className="w-5 h-2 rounded-t-sm" style={{ background: 'linear-gradient(180deg,var(--accent-bright),var(--accent-dim))', border: '1px solid var(--accent-dim)' }} />
+            <div className="w-3 h-3 rounded-b-full" style={{ background: 'linear-gradient(180deg,var(--accent),var(--accent-dim))', border: '1px solid var(--accent-mute)' }} />
           </div>
 
           {/* ID Card */}
           <div
             className="w-48 sm:w-52 overflow-hidden"
             style={{
-              backgroundColor: '#141409',
-              border: '1.5px solid #302e14',
-              borderRadius: '10px',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.7), 0 0 0 1px rgba(245,166,35,0.15), inset 0 1px 0 rgba(255,255,255,0.05)',
+              backgroundColor: 'var(--paper-2)',
+              border: '1.5px solid var(--rule)',
+              borderRadius: 'var(--radius-md)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.7), 0 0 0 1px oklch(66% 0.235 25 /0.15), inset 0 1px 0 rgba(255,255,255,0.05)',
             }}
           >
             {/* Card top bar */}
             <div
               className="px-3 py-2.5 flex items-center gap-2"
-              style={{ background: 'linear-gradient(135deg, #1e1e0c 0%, #262610 100%)', borderBottom: '1px solid #302e14' }}
+              style={{ background: 'linear-gradient(135deg, var(--paper-3) 0%, var(--paper-3) 100%)', borderBottom: '1px solid var(--rule)' }}
             >
               <div
                 className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 text-xs font-black"
-                style={{ background: 'linear-gradient(135deg, #f5a623, #c4820d)', color: '#131309' }}
+                style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-dim))', color: 'var(--paper)' }}
               >
                 AT
               </div>
               <div>
-                <p className="font-bold text-white leading-none" style={{ fontSize: '9px', letterSpacing: '1.5px' }}>PORTFOLIO</p>
-                <p style={{ fontSize: '7px', color: '#f5a623', letterSpacing: '0.5px', marginTop: '2px' }}>aldrin b. tanuan</p>
+                <p className="font-bold leading-none" style={{ fontSize: '9px', letterSpacing: '1.5px', color: 'var(--ink)', fontFamily: 'var(--font-mono)' }}>PORTFOLIO</p>
+                <p style={{ fontSize: '7px', color: 'var(--accent)', letterSpacing: '0.5px', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>aldrin b. tanuan</p>
               </div>
               <div className="ml-auto">
-                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#22c55e', boxShadow: '0 0 6px #22c55e' }} />
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--status-go)', boxShadow: '0 0 6px var(--status-go)' }} />
               </div>
             </div>
 
             {/* Gold accent line */}
-            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, #f5a623, transparent)' }} />
+            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--accent), transparent)' }} />
 
             {/* Photo */}
-            <div className="flex justify-center pt-4 pb-2" style={{ backgroundColor: '#1b1b0d' }}>
+            <div className="flex justify-center pt-4 pb-2" style={{ backgroundColor: 'var(--paper-2)' }}>
               <div
                 className="overflow-hidden"
                 style={{
                   width: '96px',
                   height: '116px',
-                  border: '2px solid #302e14',
+                  border: '2px solid var(--rule)',
                   borderRadius: '4px',
                   boxShadow: '0 4px 16px rgba(0,0,0,0.5)',
                 }}
@@ -207,28 +207,28 @@ function SwingingID() {
             </div>
 
             {/* Info */}
-            <div className="px-3 pb-3 text-center" style={{ backgroundColor: '#1b1b0d' }}>
-              <p className="font-bold tracking-wider" style={{ fontSize: '10px', color: '#ffffff', letterSpacing: '1px' }}>
+            <div className="px-3 pb-3 text-center" style={{ backgroundColor: 'var(--paper-2)' }}>
+              <p className="font-bold tracking-wider" style={{ fontSize: '10px', color: 'var(--ink)', letterSpacing: '1px' }}>
                 ALDRIN B. TANUAN
               </p>
               <div
                 className="inline-block px-2 py-0.5 mt-1.5"
-                style={{ backgroundColor: 'rgba(245,166,35,0.12)', border: '1px solid rgba(245,166,35,0.3)' }}
+                style={{ backgroundColor: 'oklch(66% 0.235 25 /0.12)', border: '1px solid oklch(66% 0.235 25 /0.3)' }}
               >
-                <p className="font-semibold" style={{ fontSize: '8px', color: '#f5a623', letterSpacing: '0.8px' }}>WEB DEVELOPER</p>
+                <p className="font-semibold" style={{ fontSize: '8px', color: 'var(--accent)', letterSpacing: '0.8px', fontFamily: 'var(--font-mono)' }}>WEB DEVELOPER</p>
               </div>
-              <p className="mt-2" style={{ fontSize: '7px', color: '#444444', letterSpacing: '0.5px' }}>tanuanaldrin28@gmail.com</p>
+              <p className="mt-2" style={{ fontSize: '7px', color: 'var(--ink-faint)', letterSpacing: '0.5px' }}>tanuanaldrin28@gmail.com</p>
             </div>
 
             {/* Barcode strip */}
-            <div className="px-3 pb-3 flex items-center gap-1" style={{ backgroundColor: '#1b1b0d', borderTop: '1px solid #1a1a1a' }}>
+            <div className="px-3 pb-3 flex items-center gap-1" style={{ backgroundColor: 'var(--paper-2)', borderTop: '1px solid var(--hairline)' }}>
               {Array.from({ length: 28 }).map((_, i) => (
                 <div
                   key={i}
                   style={{
                     width: i % 3 === 0 ? '3px' : '1.5px',
                     height: i % 5 === 0 ? '18px' : '12px',
-                    backgroundColor: '#262610',
+                    backgroundColor: 'var(--paper-3)',
                     flexShrink: 0,
                   }}
                 />
@@ -236,7 +236,7 @@ function SwingingID() {
             </div>
 
             {/* Bottom gold line */}
-            <div className="h-1.5" style={{ background: 'linear-gradient(90deg, #f5a623, #92600a, #f5a623)' }} />
+            <div className="h-1.5" style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-dim), var(--accent))' }} />
           </div>
         </div>
       </div>
@@ -249,10 +249,10 @@ export function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 sm:pt-20 relative overflow-hidden grid-bg" style={{ backgroundColor: '#131309' }}>
+    <section id="home" className="min-h-screen flex items-center pt-16 sm:pt-20 relative overflow-hidden grid-bg" style={{ backgroundColor: 'var(--paper)' }}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl" style={{ backgroundColor: '#f5a623', opacity: 0.04 }} />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full blur-3xl" style={{ backgroundColor: '#f5a623', opacity: 0.02 }} />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent)', opacity: 0.04 }} />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent)', opacity: 0.02 }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
@@ -265,49 +265,49 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
-            <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border"
-              style={{ borderColor: '#302e14', backgroundColor: '#1b1b0d', color: '#888888' }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#f5a623' }} />
+            <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full border uppercase tracking-wider"
+              style={{ borderColor: 'var(--rule)', backgroundColor: 'var(--paper-2)', color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--status-go)' }} />
               Open to Opportunities
             </div>
 
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-                Hi, I'm <span style={{ color: '#f5a623' }}>Aldrin!</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight" style={{ color: 'var(--ink)' }}>
+                Hi, I'm <span style={{ color: 'var(--accent)' }}>Aldrin!</span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold flex items-center gap-1" style={{ minHeight: '2.5rem' }}>
-                <span style={{ color: '#f5a623' }}>{typedRole}</span>
-                <span className="inline-block w-0.5 h-7 sm:h-8 ml-0.5" style={{ backgroundColor: '#f5a623', animation: 'blink 1s step-end infinite' }} />
+                <span style={{ color: 'var(--accent)' }}>{typedRole}</span>
+                <span className="inline-block w-0.5 h-7 sm:h-8 ml-0.5" style={{ backgroundColor: 'var(--accent)', animation: 'blink 1s step-end infinite' }} />
               </h2>
             </div>
 
-            <p className="text-sm sm:text-base leading-relaxed max-w-lg" style={{ color: '#888888' }}>
+            <p className="text-sm sm:text-base leading-relaxed max-w-lg" style={{ color: 'var(--ink-mute)' }}>
               I build responsive web applications and drive business growth through technology.
               Experienced in web development, API integration, tech support, and SaaS sales.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-1">
               {[{ value: '12', label: 'UK Projects' }, { value: '3', label: 'Years Experience' }, { value: '2026', label: 'BSIT Graduate' }].map(({ value, label }) => (
-                <div key={label} className="px-4 py-2.5 flex flex-col" style={{ border: '1px solid #282812', backgroundColor: '#1b1b0d' }}>
-                  <span className="text-lg font-bold" style={{ color: '#f5a623' }}>{value}</span>
-                  <span className="text-xs" style={{ color: '#555555' }}>{label}</span>
+                <div key={label} className="px-4 py-2.5 flex flex-col" style={{ border: '1px solid var(--hairline)', backgroundColor: 'var(--paper-2)', borderRadius: 'var(--radius-sm)' }}>
+                  <span className="text-lg font-bold" style={{ color: 'var(--accent)', fontFamily: 'var(--font-display)' }}>{value}</span>
+                  <span className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>{label}</span>
                 </div>
               ))}
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">
               <button onClick={() => scrollTo('experience')}
-                className="px-6 py-3 text-sm font-medium flex items-center gap-2 transition-all duration-300 border"
-                style={{ borderColor: '#ffffff', backgroundColor: 'transparent', color: '#ffffff' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#ffffff'; (e.currentTarget as HTMLButtonElement).style.color = '#131309'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLButtonElement).style.color = '#ffffff'; }}>
+                className="px-6 py-3 text-xs uppercase tracking-wider font-medium flex items-center gap-2 transition-all duration-300 border"
+                style={{ borderColor: 'var(--ink)', backgroundColor: 'transparent', color: 'var(--ink)', fontFamily: 'var(--font-mono)', borderRadius: 'var(--radius-sm)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--ink)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--paper)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--ink)'; }}>
                 View My Work <ChevronRight className="w-4 h-4" />
               </button>
               <button onClick={() => scrollTo('contact')}
-                className="px-6 py-3 text-sm font-medium flex items-center gap-2 transition-all duration-300 border"
-                style={{ borderColor: '#302e14', backgroundColor: 'transparent', color: '#888888' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = '#f5a623'; (e.currentTarget as HTMLButtonElement).style.color = '#f5a623'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = '#302e14'; (e.currentTarget as HTMLButtonElement).style.color = '#888888'; }}>
+                className="px-6 py-3 text-xs uppercase tracking-wider font-medium flex items-center gap-2 transition-all duration-300 border"
+                style={{ borderColor: 'var(--rule)', backgroundColor: 'transparent', color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)', borderRadius: 'var(--radius-sm)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--accent)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--ink-mute)'; }}>
                 <Mail className="w-4 h-4" /> Get in Touch
               </button>
             </div>
@@ -335,10 +335,10 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 0.7 }}
         aria-label="Scroll to about"
       >
-        <span className="text-xs tracking-[0.22em] uppercase" style={{ color: '#444444' }}>Scroll</span>
+        <span className="text-xs tracking-[0.22em] uppercase" style={{ color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)' }}>Scroll</span>
         <motion.div
           className="w-px h-10"
-          style={{ background: 'linear-gradient(to bottom, #f5a623, transparent)', transformOrigin: 'top' }}
+          style={{ background: 'linear-gradient(to bottom, var(--accent), transparent)', transformOrigin: 'top' }}
           animate={{ opacity: [0.3, 1, 0.3] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         />
