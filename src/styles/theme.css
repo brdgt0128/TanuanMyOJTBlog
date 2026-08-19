@@ -19,6 +19,11 @@
   --accent-bright:oklch(74% 0.200 30);
   --accent-dim:   oklch(48% 0.170 25);
   --accent-mute:  oklch(38% 0.110 28);
+
+  --accent-2:        oklch(78% 0.150 75);
+  --accent-2-bright: oklch(85% 0.130 80);
+  --accent-2-dim:    oklch(60% 0.140 70);
+
   --status-go:    oklch(72% 0.150 145);
 
   --font-display: "Bricolage Grotesque", "Archivo Black", system-ui, sans-serif;

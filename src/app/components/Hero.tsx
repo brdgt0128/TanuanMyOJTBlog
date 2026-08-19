@@ -54,7 +54,7 @@ function Ticker() {
         {loop.map((item, i) => (
           <span className="hero-ticker-item" key={i}>
             {item}
-            <span className="hero-ticker-dot" />
+            <span className="hero-ticker-dot" style={{ backgroundColor: i % 2 === 0 ? 'var(--accent)' : 'var(--accent-2)' }} />
           </span>
         ))}
       </div>
@@ -171,18 +171,18 @@ function SwingingID() {
         {/* Lanyard cord */}
         <div className="flex flex-col items-center">
           {/* Neck loop anchor bar */}
-          <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-dim) 20%, var(--accent) 50%, var(--accent-dim) 80%, transparent)' }} />
+          <div className="w-16 h-1.5 rounded-full mb-0.5" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-2-dim) 20%, var(--accent-2) 50%, var(--accent-2-dim) 80%, transparent)' }} />
 
           {/* Double-cord lanyard (two parallel strings) */}
           <div className="relative flex items-start justify-center" style={{ height: 'clamp(80px, 14vw, 220px)', width: '16px' }}>
-            <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, var(--accent-dim), var(--accent)60 60%, var(--accent-dim))' }} />
-            <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, var(--accent-dim), var(--accent)60 60%, var(--accent-dim))' }} />
+            <div className="absolute w-px h-full left-1" style={{ background: 'linear-gradient(to bottom, var(--accent-2-dim), var(--accent-2)60 60%, var(--accent-2-dim))' }} />
+            <div className="absolute w-px h-full right-1" style={{ background: 'linear-gradient(to bottom, var(--accent-2-dim), var(--accent-2)60 60%, var(--accent-2-dim))' }} />
           </div>
 
           {/* Metal clip */}
           <div className="relative flex flex-col items-center -mb-0.5">
-            <div className="w-5 h-2 rounded-t-sm" style={{ background: 'linear-gradient(180deg,var(--accent-bright),var(--accent-dim))', border: '1px solid var(--accent-dim)' }} />
-            <div className="w-3 h-3 rounded-b-full" style={{ background: 'linear-gradient(180deg,var(--accent),var(--accent-dim))', border: '1px solid var(--accent-mute)' }} />
+            <div className="w-5 h-2 rounded-t-sm" style={{ background: 'linear-gradient(180deg,var(--accent-2-bright),var(--accent-2-dim))', border: '1px solid var(--accent-2-dim)' }} />
+            <div className="w-3 h-3 rounded-b-full" style={{ background: 'linear-gradient(180deg,var(--accent-2),var(--accent-2-dim))', border: '1px solid var(--accent-mute)' }} />
           </div>
 
           {/* ID Card */}
@@ -202,7 +202,7 @@ function SwingingID() {
             >
               <div
                 className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 text-xs font-black"
-                style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-dim))', color: 'var(--paper)' }}
+                style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-2))', color: 'var(--paper)' }}
               >
                 AT
               </div>
@@ -216,7 +216,7 @@ function SwingingID() {
             </div>
 
             {/* Gold accent line */}
-            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--accent), transparent)' }} />
+            <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-2), transparent)' }} />
 
             {/* Photo */}
             <div className="flex justify-center pt-4 pb-2" style={{ backgroundColor: 'var(--paper-2)' }}>
@@ -264,7 +264,7 @@ function SwingingID() {
             </div>
 
             {/* Bottom gold line */}
-            <div className="h-1.5" style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-dim), var(--accent))' }} />
+            <div className="h-1.5" style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent))' }} />
           </div>
         </div>
       </div>
@@ -285,8 +285,9 @@ export function Hero() {
   return (
     <section id="home" className="min-h-screen flex flex-col pt-16 sm:pt-20 relative overflow-hidden grid-bg" style={{ backgroundColor: 'var(--paper)' }}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent)', opacity: 0.04 }} />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent)', opacity: 0.02 }} />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[560px] h-[560px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent)', opacity: 0.1 }} />
+        <div className="absolute top-1/3 right-0 w-[420px] h-[420px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent-2)', opacity: 0.08 }} />
+        <div className="absolute bottom-0 left-0 w-[340px] h-[340px] rounded-full blur-3xl" style={{ backgroundColor: 'var(--accent-2)', opacity: 0.05 }} />
       </div>
 
       <Ticker />
@@ -314,7 +315,17 @@ export function Hero() {
 
             <div className="space-y-3">
               <h1 className="font-bold leading-[0.98]" style={{ color: 'var(--ink)', fontSize: 'clamp(2.75rem, 7vw, 5.5rem)', fontFamily: 'var(--font-display)' }}>
-                Hi, I'm <span style={{ color: 'var(--accent)' }}>Aldrin!</span>
+                Hi, I'm{' '}
+                <span
+                  style={{
+                    background: 'linear-gradient(100deg, var(--accent) 30%, var(--accent-2) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    color: 'transparent',
+                  }}
+                >
+                  Aldrin!
+                </span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold flex items-center gap-1" style={{ minHeight: '2.5rem', fontFamily: 'var(--font-display)' }}>
                 <span style={{ color: 'var(--accent)' }}>{typedRole}</span>
@@ -340,7 +351,7 @@ export function Hero() {
                     borderRight: i < stats.length - 1 ? '1px solid var(--hairline)' : 'none',
                   }}
                 >
-                  <span className="text-2xl" style={{ fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-display)' }}>{value}</span>
+                  <span className="text-2xl" style={{ fontWeight: 800, color: i % 2 === 0 ? 'var(--accent)' : 'var(--accent-2)', fontFamily: 'var(--font-display)' }}>{value}</span>
                   <span className="text-xs uppercase tracking-wider" style={{ color: 'var(--ink-mute)', fontFamily: 'var(--font-mono)' }}>{label}</span>
                 </div>
               ))}
