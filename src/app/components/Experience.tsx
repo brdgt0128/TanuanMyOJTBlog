@@ -5,7 +5,7 @@ export function Experience() {
   const experiences = [
     {
       title: 'Claude Developer',
-      company: 'Activerse Inc.',
+      company: 'Freelance',
       period: '2026',
       description: 'Built AI-powered tools and automated workflows using Anthropic\'s Claude API.',
       tags: ['Claude AI', 'Prompt Engineering', 'Automation'],
@@ -13,7 +13,7 @@ export function Experience() {
     },
     {
       title: 'Web Developer',
-      company: 'Activerse Inc.',
+      company: 'Freelance',
       period: '2026',
       description: 'Built responsive web apps and landing pages for clients using modern frontend stack.',
       tags: ['HTML/CSS', 'JavaScript', 'React'],
@@ -21,7 +21,7 @@ export function Experience() {
     },
     {
       title: 'SaaS Sales Executive',
-      company: 'Activerse Inc.',
+      company: 'Freelance',
       period: '2025',
       description: 'Drove B2B SaaS sales through client demos, pipeline management, and deal closing.',
       tags: ['B2B Sales', 'CRM', 'Lead Generation'],
@@ -29,7 +29,7 @@ export function Experience() {
     },
     {
       title: 'Tech Support Specialist',
-      company: 'Activerse Inc.',
+      company: 'Freelance',
       period: '2023–2024',
       description: 'Resolved software issues and escalated complex tickets while maintaining high CSAT.',
       tags: ['Troubleshooting', 'Ticketing', 'Customer Success'],
