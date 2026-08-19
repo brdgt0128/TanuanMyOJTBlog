@@ -1,4 +1,11 @@
-import { Code, Palette, Database, Terminal, Github, Figma as FigmaIcon } from 'lucide-react';
+import { Braces, Webhook, Network, Globe2, FileCode, Coffee, Code, Terminal, Palette, Bot } from 'lucide-react';
+import {
+  SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiTailwindcss, SiNextdotjs, SiNodedotjs,
+  SiMysql, SiFirebase, SiPostgresql, SiMongodb,
+  SiClaude, SiResend, SiPostman,
+  SiCloudflare, SiGithubpages, SiVercel,
+  SiGit, SiFigma, SiGithub, SiDiagramsdotnet, SiN8N,
+} from 'react-icons/si';
 import { motion } from 'motion/react';
 
 const fadeUp = (delay = 0) => ({
@@ -12,40 +19,71 @@ export function PersonalProfile() {
   const skillGroups = [
     {
       label: 'Web Development',
-      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind CSS', 'Next.js', 'Node.js'],
+      skills: [
+        { name: 'HTML', icon: SiHtml5 },
+        { name: 'CSS', icon: SiCss },
+        { name: 'JavaScript', icon: SiJavascript },
+        { name: 'TypeScript', icon: SiTypescript },
+        { name: 'React', icon: SiReact },
+        { name: 'Tailwind CSS', icon: SiTailwindcss },
+        { name: 'Next.js', icon: SiNextdotjs },
+        { name: 'Node.js', icon: SiNodedotjs },
+      ],
     },
     {
       label: 'Database',
-      skills: ['MySQL', 'Firebase', 'PostgreSQL', 'MongoDB'],
+      skills: [
+        { name: 'MySQL', icon: SiMysql },
+        { name: 'Firebase', icon: SiFirebase },
+        { name: 'PostgreSQL', icon: SiPostgresql },
+        { name: 'MongoDB', icon: SiMongodb },
+      ],
     },
     {
       label: 'API Integration',
-      skills: ['REST API', 'Claude API', 'Resend API', 'Postman', 'Webhook'],
+      skills: [
+        { name: 'REST API', icon: Braces },
+        { name: 'Claude API', icon: SiClaude },
+        { name: 'Resend API', icon: SiResend },
+        { name: 'Postman', icon: SiPostman },
+        { name: 'Webhook', icon: Webhook },
+      ],
     },
     {
       label: 'DNS & Hosting',
-      skills: ['DNS Configuration', 'Cloudflare', 'Domain Management', 'GitHub Pages', 'Vercel'],
+      skills: [
+        { name: 'DNS Configuration', icon: Network },
+        { name: 'Cloudflare', icon: SiCloudflare },
+        { name: 'Domain Management', icon: Globe2 },
+        { name: 'GitHub Pages', icon: SiGithubpages },
+        { name: 'Vercel', icon: SiVercel },
+      ],
     },
     {
       label: 'Other',
-      skills: ['C#', 'Java', 'Git', 'Figma'],
+      skills: [
+        { name: 'C#', icon: FileCode },
+        { name: 'Java', icon: Coffee },
+        { name: 'Git', icon: SiGit },
+        { name: 'Figma', icon: SiFigma },
+      ],
     },
   ];
 
   const tools = [
     { name: 'VS Code', icon: Code },
-    { name: 'GitHub', icon: Github },
-    { name: 'Figma', icon: FigmaIcon },
+    { name: 'GitHub', icon: SiGithub },
+    { name: 'Figma', icon: SiFigma },
     { name: 'Visual Studio', icon: Terminal },
-    { name: 'Firebase', icon: Database },
+    { name: 'Firebase', icon: SiFirebase },
     { name: 'Canva', icon: Palette },
-    { name: 'Draw.io', icon: Palette },
-    { name: 'Postman', icon: Terminal },
-    { name: 'Claude AI', icon: Code },
-    { name: 'ChatGPT', icon: Code },
-    { name: 'Resend', icon: Terminal },
-    { name: 'Vercel', icon: Terminal },
-    { name: 'n8n', icon: Code },
+    { name: 'Draw.io', icon: SiDiagramsdotnet },
+    { name: 'Postman', icon: SiPostman },
+    { name: 'Claude AI', icon: SiClaude },
+    { name: 'ChatGPT', icon: Bot },
+    { name: 'Resend', icon: SiResend },
+    { name: 'Vercel', icon: SiVercel },
+    { name: 'n8n', icon: SiN8N },
   ];
 
   const quickFacts = [
@@ -125,21 +163,25 @@ export function PersonalProfile() {
                   {group.label}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-xs transition-all duration-300 cursor-default"
-                      style={{
-                        color: 'var(--accent)',
-                        backgroundColor: 'oklch(66% 0.235 25 /0.07)',
-                        border: '1px solid oklch(66% 0.235 25 /0.18)',
-                        borderRadius: 'var(--radius-sm)',
-                        fontFamily: 'var(--font-mono)',
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {group.skills.map((skill) => {
+                    const Icon = skill.icon;
+                    return (
+                      <span
+                        key={skill.name}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 text-xs transition-all duration-300 cursor-default"
+                        style={{
+                          color: 'var(--accent)',
+                          backgroundColor: 'oklch(66% 0.235 25 /0.07)',
+                          border: '1px solid oklch(66% 0.235 25 /0.18)',
+                          borderRadius: 'var(--radius-sm)',
+                          fontFamily: 'var(--font-mono)',
+                        }}
+                      >
+                        <Icon className="w-3.5 h-3.5 flex-shrink-0" />
+                        {skill.name}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             ))}
